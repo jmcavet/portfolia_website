@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/scripts/demo_script_src.js"></script>
+
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
+
+    <script src="/scripts/scroll-down.js"></script>
+    <script src="/scripts/hamburger.js"></script>
+
+    <title>Jean-Marie Cavet | About</title>
+</head>
+
+<body class="grid grid--body">
+    <header class="header">
+        <header-component page="about"></header-component>
+    </header>
+
+    <main>
+        <section class="flex flex--center bg-color-light">
+            <div class="section__layout-container">
+                <div class="section__layout about-header">
+                    <h1 class="heading-1 u-center-text">About Me</h1>
+                    <div class="about-header__intro grid about-header__grid0">
+                        <div>
+                            <p>Bonjour!</p>
+                            <p>My name is <span>Jean-Marie</span>, I am a Software engineer from France. I live with my
+                                italian wife and our two boys in beautiful Munich, Germany.</p>
+                            <p>Apart from coding, I love cooking, travelling, and practising foreign languages.</p>
+                        </div>
+                        <figure>
+                            <img src="/img/profile_photo.png" alt="Profile Photo">
+                        </figure>
+                    </div>
+                    <div class="grid about-header__grid1">
+                        <div class="about-header__travelling">
+                            <p>Over the last 18 years, I travelled around 3 EU countries and worked for international
+                                aeronautical companies, such as <span class="span-link"><a
+                                        href="https://www.airbus.com">Airbus</a></span> and <span class="span-link"><a
+                                        href="https://www.mtu.de">MTU Aero Engines</a></span>.
+                            </p>
+                            <p>While I started as an aerodynamic engineer, I gradually developed a passionate interest
+                                in Software development, which brought me in 2017 to my current position as a <span
+                                    class="span-link"><a href="#experience">Software engineer for Methods &
+                                        Tools</a></span> at MTU.</p>
+                            <p>Since then, I help my company design and develop tools for scientific study, especially
+                                in the field of <span class="span-bold">data analysis</span> and <span
+                                    class="span-bold">visualization</span>.</p>
+                        </div>
+
+                        <!-- Create an element where the map will take place -->
+                        <div class="map_europe_container">
+                            <svg id="map_europe"></svg>
+                            <button class="map_europe_reload">
+                                <a class="flex" onclick=run_animation()>
+                                    <img src="/img/play.svg" alt="Icon Play" />
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid about-header__grid2">
+                        <p>Although I first worked with processes and algorithms, I felt increasingly interested in
+                            <span class="span-bold">Front-End</span> engineering and <span
+                                class="span-bold">UX/UI</span>
+                            design.<br>It aroused my curiosity and appetite for learning new languages and frameworks
+                            and the potential to reach directly customers worldwide by building and deploying <span
+                                class="span-bold">web apps</span>.
+                        </p>
+                        <p>My long-term learning process aims at achieving a qualitative knowledge in both Front and
+                            Back
+                            ends.
+                            My career so far and expertise in <span class="span-bold">data and visual analytics</span>
+                            bring me enough credibility to start a new career in Web development, especially for
+                            industries
+                            turned towards AI, digitalization, or data science.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex--center">
+            <div class=" section__layout-container">
+                <div class="section__layout experience">
+                    <h2 class="heading-2" id="experience">My Experience</h2>
+                    <div class="grid experience__grid">
+                        <div class="experience__cv-data">
+                            <div class="experience__companies flex"></div>
+                            <div class="experience__job">
+                                <div class="experience__job-header">
+                                    <div class="job-header flex flex--spacebetween">
+                                        <div class="job-header__title"></div>
+                                        <div class="job-header__place flex">
+                                            <img src="/img/location.svg" alt="Icon location" />
+                                            <div class="city-country"></div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline flex">
+                                        <div class="timeline__year">2003</div>
+                                        <div class="timeline__fullspan">
+                                            <div class="timeline__segment"></div>
+                                        </div>
+                                        <div class="timeline__year">Present</div>
+                                    </div>
+                                </div>
+                                <div class="job-activities"></div>
+                            </div>
+                        </div>
+                        <div class="experience__cv-description">
+                            <div class="job-summary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="flex flex--center" id="expertise">
+            <div class="section__layout-container">
+                <div class="section__layout card-work">
+                    <h2 class="heading-2 card-work__header card-work__header--left">My Work Expertise</h2>
+                    <div class="card-work__body grid grid--card-work-3-2">
+                        <div class="card-work__summary card-work__summary--left">
+                            <div class="card-work__title flex flex--center">
+                                <img src="/img/programming.svg" alt="Icon Programming" />
+                                <h3 class="heading-3" id="id1">Software Engineering</h3>
+                            </div>
+                            <p class="bulletpt bulletpt--primary">I design and develop interactive in-house GUIs and
+                                Computer-Aided Engineering (CAE) Software for
+                                scientific simulations, in the field of CFD and Thermal Analysis.
+                            </p>
+                            <p class="bulletpt bulletpt--primary">It involves pre- and post-processing through visual
+                                data analytics and data visualization (?). We
+                                use continuous deployment (Git) for our processes and review our development with the
+                                customer
+                                on a weekly basis.</p>
+                            <p class="bulletpt bulletpt--primary">I started running simulations as a user of CAE and
+                                analysing results with basic tools.
+                                This experience makes me now better grasp, as a developer, what is required for building
+                                intuitive and user-friendly tools in order to deliver consistent analysis in shorter
+                                timeframe.
+                            </p>
+                            <br>
+                            <div class="card-work__title flex flex--center">
+                                <img src="/img/workstyle.svg" alt="Icon workstyle" />
+                                <h3 class="heading-3" id="id1">Work style and approach</h3>
+                            </div>
+                            <p class="bulletpt bulletpt--primary">Together with the customer, we define the Software
+                                specifications in terms of interfaces, functionalities, process workflows, and external
+                                dependencies.</p>
+                            <p class="bulletpt bulletpt--primary">I then quickly come up with preliminary solutions and
+                                refine them throughout all development phases, based on feedback and testing. In
+                                particular, I
+                                like to present intermediate analysis (data frames, interactive plots) to the customer
+                                using
+                                Jupyter Notebooks. It helps visualize the sequence of processes and validate our data.
+                            </p>
+                            <p class="bulletpt bulletpt--primary">As for the code itself, I focus on maintaining a
+                                modular architecture, well-documented code (docstring, UML diagrams, Flowcharts), and
+                                user-guides.</p>
+                        </div>
+                        <div class="card-work__additional">
+                            <div>
+                                <div class="card-work__title flex flex--center">
+                                    <img src="/img/tools.svg" alt="Icon tools" />
+                                    <h3 class=" heading-3" style="color: #fff;">Tech Stack and Tools</h3>
+                                </div>
+                                <p class="bulletpt bulletpt--white">Languages: Python 3 (Pylint, Pytest, PyQt, OOP), C++
+                                </p>
+                                <p class="bulletpt bulletpt--white">Data analysis: Numpy, Panda</p>
+                                <p class="bulletpt bulletpt--white">Data visualization: PyQtGraph, Matplotib, Plotly,
+                                    Jupyter Notebook</p>
+                                <p class="bulletpt bulletpt--white">IDE: PyCharm, Eclipse, Visual Studio Code</p>
+                                <p class="bulletpt bulletpt--white">OS: Linux Environment (SUSE), Shell scripting</p>
+                                <p class="bulletpt bulletpt--white">Version Control Systems: Git, BitBucket, SVN</p>
+                            </div>
+                            <div>
+                                <div class="card-work__title flex flex--center">
+                                    <img src="/img/softskills.svg" alt="Icon soft skills" />
+                                    <h3 class=" heading-3" style="color: #fff;" id="id1">Soft skills</h3>
+                                </div>
+                                <p class="bulletpt bulletpt--white">Multilingual: weekly use of German, English and
+                                    French</p>
+                                <p class="bulletpt bulletpt--white">Team player: brings good humour</p>
+                                <p class="bulletpt bulletpt--white">Self-motivation: curious, proactive, constantly
+                                    learning new topics ('never-stop-learning' attitude)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="flex flex--center" id="learning">
+            <div class="section__layout-container">
+                <div class="section__layout card-work">
+                    <h2 class="heading-2 card-work__header card-work__header--right">Passion for Web Applications</h2>
+                    <div class="card-work__body grid grid--card-work-2-3">
+                        <div class="card-work__additional">
+                            <div>
+                                <div class="card-work__title flex flex--center">
+                                    <img src="/img/tools.svg" alt="Icon tools" />
+                                    <h3 class=" heading-3" style="color: #fff;">Tech Stack and Tools</h3>
+                                </div>
+                                <p class="bulletpt bulletpt--white">Front-end: JavaScript, React, Redux</p>
+                                <p class="bulletpt bulletpt--white">Back-end: Node.js, Express, Flask</p>
+                                <p class="bulletpt bulletpt--white">DBMS: NoSQL (MongoDB), SQL (SQLite)</p>
+                                <p class="bulletpt bulletpt--white">CSS pre-processors and architectures: Sass and BEM
+                                </p>
+                                <p class="bulletpt bulletpt--white">UI: semanticUI, Bootstrap, MaterialUI</p>
+                                <p class="bulletpt bulletpt--white">Data Viz: D3.js, chart.js, plotly</p>
+                                <p class="bulletpt bulletpt--white">UI/UX Design: Figma</p>
+                            </div>
+                            <div>
+                                <div class="card-work__title flex flex--center">
+                                    <img src="/img/wishlist.svg" alt="Icon wishlist" />
+                                    <h3 class="heading-3" style="color: #fff;">My learning wishlist</h3>
+                                </div>
+                                <p class="bulletpt bulletpt--white">Visualization: WebGL, three.js</p>
+                                <p class="bulletpt bulletpt--white">Web Frameworks/Libraries: NextJs, Angular,
+                                    Flask/Django, etc.</p>
+                                <p class="bulletpt bulletpt--white">Docker, Kubernetes</p>
+                            </div>
+                        </div>
+                        <div class="card-work__summary card-work__summary--right">
+                            <div class="card-work__title flex flex--center">
+                                <img src="/img/achievements.svg" alt="Icon achievements" />
+                                <h3 class="heading-3" id="id1">My achievements</h3>
+                            </div>
+                            <p class="bulletpt bulletpt--primary">I started learning basic Front-end Web Dev through
+                                online courses such as <span class="span-link"><a href="https://www.udemy.com"
+                                        target="_blank">Udemy</a></span>, my favourite. I then jumped into Back-end with
+                                Nodes.js and Express, and built my first Web App, <span class="span-link"><a
+                                        href="https://linguappo.herokuapp.com/" target="_blank">Linguappo</a></span>,
+                                aimed at
+                                learning languages. After deploying it, I re-factored the architecture, applying
+                                Model-View-Controller and micro-services patterns.</p>
+                            <p class="bulletpt bulletpt--primary">Having in mind to build my own portfolio website, I
+                                decided to deepen first my skills in CSS by learning preprocessor <span
+                                    class="span-link"><a href="https://www.udemy.com/course/advanced-css-and-sass/"
+                                        target="_blank">Sass,
+                                        flexbox
+                                        and grid layouts</a></span>, especially because I was aiming at coding without
+                                the help
+                                of a Front-end framework. Learning as well basic <span class="span-link"><a
+                                        href="https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/"
+                                        target="_blank">Sketching, Prototyping and Web Design</a></span> helped me
+                                develop my
+                                own style for this website.
+                                <br>Viewing online course videos is definitly helping, but practising myself, trying,
+                                failing,
+                                and trying again made me really learn the whole process.
+                            </p>
+                            <p class="bulletpt bulletpt--primary">After those achievements, I felt more confident to
+                                jump into a Front-end library such as ReactJs. I built a project with React, Redux, and
+                                Firestore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="flex flex--center" id="jobsearch">
+            <div class="section__layout-container">
+                <div class="section__layout card-work">
+                    <h2 class="heading-2 card-work__header card-work__header--left">My next job</h2>
+                    <div class="card-work__body grid grid--card-work-3-2">
+                        <div class="card-work__summary">
+                            <div class="card-work__title flex flex--center">
+                                <img src="/img/target.svg" alt="Icon target" />
+                                <h3 class="heading-3">What I am looking for</h3>
+                            </div>
+                            <p class="bulletpt bulletpt--primary">I love coding, so let's focus on that! Ideally, I
+                                would be
+                                developing modern web applications and contribute to building UI, Dashboards, etc. I
+                                find my
+                                motivation in...I am willing to gradually take more technical responsibilities and
+                                leadership
+                                while I gain more experience. I would be thrilled to collaborate on both Front-end and
+                                Back-end
+                                engineering. Data analytics and visualization is definitly a domain which I would be
+                                passionate
+                                working for.
+                            </p>
+                            <p class="bulletpt bulletpt--primary">Why my skills & personality fit the position: ...</p>
+                            <p class=" bulletpt bulletpt--primary">Continuous learning, challenge of innovation,
+                                professional
+                                development/training</p>
+                        </div>
+                        <div class="card-work__additional">
+                            <div>
+                                <div class="card-work__title flex flex--center">
+                                    <img src="/img/company.svg" alt="Icon company" />
+                                    <h3 class=" heading-3" style="color: #fff;">Company profile</h3>
+                                </div>
+                                <p class="bulletpt bulletpt--white">Position: Back-end or Front-end Engineer</p>
+                                <p class="bulletpt bulletpt--white">Company: Industry involved in Data, Digitalisation,
+                                    AI,
+                                    etc. Oriented towards Science, green environment, etc.</p>
+                                <p class="bulletpt bulletpt--white">Type: preferably small to medium size</p>
+                                <p class="bulletpt bulletpt--white">Bonus: dynamic international working environment
+                                    with
+                                    trustful
+                                    and friendly teams</p>
+                                <p class="bulletpt bulletpt--white">Contract: permanent, full-time & part-time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer-component></footer-component>
+
+
+
+</body>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<script>
+    const current_year = new Date().getFullYear();
+    const current_month = new Date().getMonth();
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // Select (d3 names!) those countries where I worked
+    const career_countries = ["France", "Germany", "Spain", "United Kingdom"];
+    var cv, jobstart, nb_jobs, companies, cities, jobtitle, place, activities, summary, jobMonthYear;
+
+    var geoJsonUrl = "https://gist.githubusercontent.com/spiker830/3eab0cb407031bf9f2286f98b9d0558a/raw/7edae936285e77be675366550e20f9166bed0ed5/europe_features.json";
+
+    // SECTION FOR D3 MAP
+    // Setting up the svg element for D3 to draw in
+    let width = 300, height = 300;
+
+    var svg = d3.select("svg")
+        .attr("width", width)
+        .attr("height", height)
+
+    var europeProjection = d3.geoMercator()
+        .center([4, 47])
+        .scale([width / 0.55]) //.scale([width / 1.5])
+        .translate([width / 2, height / 2])
+
+    var g = svg.append("g");
+
+    var circle_radius = 5; // 5px
+
+
+    function setup_svg_d3() {
+        console.log("Setup SVG d3 graph");
+        loadJSON((response) => {
+            cv = JSON.parse(response);
+            jobstart = cv.jobstart;
+            nb_jobs = jobstart.length;
+            companies = cv.companies;
+            jobtitle = cv.jobtitle;
+            place = cv.place;
+            activities = cv.activities;
+            summary = cv.summary;
+            jobMonthYear = cv.jobMonthYear;
+            cities = cv.cities;
+            nb_cities = cities.length;
+
+            let current_jobtitle = jobtitle[nb_jobs - 1];
+            let current_place = place[nb_jobs - 1];
+            let current_activities = activities[nb_jobs - 1];
+            let current_summary = summary[nb_jobs - 1];
+            let current_job_month_year = jobMonthYear[nb_jobs - 1];
+
+            let element_index = $(this).index();
+            companies.forEach((element, incr) => {
+                $('.experience__companies.flex').append(`
+                    <button class="experience__company ${incr == nb_jobs - 1 ? 'experience__company--active' : ''}">
+                        ${element}    
+                    </button>
+                `);
+            });
+
+            $('.job-header__title').text(current_jobtitle);
+            $('.city-country').text(current_place);
+
+            current_activities.forEach(element => {
+                $('.job-activities').append(`
+                    <div class="job-activity flex">
+                        <img src="/img/arrow-right.svg" class="job-activity__image" alt="Icon arrow right" />
+                        <div class="job-activity__text">${element}</div>
+                    </div>
+                `);
+            });
+
+            current_summary.forEach(element => {
+                $('.job-summary').append(`
+                    <div class="job-summary__text">${element}</div>
+                `);
+            });
+
+            let job_start = jobstart[nb_jobs - 1];
+            let career_start = jobstart[0];
+            const career_duration = current_year - career_start;
+            let job_duration = current_year - job_start;
+            let job_left = ((job_start - career_start) / career_duration * 100) + "%";
+            let job_width = (job_duration / career_duration * 100) + "%";
+
+            let current_month_short = months[current_month].slice(0, 3);
+            let before_content = "'" + current_job_month_year[0] + "'";
+            let after_content = "'" + current_month_short + " " + current_year + "'";
+
+            $('.timeline__segment').css({
+                "left": job_left,
+                "width": job_width,
+                "--beforeContent": before_content,
+                "--afterContent": after_content,
+            });
+        })
+
+        let pathGenerator = d3.geoPath().projection(europeProjection);
+
+        var map_tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip-map")
+            .style("opacity", 0)
+
+        d3.json(geoJsonUrl, function (geojson) {
+            let cities_coordinates = [];
+            cities.forEach(city => {
+                cities_coordinates.push(city.coordinates)
+            });
+
+            // Draw the map
+            g.selectAll("path")
+                .data(geojson.features)
+                .enter()
+                .append("path")
+                .attr("d", pathGenerator)
+                .attr("fill", colorCountry) // Color uses to fill in the lines
+                .style("stroke", colorStroke) // Color of the lines themselves
+
+            g.selectAll("circle")
+                .data(cities_coordinates)
+                .enter()
+                .append("circle")
+                .attr("cx", function (d) {
+                    return europeProjection(d)[0];
+                })
+                .attr("cy", function (d) { return europeProjection(d)[1]; })
+                .attr("class", (d, i) => 'circle' + (i + 1))
+                .attr("r", circle_radius + "px")
+                .attr("fill", "#0052CC")
+                .on("mouseover", mouseOverCity)
+                .on("mouseout", mouseOutCity)
+
+            g.selectAll("text")
+                .data(cities_coordinates)
+                .enter()
+                .append("text")
+                .text((d, i) => i + 1)
+                .attr("x", (d, i) => europeProjection(d)[0] + .5 * circle_radius)
+                .attr("y", (d, i) => europeProjection(d)[1] - 1 * circle_radius)
+                .attr("class", (d, i) => 'circlenumber' + (i + 1))
+                .style('fill', '#0052CC') // Use '' and not ""!
+                .style("font-size", 13)
+                .style("font-weight", 500);
+
+            //runAnimationCities(cities_coordinates);
+        })
+
+        // color country
+        function colorCountry(country) {
+            if (career_countries.includes(country.properties.name)) {
+                return '#b5bcc7';
+            } else {
+                return '#364661';
+            }
+        };
+
+        function colorStroke(country) {
+            if (career_countries.includes(country.properties.name)) {
+                return 'black';
+            } else {
+                return 'grey';
+            }
+        };
+
+        function mouseOverCity(citiesCoordinates, _index) {
+            d3.select(this)
+                .attr("fill", "#0067ff")
+                .style("r", (2 * circle_radius) + "px")
+                .style("transition", "all .7s");
+
+            var html_city_information;
+            cities.forEach(city => {
+                if (city.coordinates[0] == citiesCoordinates[0] && city.coordinates[1] == citiesCoordinates[1]) {
+                    html_city_information = city.information.join(""); // Concatenate all strings of array and remove comma
+                }
+
+                map_tooltip.html(html_city_information)
+                    .style("left", (d3.event.pageX + 10) + "px")
+                    .style("top", (d3.event.pageY + 10) + "px")
+                    .style("opacity", 1)
+                    .style("transition", "opacity .7s");
+            });
+
+            // Circle Number on cities
+            d3.select('.circlenumber' + (_index + 1))
+                .style("font-size", 20)
+                .style("transform", "translateY(-5px)")
+                .style("transition", "all 1s");
+        }
+
+        function mouseOutCity(citiesCoordinates, _index) {
+            d3.select(this)
+                .attr("fill", "#0052CC")
+                .style("r", circle_radius + "px");
+
+            map_tooltip.html('')
+                .style("opacity", 0)
+                .style("transition", "opacity 0s");
+
+            // Circle Number on cities
+            d3.select('.circlenumber' + (_index + 1))
+                .style("font-size", 13)
+                .style("transform", "translateY(0)")
+                .style("transition", "all 1s");
+        }
+    }
+
+
+    function run_animation() {
+        d3.json(geoJsonUrl, function (geojson) {
+            let cities_coordinates = [];
+            cities.forEach(city => {
+                cities_coordinates.push(city.coordinates)
+            });
+
+            runAnimationCities(cities_coordinates);
+        })
+    }
+
+    function runAnimationCities(cities_coordinates) {
+        console.log("Running animation");
+
+        // Generate arrays for all tooltips, lines and circles' positions
+        var map_tooltips = [];
+        var map_lines = [];
+        var circles_position = [];
+
+        for (i = 0; i < nb_cities; i++) {
+            map_tooltips.push(d3.select("body").append("div")
+                .attr("class", "tooltip-map")
+                .style("opacity", 0)
+            );
+
+            map_lines.push(g.append("line")
+                .style("stroke", "#0067ff")
+                .style("stroke-width", 3)
+                .style("stroke-dasharray", ("5, 5")) // 5px long, 5px offset
+                .style("opacity", 0)
+            );
+
+            circles_position.push($('.circle' + (i + 1)).position());
+        }
+
+        for (let i = 0; i < nb_cities; i++) {
+            let duration = 1800;
+            let tooltip_offset = 10; // In pixel
+            let svg_position = $('#map_europe').position();
+
+            // Circles on cities
+            d3.select('.circle' + (i + 1))
+                .attr("fill", "#0052CC")
+                .transition()
+                .delay(2 * duration * i)
+                .style("r", circle_radius + "px")
+                .transition()
+                .duration(duration)
+                .style("r", (circle_radius * 2) + "px")
+                .transition()
+                .duration(duration)
+                .style("r", circle_radius + "px")
+
+            // Circle Number on cities
+            d3.select('.circlenumber' + (i + 1))
+                .transition()
+                .delay(2 * duration * i)
+                .style("font-size", 13)
+                .style("transform", "translateY(0)")
+                .transition()
+                .duration(duration)
+                .style("font-size", 20)
+                .style("transform", "translateY(-5px)")
+                .transition()
+                .duration(duration)
+                .style("font-size", 13)
+                .style("transform", "translateY(0)")
+
+            // Tooltips near each city
+            map_tooltips[i].html(cities[i].information.join(""))
+                .style("left", (circles_position[i].left + tooltip_offset) + "px")
+                .style("top", (circles_position[i].top + tooltip_offset) + "px")
+                .transition()
+                .delay(2 * duration * i)
+                .style("opacity", 0)
+                .transition()
+                .duration(duration)
+                .style("opacity", .8)
+                .transition()
+                .duration(duration)
+                .style("opacity", 0)
+                .remove();
+
+            // Add 'circle_radius' otherwise the line start and end point won't be centered on city circle
+            line_x1 = line_x2 = circles_position[i].left + circle_radius - svg_position.left;
+            line_y1 = line_y2 = circles_position[i].top + circle_radius - svg_position.top;
+            // For all but last city, the end of the line is defined. For the last city, no line is drawn
+            if (i < (cities_coordinates.length - 1)) {
+                line_x2 = circles_position[i + 1].left + circle_radius - svg_position.left;
+                line_y2 = circles_position[i + 1].top + circle_radius - svg_position.top;
+            }
+
+            // Lines between cities
+            map_lines[i]
+                .attr("x1", line_x1)
+                .attr("y1", line_y1)
+                .transition()
+                .duration(2 * duration + (i - 1) * (2 * duration))
+                .style("opacity", 0)
+                .attr("x2", line_x1)
+                .attr("y2", line_y1)
+                .transition()
+                .duration(duration * 4)
+                .style("opacity", 1)
+                .attr("x2", line_x2)
+                .attr("y2", line_y2)
+                .transition()
+                .duration(duration)
+                .style("opacity", 0)
+                .remove();
+        };
+
+    }
+
+    $(document).ready(() => {
+        setup_svg_d3();
+        run_animation();
+    });
+
+
+    /*
+    Use "$(document).on('click',..." instead of "$('.experience__company').click(function () {"
+    otherwise the event listener is added before object is created (?) --> wont' work
+    */
+    $(document).on('click', '.experience__company', function () {
+        let element_index = $(this).index();
+
+        const career_start = jobstart[0];
+        const job_start = jobstart[element_index];
+        const career_duration = current_year - career_start;
+        const job_month_year = jobMonthYear[element_index];
+
+        let job_duration = 0;
+        if (element_index == nb_jobs - 1) {
+            job_duration = current_year - job_start;
+        } else {
+            job_duration = jobstart[element_index + 1] - job_start;
+        }
+
+        let job_width = (job_duration / career_duration * 100) + "%";
+        let job_left = ((job_start - career_start) / career_duration * 100) + "%";
+
+        // Define pseudo classes (::before and ::after) contents
+        let before_content = "'" + job_month_year[0] + "'";
+
+        let after_content = "";
+        let current_month_short = months[current_month].slice(0, 3);
+        if (element_index == nb_jobs - 1) {
+            after_content = "'" + current_month_short + " " + current_year + "'";
+        } else {
+            after_content = "'" + job_month_year[1] + "'";
+        }
+
+        // Apply modifications to element via css
+        $(this).addClass('experience__company--active');
+        $(this).siblings().removeClass('experience__company--active');
+
+        $('.job-header__title').text(jobtitle[element_index]);
+        $('.city-country').text(place[element_index]);
+
+        $('.timeline__segment').css({
+            "left": job_left,
+            "width": job_width,
+            "--beforeContent": before_content,
+            "--afterContent": after_content,
+        });
+
+        $('.job-activities').empty();
+        activities[element_index].forEach(element => {
+            $('.job-activities').append(`
+                    <div class="job-activity flex">
+                        <img src="/img/arrow-right.svg" class="job-activity__image" alt="Icon arrow right" />
+                        <div class="job-activity__text">${element}</div>
+                    </div>
+                `);
+        });
+
+        $('.job-summary').empty();
+        summary[element_index].forEach(element => {
+            $('.job-summary').append(`
+                    <div class="job-summary__text">${element}</div>
+                `);
+        });
+    });
+
+    function loadJSON(callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', 'cv.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                /* Required use of an anonymous callback as .open will NOT return a value but simply 
+                returns undefined in asynchronous mode */
+                callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+    }
+
+</script>

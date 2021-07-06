@@ -1,0 +1,39 @@
+/* CAREER SECTION */
+/* -------------- */
+.career {
+    &__header {text-align: center;}
+
+    &__paragraph {
+        width: 85%;
+        max-width: 80rem;
+        margin: 2rem auto 6rem; // Top: 2rem, left & right: auto, bottom: 6rem
+
+        a {
+            color: $color__primary;
+            font-weight: 400;
+        }
+
+        span a {
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: '\2192';
+                font-size: 3rem;
+                position: absolute;
+                top: -1rem;
+                margin-left: 1rem;
+            }
+        }
+
+    }
+}
+
+.career-cards {
+    &__grid {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 5rem;
+        align-items: stretch; // Per default
+    }
+}
+

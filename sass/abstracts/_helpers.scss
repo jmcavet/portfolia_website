@@ -1,0 +1,20 @@
+
+@function get-font-scale($level) {
+    @return map-get($font-scale, $level);
+}
+
+@function get-line-height($level) {
+    @return map-get($line-height, $level);
+}
+
+@function get-font-weight($level) {
+    @return map-get($font-weight, $level);
+}
+
+@function get-margin($level) {
+    @return map-get($margin, $level);
+}
+
+@function get-padding($level) {
+    @return map-get($padding, $level);
+}

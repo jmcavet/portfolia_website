@@ -1,0 +1,377 @@
+.tooltip-map {
+    @include color-bg-text($color__gray--600, $color__white);
+    border: $color__primary 2px solid;
+    padding: .5rem 1rem;
+    position: absolute;
+}
+
+.map-city {
+    font-weight: 600;
+    text-align: center;
+
+    span {
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+
+    &__activity {color: $color__gray--50;}
+}
+
+.about-header {
+    &__intro {
+        @include margin($bottom: xxxl);
+
+        @media only screen and (max-width: $bp-small) {
+            @include margin($bottom: xxl);
+        }
+    }
+
+    &__grid0 {
+        grid-template-columns: minmax(min-content, 45rem) minmax(min-content, max-content);
+        align-items: center;
+        grid-gap: 3rem;
+
+        p {
+            @include font-scale(xl);
+            //background-color: violet;
+            margin: 0;
+            padding: 1rem;
+
+            &:first-child {
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: .4rem;
+            }
+
+            span {
+                font-size: 2.7rem;
+                font-weight: 600;
+                color: $color__primary--700;
+            }
+        }
+
+        figure img {
+            border-radius: 50%;
+            box-shadow: 0 1rem 2rem rgba($color__gray--800, .3);
+            width: 100%;
+            height: 100%;
+            max-width: 30rem;
+            /*In order to use object-fit, you need to define BOTH width and height.
+            Object-fit will make sur the element/image is resized to fit its parent container (being the <figure> tag).
+            'cover' --> the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit.*/
+            object-fit:cover;
+            /*Let's define it as block, otherwise it will have these weird white space after it because it's teated
+            as an inline element, like text.*/
+            display: block;
+            margin: 0 auto;
+
+        }
+
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__grid1 {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content:space-between;
+        justify-items: center;
+        
+        svg {background-color: $color__gray--800;}
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__travelling {
+        p:last-child {margin-bottom: 0;}
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__grid2 {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content:space-between;
+        justify-items: center;
+        align-items: start;
+        grid-column-gap: 5rem;
+        margin-top: 4rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// SECTION 'MY EXPERIENCE'
+#experience {@include flexbox(row, center, center);}
+
+.experience {
+    //display: none;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__grid {
+        grid-template-columns: 3fr 2fr;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-rows: repeat(2, max-content);
+            grid-template-columns: none;
+
+            .job-summary {
+                padding: 1rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__cv-data {
+        @include color-bg-text($color__gray--800, $color__white);
+        padding: 2rem;
+    }
+
+    &__companies {
+        margin-bottom: 3rem;
+        border-bottom: 1px solid $color__gray--600;
+        
+        & > * {
+            @include color-bg-text($color__gray--800, $color__gray--300);
+            padding: .75rem 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__company {
+        @extend %button-shared;
+        @include font-line-settings(md);
+        border: none;
+        border-radius: 0;
+        transition: transform .3s;
+        
+        &--active {
+            color: $color__primary--50;
+            border-top: 2px solid $color__primary--50;
+            border-bottom: 2px solid $color__primary--50;
+            transform: translateY(-.3rem);
+        }
+    
+        &:hover {
+            color: $color__primary--50;
+            transition: transform 1s;
+            transform: translateY(-.3rem);
+        }            
+    }
+
+    &__cv-description {
+        display: block;
+        width: 100%;
+        @include color-bg-text($color__gray--50, $color__gray--800);
+    
+        span {color: $color__primary;}
+    }
+
+
+    &__job-header {margin-bottom: 3rem;}
+}
+
+.company {
+    @extend %button-shared;
+    @include font-line-settings(md);
+    border: none;
+    border-radius: 0;
+    transition: transform .3s;
+    
+    &--active {
+        color: $color__primary--100;
+        border-top: 2px solid $color__primary--100;
+        border-bottom: 2px solid $color__primary--100;
+        transform: translateY(-.3rem);
+    }
+
+    &:hover {
+        color: $color__primary--100;
+        transition: transform 1s;
+        transform: translateY(-.3rem);
+    }
+}
+
+.job-header {
+    margin-bottom: 3rem;
+
+    &__title {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+
+    &__place {
+        @include color-bg-text($color__gray--700, $color__gray--50);
+        padding: .5rem 1rem;
+    
+        img {
+            width: 2.2rem;
+            height: 2.2rem;
+            margin-right: 1rem;
+        }
+    
+        div {font-size: 1.4rem;}
+    }
+}
+
+.job-activity {
+    padding: .5rem 1rem;
+
+    &__image {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1rem;
+        align-self: flex-start;
+        margin-top: .6rem;
+    }
+
+    &__text {color: $color__gray--50;}
+}
+
+.job-summary {
+    padding: 2rem;
+    margin: 2rem auto;
+
+    &__text {padding: 1rem;}
+}
+
+.timeline {
+    margin-bottom: 1.5rem;
+
+    &__year {
+        color: $color__primary--100;
+        padding: .3rem .6rem;
+    }
+
+    &__fullspan {
+        background-color: $color__gray--500;
+        width: 100%;
+        height: 2px;
+        position: relative;
+    }
+
+    &__segment {
+        background-color: $color__secondary;
+        position: absolute;
+        top: -50%;
+        height: 4px;
+        transition: all .7s ease-out;
+        display: inline-block;
+        --beforeContent: '';
+        --afterContent: '';
+
+        &::before,
+        &::after {
+            position: absolute;
+            font-size: 1.3rem;
+            color: $color__secondary;
+        }
+
+        &::before {
+            content: var(--beforeContent);
+            top: -3rem;
+            width: 100%;
+            display: grid;
+            justify-content: flex-end;
+            grid-template-columns: max-content;
+            margin-left: -100%;
+        }
+
+        &::after {
+            content: var(--afterContent);
+            top: 1.5rem;
+            width: 100%;
+            display: grid;
+            justify-content: flex-start;
+            grid-template-columns: max-content;
+            margin-left: 100%;
+        }
+    }
+}
+
+.card-work {
+    &__header {
+        &--left {text-align: left;}
+        &--right {text-align: right;}
+    }
+
+    &__summary,
+    &__additional {
+        padding: 3rem 4rem;
+        grid-row: 1 / span 1;
+    }
+
+    &__summary {@include color-bg-text($color__gray--50, $color__gray--800);}
+
+    &__additional {
+        @include color-bg-text($color__primary, $color__gray--50);
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        > :first-child {margin-bottom: 2rem;}
+
+        @media only screen and (max-width: $bp-large) {
+            grid-row: 2 / span 1;
+            flex-direction: row;
+            > :first-child {
+                margin-right: 5rem;
+                margin-bottom: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            > :first-child {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+
+        :first-child {margin-right: 2rem;}
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 2rem;
+        }
+
+        h3 {margin: 0;}
+    }
+}
+
+.map_europe_container {
+    position: relative;
+    align-self: center;
+}
+
+.map_europe_reload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+
+    img {
+        width: 3rem;
+        height: 3rem;
+        transition :transform .5s;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+}

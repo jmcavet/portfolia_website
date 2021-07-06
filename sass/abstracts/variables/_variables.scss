@@ -1,0 +1,43 @@
+/* BUTTONS
+Note: no colors specified here, but rather within the button-theme mixin
+*/
+$button-padding: 1.8rem 3.2rem;
+$button-border-width: 1px;  // border width for all form inputs
+$button-border-radius: 3px;
+$button-border-style: solid;
+$button-text-transform: none;
+
+$button-transition-time: .3s;
+$button-cursor: pointer;
+
+/* LINKS */
+$link-color: $color__primary;
+$link-visited-color: $color__primary;
+
+/* ICONS */
+$icon-color: $color__primary;
+$icon-hover-color: $color__primary;
+
+/* LOGO */
+$logo__color: $color__white;
+
+/* HEADER */
+$header__color-bg: $color__gray--900;
+$header__color-text: $color__white;
+
+$developer-text__color: $color__gray--50;
+$summary-text__color: $color__gray--200;
+$summary-span-text__color: $color__gray--50;
+$profile-border__color: $color__primary;
+$description-item-bg__color: $color__gray--700;
+$description-item-text__color: $color__gray--50;
+
+/* NAVBAR */
+$navbar__color-bg: $color__primary--900;
+$navbar__color-text: $color__gray--50;
+$navbar__color-text--hover: $color__white;
+$navbar__color-borderbottom: $color__primary;
+
+/* FOOTER */
+$footer__color-bg: $color__primary--900;
+$footer__color-text: $color__gray--50;

@@ -1,0 +1,50 @@
+//$space-unit: 1rem;
+$space-unit: $base-font-size;
+
+$margin: (
+  xxs: calc(0.25 * #{$space-unit}),
+  xs: calc(0.5 * #{$space-unit}),
+  sm: calc(0.75 * #{$space-unit}),
+  md: calc(1 * #{$space-unit}),
+  lg: calc(1.5 * #{$space-unit}),
+  xl: calc(3 * #{$space-unit}),
+  xxl: calc(5 * #{$space-unit}),
+  xxxl: calc(8 * #{$space-unit}),
+  auto: auto
+);
+
+@each $name, $value in $margin {
+  .m-t-#{$name} {@include margin($top: $value);}
+  .m-b-#{$name} {@include margin($bottom: $value);}
+  .m-l-#{$name} {@include margin($left: $value);}
+  .m-r-#{$name} {@include margin($right: $value);}
+
+  .m-x-#{$name} {@include margin($left: $value, $right: $value);}
+  .m-y-#{$name} {@include margin($top: $value, $bottom: $value);}
+  
+  .m-#{$name} {@include margin($top: $value, $bottom: $value, $left: $value, $right: $value);}
+}
+
+$padding: (
+  xxs: calc(0.25 * #{$space-unit}),
+  xs: calc(0.5 * #{$space-unit}),
+  sm: calc(0.75 * #{$space-unit}),
+  md: calc(1 * #{$space-unit}),
+  lg: calc(1.5 * #{$space-unit}),
+  xl: calc(3 * #{$space-unit}),
+  xxl: calc(5 * #{$space-unit}),
+  xxxl: calc(8 * #{$space-unit}),
+  auto: auto
+);
+
+@each $name, $value in $padding {
+  .p-t-#{$name} {@include padding($top: $value);}
+  .p-b-#{$name} {@include padding($bottom: $value);}
+  .p-l-#{$name} {@include padding($left: $value);}
+  .p-r-#{$name} {@include padding($right: $value);}
+
+  .p-x-#{$name} {@include padding($left: $value, $right: $value);}
+  .p-y-#{$name} {@include padding($top: $value, $bottom: $value);}
+  
+  .p-#{$name} {@include padding($top: $value, $bottom: $value, $left: $value, $right: $value);}
+}

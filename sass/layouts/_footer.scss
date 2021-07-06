@@ -1,0 +1,39 @@
+.footer {
+    background-color: $footer__color-bg;
+    color: $footer__color-text;
+    grid-column: 1 / -1;
+    padding: 5rem;
+
+    &__social {
+        @include flexbox(row, space-around, null, null, null);
+        width: 25vw;
+        margin: 4rem auto;
+
+        & > :not(:last-child) {
+            margin-right: 5rem;
+        }
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__navbar {        
+        @include flexbox(row, center, null, null, center);
+        font-size: 1.5rem;
+        list-style: none;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: $footer__color-text;
+    text-align: center;
+    margin: 4rem auto;
+    width: 80%;
+}

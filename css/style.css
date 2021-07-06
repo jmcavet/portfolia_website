@@ -1,0 +1,2358 @@
+@charset "UTF-8";
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, sass tools, helpers, variables, mixins,
+functions and other config files. They have no direct output.
+*/
+/*
+This file is used to contain all variables imports from abstracts.
+Files inside this folder can contain variables such as colors, fonts, etc.
+*/
+/*
+To keep your color variables from becoming too granular, if a color name is duplicated, then it's not
+ worth having its own variable. Instead, use the built in Sass color functions. In the above example, 
+ you would use darken($mine-shaft, 2.5%) instead of #303030.
+*/
+/*---COLOR PALETTE---*/
+/*
+____PRIMARY____
+#4ad395 (153/61/56) --> Base for primary. Background of main cta buttons
+                    --> Some 'primary' paragraphs (.item-title). Sub-paragraphs (.item-title as well)
+                    will have the #374957 color (see below medium blue grays)
+#2bc48a (157/64/47) --> Hover on base color above (slightly darker)
+                    --> Background of navbar items (with white text color) on a surface color of #0b2138
+                    --> Background of footer items (with white text color) on a surface color of #08192b
+                    --> Background of 1 cta button (with white text color) on a surface color of #08192b
+#00af80 (164/100/34) --> Used when hovering on #2bc48a. Makes button border color lighter.
+#009d73 (164/100/31) --> Color for hyperlinks
+
+____DARK BLUE GRAYS____
+#0b2138 (210/68/13) --> background header/navbar and footer (Hue: 210, azzuro --> very dark)
+                    --> Two text color appearances (top 'heading' being actually a paragraph with 
+                        large font-size, and <h1> tag just below (smaller font-size)) 
+#0e2b49 (210/68/17) --> (lighter than #08192B). Used as background for some section with text, button, card on it.
+#143a6b (214/68/25) --> Used on top of the #0e2b49 section. Lighter blue as #0e2b49, nice contrast.
+
+____MEDIUM BLUE GRAYS____
+#374957 (206/23/28) --> h3 text and paragraph (.item-title). (Hue: 206, azzuro --> blue-gray medium)
+        --> Is actually on most of the text of the page
+#4a6375 (205/23/37) --> p (.item-text) (Hue: 205, azzuro --> blue-gray medium)
+#5f7d95 (207/22/48) --> body default text (Hue: 207, azzuro --> blue-gray medium). Used for default paragraphs.
+
+____LIGHT BLUE GRAYS____
+#839caf (206/22/60) --> also text on footer, more subtil (Hue: 206, azzuro --> very light blue)
+#CFD9E0 (205/22/85) --> text color on navbar & footer (Hue: 205, azzuro --> very light blue, 
+                        lighter than #869FB2, almost white)
+#eff3f6 (206/28/95) --> Hover on #cfd9e0 (above)
+                    --> background color for search bar on white surface.
+                    --> Can be used for section background as well
+#f8fafb (200/27/97) --> Very light section background (could be used with a linear-gradient as well!) 
+#fff (0/0/100) --> body background
+
+__ACCENT__
+#fca120 (35/97/56): Text on #0b2138 (navbar background) or on #08192b (footer background)
+#f69110 (34/93/51): hover on color above (slightly darker)
+*/
+/*
+- HUE: The Hue Property is a color picked from a palette of 360 colors. The colors are set in a circle, and 
+each hue is a degree in the color-wheel. The chosen color is the base from which we’ll create other 
+shades by adding saturation, lightness, or both.
+- SATURATION: The Saturation Property describes the color’s saturation. 0% means no color (the color will be grey)
+, and a value of 100% will show the color in its most vibrant color. It’s best to use a value in the range of 
+10% — 100% since that will allow us to see the base color.
+- LIGHTNESS: The Lightness Property describes the lighting intensity. The extreme values will eliminate the 
+color: 0% will look black, and 100% will look white. Therefore we prefer to use numbers between 10% and
+ 90% since that will allow us to see the base color.
+*/
+/*
+// CONFIG VARIABLES
+$color__primary: $shamrock;
+$color__primary--400: darken(saturate(adjust-hue($color__primary, 4deg), 3%), 9%);
+$color__primary--500:darken(saturate(adjust-hue($color__primary, 11deg), 39%), 22%);
+$color__primary--600: darken(saturate(adjust-hue($color__primary, 11deg), 39%), 25%);
+
+$color__accent: $tree-poppy;
+$color__accent--500: darken(desaturate(adjust-hue($color__accent, -1deg), 4%), 5%);
+
+// Dark grays
+$color__gray--900: $blue-zodiac; // Background header/navbar and footer + top headings (h1)
+$color__gray--850: lighten($color__gray--900, 4%); // Background for some section with text, button, card on it.
+$color__gray--800: lighten(adjust-hue($color__gray--900, 4deg), 12%); // On top of $color__gray--850
+
+// Medium grays
+$color__gray--700: $oxford-blue; // h3 text and paragraph (.item-title). Mostly the body's text
+$color__gray--600: lighten($color__gray--700, 10%); // Paragraph (.item-text)
+$color__gray--500: lighten($color__gray--700, 20%); // Body default text 
+$color__gray--300: lighten($color__gray--700, 30%); // Text on footer
+
+// Light grays
+$color__gray--150: lighten($color__gray--700, 55%); // text color on navbar & footer
+$color__gray--100: lighten(saturate($color__gray--700, 5%), 65%); // Hover for text on navbar & footer + used for section background
+$color__gray--50: lighten(saturate($color__gray--700, 5%), 70%);
+
+$color__white: #fff;
+*/
+/*
+$turquoise-blue: #5CEBDF;
+$color__primary--500: $turquoise-blue; // CTA bg (with 900 as text)
+
+$color__primary--900: darken(adjust-hue($turquoise-blue, 35deg), 55%); // Text for CTA (normal and hover) + Bg for some section with white text
+$color__primary--800: darken(adjust-hue($turquoise-blue, 17deg), 36%);
+$color__primary--700: darken(adjust-hue($turquoise-blue, 11deg), 27%);
+$color__primary--600: darken(adjust-hue($turquoise-blue, 5deg), 15%); // Bg moderate for a section (on top of white body surface) with white as text
+
+$color__primary--400: lighten(adjust-hue($turquoise-blue, -6deg), 10%);
+$color__primary--300: lighten(adjust-hue($turquoise-blue, -11deg), 16%);
+$color__primary--200: lighten(adjust-hue($turquoise-blue, -16deg), 23%); // Hover on CTA bg (with 900 as text)
+$color__primary--100: lighten(adjust-hue($turquoise-blue, -22deg), 30%); // Border around input when clicking inside
+$color__primary--050: lighten(adjust-hue($turquoise-blue, -40deg), 33%); // Bg light, with gray--800 as text
+*/
+/*For headings, CTA buttons, links, etc.*/
+/*
+$color__primary--500: $science-blue;
+$color__primary--900: darken($science-blue, 25%);
+$color__primary--800: darken($science-blue, 20%);
+$color__primary--700: darken($science-blue, 15%);
+$color__primary--600: darken($science-blue, 10%);
+$color__primary--400: lighten($science-blue, 10%);
+$color__primary--300: lighten($science-blue, 15%);
+$color__primary--200: lighten($science-blue, 20%);
+$color__primary--100: lighten($science-blue, 25%);
+$color__primary--75: lighten(saturate(adjust-hue($science-blue, -20deg), 40%), 15%);
+$color__primary--50: lighten($science-blue, 55%);
+*/
+/*For primary actions, buttons, text links, for indicating progress, etc.*/
+/*
+$ocean-green: #00c2a2; // #03b4b4;
+$color__secondary: $ocean-green;
+$color__secondary--300: $ocean-green;
+
+$color__secondary--500: darken(saturate($ocean-green, 45%), 25%);
+$color__secondary--400: darken(saturate($ocean-green, 45%), 20%);
+$color__secondary--200: lighten($ocean-green, 15%);
+$color__secondary--100: lighten($ocean-green, 25%);
+$color__secondary--75: lighten($ocean-green, 35%);
+$color__secondary--50: lighten($ocean-green, 50%);
+*/
+/*----NEUTRALS----*/
+/*
+$big-stone: #172B4D; //rgb(16, 20, 46);//#00364d; //#031d49; //#11213d; //#172B4D
+$color__gray: $big-stone;
+$color__gray--800: $big-stone;
+
+//Dark neutrals are very effective for creating contrast and are therefore the primary color used for 
+//typography. Occasionally the dark neutrals are found in illustration but they rarely dominate the palette
+$color__gray--900: darken(saturate($big-stone, 15%), 5%);
+$color__gray--700: lighten(desaturate($big-stone, 15%), 5%);
+$color__gray--600: lighten(desaturate($big-stone, 25%), 10%); // Usually some sub-section text color, underneath some base dark gray (--800)
+$color__gray--500: lighten(desaturate($big-stone, 32%), 15%); // Usually some sub-section text color, underneath some dark gray (--600)
+
+//Use mid-neutrals to create depth in components such as modal dialog blankets and cards. Avoid mid-neutrals 
+//as background colors because there is usually not enough contrast to remain AA compliant.
+//The mid-neutrals N400 to N200 can be used for subtle text and icons on light-neutral backgrounds.
+
+//Subtle text on light gray bg (N20). Ex: Bg: N20, Heading h1, h2, h3 (N800), paragraph underneath (N400).
+$color__gray--400: lighten(desaturate($big-stone, 37%), 20%);
+$color__gray--300: lighten(desaturate($big-stone, 40%), 25%);
+$color__gray--200: lighten(desaturate($big-stone, 40%), 30%);
+$color__gray--100: lighten(desaturate($big-stone, 40%), 35%);
+$color__gray--90: lighten(desaturate($big-stone, 40%), 40%);
+$color__gray--80: lighten(desaturate($big-stone, 40%), 45%);
+$color__gray--70: lighten(desaturate($big-stone, 40%), 50%);
+$color__gray--60: lighten(desaturate($big-stone, 40%), 55%);
+
+//We use light neutrals as subtle backgrounds to indicate various interactive states such as hover and 
+//disabled, or simply to create secondary attention towards a component. You'll find light neutrals in buttons,
+//text fields, tags, and illustrations. Light neutrals are helpful for offsetting content in a primarily white
+//layout without losing warmth and cleanliness and are therefore often used as a background color.
+$color__gray--50: lighten(desaturate($big-stone, 40%), 60%);
+$color__gray--40: lighten(desaturate($big-stone, 40%), 70%);
+// 30: Bg with N600 text
+$color__gray--30: lighten(desaturate($big-stone, 40%), 72%);
+// 20: Good card bg color on white surface
+$color__gray--20: lighten(desaturate($big-stone, 40%), 75%);
+//10: Bg color for sections (creates separation). For text, N800 and N400 for more subtle sub-title.
+//Refer to https://atlassian.design/foundations/color (top section of page).
+$color__gray--10: lighten(desaturate($big-stone, 40%), 78%);
+$color__white: #fff;
+*/
+/*
+$color__gray--0: hsl(210, 0%, 100%);
+$color__gray--50: hsl(210, 20%, 97%);
+$color__gray--100: hsl(210, 0%, 95%);
+$color__gray--200: hsl(210, 0%, 90%);
+$color__gray--300: hsl(210, 0%, 85%);
+$color__gray--400: hsl(210, 0%, 80%);
+$color__gray--500: hsl(210, 0%, 70%);
+$color__gray--600: hsl(210, 0%, 55%);
+$color__gray--700: hsl(210, 0%, 40%);
+$color__gray--800: hsl(210, 35%, 20%);
+$color__gray--900: hsl(210, 0%, 10%);
+$color__gray--1000: hsl(210, 0%, 0%);
+$color__white: $color__gray--0;
+*/
+/*
+Note: it seems that headings tend to have a Neutral 700 (<800, more colorful)
+whereas paragraphs a Neutral 900.
+
+Surface Bg: White
+Section Bg: Neutral 10
+Headline (h1) Text: Neutral 800
+Paragraph or Sub-title (h2 or h3?) Text: Neutral 400 
+
+Surface Bg: White
+Section Bg: Primary 50
+Headline (h1, h2, h3) Text: Neutral 700
+Text underneath headline (not paragraph, just 1 line): Neutral 500
+Normal Paragraph (multi-lines) underneath headline (h3): Neutral 900
+
+Surface Bg: White
+Large Card Bg: Neutral 20
+Bold/Important Text: Neutral 800
+More subtle Text: Neutral 300
+Colored Text: Primary
+
+Surface Bg: White
+Bold/Important Text: Neutral 800
+More subtle Text: Neutral 200 or Neutral 300, not much a difference!
+Colored Text: Primary
+
+Several sections example:
+1. White (you can have some primary--inversed button or some bg-color: primary--50 and text-color: primary)
+2. Neutral 800 + white text on top --> any other color (most likely light) welcome?)
+3. Neutral 20 + Neutral 700 (h2 & h3) and Neutral 900 (multi-lines paragraph underneath headings) 
+4. White again
+5. Primary bg + white text on top + (bg: accent, text: Neutral 800 for button)
+
+*/
+/* FONT FAMILY */
+/* BASE FONT SIZE, HEIGHT, WEIGHT */
+/*line height (pixels) ÷ body copy font size (pixels) = 1.48.
+Note that 1.5 is a value that is commonly recommended in classic
+typographic books --> refer to my medium (md) value, used for paragraphs*/
+/*Make sure headings have some bold font-weight --> visual hierarchy!*/
+.m-t-auto {
+  margin-top: auto; }
+
+.m-b-auto {
+  margin-bottom: auto; }
+
+.m-l-auto {
+  margin-left: auto; }
+
+.m-r-auto {
+  margin-right: auto; }
+
+.m-x-auto {
+  margin-right: auto;
+  margin-left: auto; }
+
+.m-y-auto {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.m-auto {
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto; }
+
+.p-t-auto {
+  padding-top: auto; }
+
+.p-b-auto {
+  padding-bottom: auto; }
+
+.p-l-auto {
+  padding-left: auto; }
+
+.p-r-auto {
+  padding-right: auto; }
+
+.p-x-auto {
+  padding-right: auto;
+  padding-left: auto; }
+
+.p-y-auto {
+  padding-top: auto;
+  padding-bottom: auto; }
+
+.p-auto {
+  padding-top: auto;
+  padding-right: auto;
+  padding-bottom: auto;
+  padding-left: auto; }
+
+/* BUTTONS
+Note: no colors specified here, but rather within the button-theme mixin
+*/
+/* LINKS */
+/* ICONS */
+/* LOGO */
+/* HEADER */
+/* NAVBAR */
+/* FOOTER */
+.color-primary {
+  color: #1a4de6; }
+
+.color-primary--200 {
+  color: #a3b8f5; }
+
+.color-secondary {
+  color: #1ae6d5; }
+
+.color-gray--500 {
+  color: #668099; }
+
+.bg-color-light {
+  background-color: #f7f7f8; }
+
+.bg-color-medium {
+  background-color: #a7b3be; }
+
+.bg-color-dark {
+  background-color: #213345; }
+
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.scroll-down {
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: transform 1s, opacity 1s; }
+
+.anim-scroll-down {
+  opacity: 1;
+  transform: translateY(0); }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* For fonts (family, weight, line height), save them in '_typography.scss'*/
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  /*Borders and paddings are no longer added to the total width or height*/
+  box-sizing: border-box;
+  /*Apply a padding for the whole body. It gives a good style to the page*/
+  /*
+    @include respond(tab-port) {
+        padding: 0;
+    }
+    */ }
+
+a {
+  background-color: transparent;
+  color: #1a4de6;
+  color: inherit;
+  text-decoration: none; }
+
+p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: calc(1 * 1.8rem);
+  /*
+    Have some subtle neutral for paragraphs. They should be more subtle than headings.
+    */
+  color: #394d60; }
+
+li {
+  list-style-type: none; }
+
+/*Used to select some text (for copy/paste for instance)*/
+::selection {
+  background-color: #1a4de6;
+  color: white; }
+
+/*BASIC STYLES RELATED TO ALL TEXT ELEMENTS*/
+body {
+  /*Properties related to fonts are usually inherited.
+    
+    Alway specify Fonts here in the body, not in the '*' universal selector.
+
+    We set the Font family of the body element, which is the parent element of all other elements.
+    All children of body will inherit from this font-family*/
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+  background-color: white;
+  color: #111a22; }
+
+.heading-1, .heading-2, .heading-3 {
+  font-family: "Prata", sans-serif; }
+
+.heading-1 {
+  font-size: 5.04rem;
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: calc(3 * 1.8rem); }
+
+.heading-2 {
+  font-size: 3.96rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: calc(1.5 * 1.8rem);
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  /*
+    In the Clarity Design System, Headers can have apparently either dark gray (neutral--900) or 
+    dark primary (primary--700, primary--800) variations
+    Let's have some primary dark color instead of neutral gray for heading 2
+    */
+  color: #1a4de6; }
+
+.heading-3 {
+  font-size: 2.52rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: calc(0.75 * 1.8rem);
+  color: #213345; }
+
+.paragraph-container {
+  max-width: 80rem; }
+
+/*
+.u-fs-sm {font-size: $font-size-small !important;}
+.u-fs-md {font-size: $font-size-medium !important;}
+.u-fs-big {font-size: $font-size-big !important;}
+.u-fs-huge {font-size: $font-size-huge !important;}
+*/
+/*If the child of this div is an inline-block, then it is treated as text and
+therefore will be centered using 'text-align: center' on its parent div.
+If its child is a block element, it will be centered as well.
+If it is an inline element ('a' tag, etc.), then it will not center it. For that to work,
+you have to add your 'a' tag the attribute 'display: inline-block'.*/
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+/*We put !important here because for the form group ('<div class="form__group u-margin-bottom-medium">') in
+index.html, the class 'form__group' (with a margin-bottom of 2rem) is more specific (because it is 
+.form {form__group:not(:last-child) {margin-bottom: 2rem;}) and therefore takes precedence over our utility
+class 'u-margin-bottom-medium'. */
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+  /*
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+    */ }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+  /*
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+    */ }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.span-link {
+  color: #1a4de6; }
+
+.span-bold {
+  font-weight: 600; }
+
+.text-center {
+  text-align: center; }
+
+.bulletpt {
+  text-indent: -2.75rem; }
+  .bulletpt::before {
+    display: inline-block;
+    content: '';
+    border-radius: 50%;
+    height: .8rem;
+    width: .8rem;
+    margin-right: 1rem;
+    margin-left: 1rem; }
+  .bulletpt--primary::before {
+    background-color: #1a4de6; }
+  .bulletpt--white {
+    color: white; }
+    .bulletpt--white::before {
+      background-color: white; }
+
+.bullet-triangle::before {
+  content: '\2bc8';
+  display: inline-block;
+  margin-right: 1rem;
+  color: #1ae6d5; }
+
+.bullet-triangle--after::after {
+  content: '\2bc8';
+  display: inline-block;
+  margin-left: 1rem;
+  color: #1ae6d5; }
+
+.bullet-triangle-down--after::after {
+  content: '\2bc6';
+  display: inline-block;
+  margin-left: 1rem;
+  color: #1ae6d5; }
+
+.bullet-plus--after::after {
+  content: '\002B';
+  display: inline-block;
+  font-size: 4rem;
+  margin-left: 1rem;
+  color: #1a4de6; }
+
+.bullet-minus--after::after {
+  content: '\002D';
+  display: inline-block;
+  font-size: 4rem;
+  margin-left: 1rem;
+  color: #d1dbfa; }
+
+.separator {
+  width: 15%;
+  height: 2px;
+  background: #1a4de6;
+  margin-top: calc(3 * 1.8rem);
+  margin-right: auto;
+  margin-bottom: calc(3 * 1.8rem);
+  margin-left: auto; }
+
+/* Additonal Base Stylesheets */
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating to a reusable component.
+*/
+/*I put this placeholder in the same file as class, and not in helpers file (recommended?) since problem
+with import (before/after) --> looping problem*/
+.btn, .experience__company, .company {
+  font-size: 2.07rem;
+  font-weight: 300;
+  line-height: 1.35;
+  font-weight: 600;
+  padding-top: calc(0.75 * 1.8rem);
+  padding-right: calc(1 * 1.8rem);
+  padding-bottom: calc(0.75 * 1.8rem);
+  padding-left: calc(1 * 1.8rem);
+  text-transform: none;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  transition: all 0.3s;
+  cursor: pointer; }
+
+.btn.primary {
+  background-color: #1a4de6;
+  color: white;
+  border-color: transparent; }
+  .btn.primary:hover {
+    background-color: #1a4de6;
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px); }
+  .btn.primary--inversed {
+    background-color: transparent;
+    color: white;
+    border-color: white; }
+    .btn.primary--inversed:hover {
+      background-color: #1a4de6;
+      color: white;
+      border-color: white;
+      transform: translateY(-3px); }
+  .btn.primary--border {
+    background-color: transparent;
+    color: #1a4de6;
+    border-color: #1a4de6; }
+    .btn.primary--border:hover {
+      background-color: #1a4de6;
+      color: white;
+      border-color: white;
+      transform: translateY(-3px); }
+
+.btn.secondary {
+  background-color: #1ae6d5;
+  color: #111a22;
+  border-color: #1ae6d5; }
+  .btn.secondary:hover {
+    background-color: #47ebcf;
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px); }
+  .btn.secondary--inversed {
+    background-color: transparent;
+    color: white;
+    border-color: white; }
+    .btn.secondary--inversed:hover {
+      background-color: #1ae6d5;
+      color: white;
+      border-color: white;
+      transform: translateY(-3px); }
+
+.career-card {
+  background-color: white;
+  box-shadow: 0px 2px 2px rgba(26, 77, 230, 0.1), 0px 0px 2px 0px rgba(26, 77, 230, 0.1);
+  border-radius: .8rem;
+  overflow: hidden;
+  transition: all .3s;
+  position: relative; }
+  .career-card__grid {
+    grid-template-rows: 15vw auto 5rem;
+    justify-items: center; }
+  .career-card:hover {
+    transform: translateY(-0.5rem) scale(1.02); }
+  .career-card__img {
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    object-fit: cover;
+    display: block; }
+  .career-card__title {
+    background-color: #091c53;
+    color: #eef0f1;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 80%;
+    padding: 1rem;
+    text-align: center;
+    transform: translateY(50%);
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    align-self: end; }
+  .career-card__items {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-top: calc(3 * 1.8rem);
+    padding-right: calc(1 * 1.8rem);
+    padding-bottom: calc(1 * 1.8rem);
+    padding-left: calc(1 * 1.8rem);
+    margin-left: 1rem;
+    list-style-type: none; }
+  .career-card__item:not(:last-child) {
+    margin-bottom: 1.3rem; }
+  .career-card__link {
+    color: #1a4de6;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+    transition: transform .5s; }
+    .career-card__link:hover {
+      transform: scale(1.1); }
+    .career-card__link::after {
+      content: '\2192';
+      font-size: 3rem;
+      position: absolute;
+      top: -1rem;
+      margin-left: 1rem; }
+
+.icon-social__github, .icon-social__linkedin, .icon-social__xing {
+  height: 3rem;
+  width: 3rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.icon-social__github {
+  background-image: url(/img/socials/github.svg); }
+
+.icon-social__linkedin {
+  background-image: url(/img/socials/linkedin.svg); }
+
+.icon-social__xing {
+  background-image: url(/img/socials/xing.svg); }
+
+.icon-social--large {
+  width: 4rem;
+  height: 4rem; }
+
+.icon-web__html5, .icon-web__css3, .icon-web__sass, .icon-web__jquery, .icon-web__bootstrap, .icon-web__javascript, .icon-web__mongodb, .icon-web__nodejs, .icon-web__react {
+  height: 3rem;
+  width: 3rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.icon-web__html5 {
+  background-image: url(/img/projects/html5.svg); }
+
+.icon-web__css3 {
+  background-image: url(/img/projects/css3.svg); }
+
+.icon-web__sass {
+  background-image: url(/img/projects/sass.svg); }
+
+.icon-web__jquery {
+  background-image: url(/img/projects/jquery.svg); }
+
+.icon-web__bootstrap {
+  background-image: url(/img/projects/bootstrap.svg); }
+
+.icon-web__javascript {
+  background-image: url(/img/projects/javascript.svg); }
+
+.icon-web__mongodb {
+  background-image: url(/img/projects/mongodb.svg); }
+
+.icon-web__nodejs {
+  background-image: url(/img/projects/nodejs.svg); }
+
+.icon-web__react {
+  background-image: url(/img/projects/react.svg); }
+
+.projects__grid {
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  grid-gap: 5rem; }
+  @media only screen and (max-width: 43.75em) {
+    .projects__grid {
+      grid-template-columns: 1fr; } }
+
+.project {
+  position: relative;
+  background-color: #07143c;
+  box-shadow: 0 5px 10px 0 rgba(168, 159, 159, 0.3);
+  /*If we do not specify overflow: hidden, we'll see the image overflow its parent frame when we hover.
+    Refer to '&:hover img {transform: scale(1.2);}'*/
+  overflow: hidden; }
+  .project::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: inherit;
+    opacity: 0.95;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1) translate(-100%, -100%) rotate(-35deg);
+    transition: transform 1s cubic-bezier(0.2, 1, 0.3, 1); }
+  .project:hover::after {
+    transform: scale(1) translate(0, 0); }
+  .project__grid {
+    grid-template-rows: max-content auto max-content; }
+  .project__figure {
+    display: block;
+    transition: transform .5s; }
+    .project__figure img {
+      width: 100%;
+      display: block;
+      transition: transform 1000ms cubic-bezier(0.2, 1, 0.3, 1);
+      object-fit: cover; }
+  .project:hover img {
+    transform: scale(1.2); }
+  .project__text {
+    position: absolute;
+    /*It fills the whole parent container*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    z-index: 1;
+    color: white;
+    transition: opacity 1500ms cubic-bezier(0.2, 1, 0.3, 1), transform 1500ms cubic-bezier(0.2, 1, 0.3, 1);
+    transition-delay: 120ms; }
+  .project:hover .project__text {
+    opacity: 1; }
+  .project__buttons {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .project__buttons a:first-child {
+      transition: transform .3s; }
+      .project__buttons a:first-child:hover {
+        transform: scale(1.5); }
+    .project__buttons a:nth-last-child(2),
+    .project__buttons a:nth-last-child(1) {
+      border: none;
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: .6rem 1.3rem;
+      cursor: pointer;
+      transition: transform .3s; }
+      .project__buttons a:nth-last-child(2):hover,
+      .project__buttons a:nth-last-child(1):hover {
+        transform: scale(1.2); }
+    .project__buttons a:nth-last-child(2) {
+      background-color: #1ae6c4;
+      color: #213345; }
+    .project__buttons a:nth-last-child(1) {
+      background-color: #1a4de6;
+      color: white; }
+  .project__description {
+    margin: 1rem 2rem;
+    align-items: center; }
+    .project__description h3 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem; }
+    .project__description div {
+      font-size: 1.6rem;
+      line-height: 1.4; }
+  .project__tech-used {
+    padding: 1rem; }
+    .project__tech-used > :not(:last-child) {
+      margin-right: 2rem; }
+
+/* Additonal Component Stylesheets */
+/*
+This file is used to contain all component imports.
+Files inside this folder can contain specific element styles and layout. 
+*/
+.footer {
+  background-color: #07143c;
+  color: #eef0f1;
+  grid-column: 1 / -1;
+  padding: 5rem; }
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 25vw;
+    margin: 4rem auto; }
+    .footer__social > :not(:last-child) {
+      margin-right: 5rem; }
+    .footer__social img {
+      width: 2.5rem;
+      height: 2.5rem; }
+  .footer__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    list-style: none; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__navbar {
+        display: none; } }
+
+.copyright {
+  font-size: 1.4rem;
+  color: #eef0f1;
+  text-align: center;
+  margin: 4rem auto;
+  width: 80%; }
+
+.section__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.section__layout-container {
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 8vw; }
+
+.section__layout {
+  padding-top: calc(5 * 1.8rem);
+  padding-bottom: calc(5 * 1.8rem); }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .flex--spacebetween {
+    justify-content: space-between; }
+  .flex--center {
+    justify-content: center; }
+  .flex--start {
+    justify-content: start; }
+  .flex--end {
+    justify-content: end; }
+
+.grid {
+  display: grid;
+  grid-column-gap: 1rem;
+  justify-content: center;
+  /* --- ABOUT PAGE --- */
+  /* --- END OF ABOUT PAGE --- */ }
+  .grid--body {
+    grid-template-rows: min-content auto min-content;
+    justify-content: stretch; }
+  .grid--body-home {
+    grid-template-rows: 100vh auto min-content;
+    justify-content: stretch; }
+    @media only screen and (max-width: 31.25em) {
+      .grid--body-home {
+        grid-template-rows: auto auto min-content; } }
+  .grid--card-work-2-3, .grid--card-work-3-2 {
+    gap: 3rem;
+    grid-template-rows: 1fr; }
+  .grid--card-work-2-3 {
+    grid-template-columns: 2fr 3fr; }
+    @media only screen and (max-width: 62.5em) {
+      .grid--card-work-2-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content); } }
+  .grid--card-work-3-2 {
+    grid-template-columns: 3fr 2fr; }
+    @media only screen and (max-width: 62.5em) {
+      .grid--card-work-3-2 {
+        grid-template-columns: 1fr; } }
+
+.header {
+  display: grid;
+  grid-template-rows: max-content auto;
+  align-items: stretch; }
+  .header__logo {
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    color: white; }
+    .header__logo span {
+      color: #1a4de6; }
+  .header__nav {
+    background-image: linear-gradient(to right, #07143c, #07143c);
+    color: #eef0f1;
+    height: 8rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center; }
+  .header__hamburger {
+    background-color: white;
+    color: #1a4de6;
+    box-shadow: 0 1rem 2rem rgba(33, 51, 69, 0.2);
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    top: 1rem;
+    right: 2rem;
+    border-radius: 50%;
+    display: none;
+    opacity: 0;
+    cursor: pointer; }
+    @media only screen and (max-width: 37.5em) {
+      .header__hamburger {
+        display: flex;
+        opacity: 1;
+        z-index: 11; } }
+    .header__hamburger span {
+      position: relative; }
+      .header__hamburger span, .header__hamburger span::before, .header__hamburger span::after {
+        width: 3rem;
+        height: 2px;
+        background-color: #1a4de6;
+        display: inline-block; }
+      .header__hamburger span::before, .header__hamburger span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s; }
+      .header__hamburger span::before {
+        top: -.7rem; }
+      .header__hamburger span::after {
+        top: .7rem; }
+    .header__hamburger span.cross::before,
+    .header__hamburger span.cross::after {
+      top: 0; }
+    .header__hamburger span.cross::before {
+      transform: rotate(135deg); }
+    .header__hamburger span.cross::after {
+      transform: rotate(-135deg); }
+    .header__hamburger:hover span::before {
+      top: -1rem; }
+    .header__hamburger:hover span::after {
+      top: 1rem; }
+    .header__hamburger:hover span.cross::before,
+    .header__hamburger:hover span.cross::after {
+      top: 0; }
+  .header__mobile-background {
+    background-image: radial-gradient(#111a22, #668099);
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+    .header__mobile-background--active {
+      transform: scale(50); }
+    @media only screen and (max-width: 37.5em) {
+      .header__mobile-background {
+        opacity: 1;
+        z-index: 1; } }
+  .header__mobile {
+    color: #eef0f1;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 10;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .header__mobile--active {
+      display: none; }
+      @media only screen and (max-width: 37.5em) {
+        .header__mobile--active {
+          width: 100%;
+          opacity: 1;
+          display: block; } }
+    .header__mobile > ul {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 3rem;
+      /*
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 2rem;
+            */ }
+  .header__grid-body {
+    grid-template-columns: repeat(12, 1fr); }
+
+.header-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #07143c, #07143c);
+  color: white; }
+
+/*PRESENTATION OF JMC*/
+.presentation {
+  grid-column: 2 / 12;
+  padding: 2rem 0;
+  margin: 0 4rem; }
+  .presentation__grid {
+    grid-template-rows: repeat(2, min-content) 1fr min-content;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+    justify-items: start;
+    margin-bottom: 2rem; }
+  .presentation__fullname {
+    color: #eef0f1;
+    font-size: 2.2rem;
+    letter-spacing: .5rem;
+    line-height: 1.1; }
+  .presentation__title {
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    /*Per default, span are inline elements. Change its display as block.
+        Block elements occupy the whole width available and they create line breaks after and before them*/ }
+    .presentation__title > span:nth-child(1) {
+      display: block;
+      animation: moveInLeft 0.8s ease-out; }
+    .presentation__title > span:nth-child(2) {
+      display: block;
+      animation: moveInRight 0.8s ease-out; }
+  .presentation__summary p, .presentation__summary span {
+    font-size: 2rem;
+    color: #c7ccd1; }
+  .presentation__summary span {
+    color: #eef0f1;
+    font-weight: 600; }
+
+/* PROFILE WITH PHOTO AND DESCRIPTION */
+.profile {
+  padding: 1rem;
+  padding-top: 4rem;
+  grid-column: 9 / 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media only screen and (max-width: 62.5em) {
+    .profile {
+      grid-column: 2 / 12;
+      grid-template-rows: min-content;
+      grid-template-columns: repeat(2, auto);
+      align-items: center;
+      margin: 5rem auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .profile {
+      grid-column: 2 / 12;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+      align-items: center; } }
+  .profile__grid {
+    grid-template-rows: repeat(2, min-content);
+    grid-gap: 1rem;
+    align-content: space-evenly;
+    justify-items: center; }
+    @media only screen and (max-width: 62.5em) {
+      .profile__grid {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, minmax(min-content, max-content)); } }
+    @media only screen and (max-width: 37.5em) {
+      .profile__grid {
+        grid-template-columns: 1fr; } }
+  .profile__image-wrapper {
+    /*Use flexbox in order to center our image horizontally.
+        APPARENTLY NOT NEEDED!!??*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center; }
+    @media only screen and (max-width: 50em) {
+      .profile__image-wrapper {
+        margin: 0rem auto; } }
+  .profile__image {
+    background-image: url(/img/profile_photo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 45vh;
+    height: 45vh; }
+    @media only screen and (max-width: 62.5em) {
+      .profile__image {
+        width: 35vh;
+        height: 35vh; } }
+    @media only screen and (max-width: 50em) {
+      .profile__image {
+        width: 25vh;
+        height: 25vh; } }
+  .profile__descriptions {
+    display: none;
+    padding: 0 1rem; }
+    .profile__descriptions__grid {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .profile__descriptions__grid {
+          grid-template-columns: 1fr; } }
+  .profile__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: #394d60; }
+    .profile__description img {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 1rem; }
+    .profile__description p {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 0;
+      color: #eef0f1; }
+    @media only screen and (max-width: 62.5em) {
+      .profile__description {
+        flex-direction: row; } }
+
+.dropdown {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  left: 0rem;
+  text-align: center;
+  list-style: none;
+  transition: opacity 1s; }
+  .dropdown__list {
+    padding: 1rem 1.5rem;
+    background-color: #07143c;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem rgba(167, 179, 190, 0.3);
+    font-size: 1.3rem;
+    text-transform: uppercase; }
+  .dropdown__link:link, .dropdown__link:visited {
+    border-bottom: 3px transparent solid;
+    display: inline-block;
+    padding-bottom: .7rem;
+    transition: border-color 1s, opacity 1s;
+    opacity: .7; }
+  .dropdown__link:hover, .dropdown__link.active {
+    border-color: #1ae6d5;
+    color: white;
+    opacity: 1; }
+
+.navbar__item:hover .dropdown {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  z-index: 10; }
+
+/*
+.dropdown-right {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    //left: calc(50% + 10rem);
+    left: 65%;
+    top: 1rem;
+    list-style: none;
+    transition: opacity 1s;
+    width: 30%;
+    text-align: left;
+    
+    &__list {
+        padding: 1rem 1.5rem;
+        background-color: $navbar__color-bg;
+        box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .3);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            border-bottom: 3px transparent solid;
+            display: inline-block;
+            padding-bottom: .7rem;
+            transition: border-color 1s, opacity 1s;
+            opacity: .7;
+        }
+
+        &:hover,
+        &.active {
+            border-color: $color__secondary;
+            color: $navbar__color-text--hover;
+            opacity: 1;
+        }
+    }
+}
+*/
+.dropdown-mobile {
+  display: none;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  margin-top: 1rem; }
+  .dropdown-mobile__list {
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem rgba(167, 179, 190, 0.2);
+    width: 75%;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem; }
+  .dropdown-mobile__link:link, .dropdown-mobile__link:visited {
+    border-bottom: 3px transparent solid;
+    display: inline-block;
+    padding-bottom: .7rem;
+    transition: border-color .7s; }
+  .dropdown-mobile__link:hover, .dropdown-mobile__link.active {
+    border-color: #1ae6d5;
+    color: white; }
+  .dropdown-mobile--activated {
+    opacity: 0;
+    display: flex;
+    flex-direction: column; }
+
+/*
+.navbar__item:hover .dropdown-right {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    z-index: 10;    
+}
+*/
+@media only screen and (max-width: 37.5em) {
+  .navbar {
+    display: none; } }
+
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.5rem;
+  list-style: none; }
+
+.navbar__item {
+  position: relative;
+  padding: 1.5rem .5rem;
+  padding-top: calc(1 * 1.8rem);
+  padding-right: calc(0.5 * 1.8rem);
+  padding-bottom: calc(1 * 1.8rem);
+  padding-left: calc(0.5 * 1.8rem); }
+  .navbar__item img {
+    height: 100%;
+    width: 4rem;
+    padding-bottom: .7rem;
+    margin-right: 1rem; }
+
+.navbar__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: yellow;
+  transform: scaleY(0);
+  transition: transform .1s, width .3s; }
+
+.navbar__link:link, .navbar__link:visited {
+  text-decoration: none;
+  border-bottom: 3px transparent solid;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: .7rem;
+  transition: all .6s;
+  /*z-index only works if we have a relative position. We use z-index here in order to make the link
+            appear on top of the '::before' selector when the link is being hovered (see '&__item:hover::before')*/
+  position: relative;
+  z-index: 1; }
+
+.navbar__link:hover, .navbar__link.active {
+  border-color: #1a4de6;
+  color: white; }
+
+.navbar__link:hover {
+  transform: translateX(0rem); }
+
+.navbar__link--portfolio:hover + .dropdown-right {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  z-index: 20; }
+
+.navbar__portfolio-items {
+  background-color: #394d60;
+  color: #eef0f1;
+  font-size: 1.6rem;
+  width: 35%;
+  margin: 0 auto;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start; }
+
+/*
+This file is used to contain all pages imports.
+Files inside this folder can contain specific styles for pages. 
+*/
+.tooltip-map {
+  background-color: #4d6680;
+  color: white;
+  border: #1a4de6 2px solid;
+  padding: .5rem 1rem;
+  position: absolute; }
+
+.map-city {
+  font-weight: 600;
+  text-align: center; }
+  .map-city span {
+    font-weight: 400;
+    font-size: 1.4rem; }
+  .map-city__activity {
+    color: #eef0f1; }
+
+.about-header__intro {
+  margin-bottom: calc(8 * 1.8rem); }
+  @media only screen and (max-width: 37.5em) {
+    .about-header__intro {
+      margin-bottom: calc(5 * 1.8rem); } }
+
+.about-header__grid0 {
+  grid-template-columns: minmax(min-content, 45rem) minmax(min-content, max-content);
+  align-items: center;
+  grid-gap: 3rem; }
+  .about-header__grid0 p {
+    font-size: 2.52rem;
+    margin: 0;
+    padding: 1rem; }
+    .about-header__grid0 p:first-child {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: .4rem; }
+    .about-header__grid0 p span {
+      font-size: 2.7rem;
+      font-weight: 600;
+      color: #0f2e8a; }
+  .about-header__grid0 figure img {
+    border-radius: 50%;
+    box-shadow: 0 1rem 2rem rgba(33, 51, 69, 0.3);
+    width: 100%;
+    height: 100%;
+    max-width: 30rem;
+    /*In order to use object-fit, you need to define BOTH width and height.
+            Object-fit will make sur the element/image is resized to fit its parent container (being the <figure> tag).
+            'cover' --> the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit.*/
+    object-fit: cover;
+    /*Let's define it as block, otherwise it will have these weird white space after it because it's teated
+            as an inline element, like text.*/
+    display: block;
+    margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .about-header__grid0 {
+      grid-template-columns: 1fr; } }
+
+.about-header__grid1 {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  justify-items: center; }
+  .about-header__grid1 svg {
+    background-color: #213345; }
+  @media only screen and (max-width: 50em) {
+    .about-header__grid1 {
+      grid-template-columns: 1fr; } }
+
+.about-header__travelling p:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (max-width: 50em) {
+  .about-header__travelling {
+    margin-bottom: 4rem; } }
+
+.about-header__grid2 {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  justify-items: center;
+  align-items: start;
+  grid-column-gap: 5rem;
+  margin-top: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .about-header__grid2 {
+      grid-template-columns: 1fr; } }
+
+#experience {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center; }
+
+.experience {
+  margin-left: auto;
+  margin-right: auto; }
+  .experience__grid {
+    grid-template-columns: 3fr 2fr; }
+    @media only screen and (max-width: 50em) {
+      .experience__grid {
+        grid-template-rows: repeat(2, max-content);
+        grid-template-columns: none; }
+        .experience__grid .job-summary {
+          padding: 1rem;
+          margin: 0 auto; } }
+  .experience__cv-data {
+    background-color: #213345;
+    color: white;
+    padding: 2rem; }
+  .experience__companies {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #4d6680; }
+    .experience__companies > * {
+      background-color: #213345;
+      color: #a7b3be;
+      padding: .75rem 1.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .experience__companies {
+        flex-direction: column; } }
+  .experience__company {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.5;
+    border: none;
+    border-radius: 0;
+    transition: transform .3s; }
+    .experience__company--active {
+      color: #e8edfc;
+      border-top: 2px solid #e8edfc;
+      border-bottom: 2px solid #e8edfc;
+      transform: translateY(-0.3rem); }
+    .experience__company:hover {
+      color: #e8edfc;
+      transition: transform 1s;
+      transform: translateY(-0.3rem); }
+  .experience__cv-description {
+    display: block;
+    width: 100%;
+    background-color: #eef0f1;
+    color: #213345; }
+    .experience__cv-description span {
+      color: #1a4de6; }
+  .experience__job-header {
+    margin-bottom: 3rem; }
+
+.company {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+  border: none;
+  border-radius: 0;
+  transition: transform .3s; }
+  .company--active {
+    color: #d1dbfa;
+    border-top: 2px solid #d1dbfa;
+    border-bottom: 2px solid #d1dbfa;
+    transform: translateY(-0.3rem); }
+  .company:hover {
+    color: #d1dbfa;
+    transition: transform 1s;
+    transform: translateY(-0.3rem); }
+
+.job-header {
+  margin-bottom: 3rem; }
+  .job-header__title {
+    font-size: 1.8rem;
+    margin-right: 1rem; }
+  .job-header__place {
+    background-color: #394d60;
+    color: #eef0f1;
+    padding: .5rem 1rem; }
+    .job-header__place img {
+      width: 2.2rem;
+      height: 2.2rem;
+      margin-right: 1rem; }
+    .job-header__place div {
+      font-size: 1.4rem; }
+
+.job-activity {
+  padding: .5rem 1rem; }
+  .job-activity__image {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    align-self: flex-start;
+    margin-top: .6rem; }
+  .job-activity__text {
+    color: #eef0f1; }
+
+.job-summary {
+  padding: 2rem;
+  margin: 2rem auto; }
+  .job-summary__text {
+    padding: 1rem; }
+
+.timeline {
+  margin-bottom: 1.5rem; }
+  .timeline__year {
+    color: #d1dbfa;
+    padding: .3rem .6rem; }
+  .timeline__fullspan {
+    background-color: #668099;
+    width: 100%;
+    height: 2px;
+    position: relative; }
+  .timeline__segment {
+    background-color: #1ae6d5;
+    position: absolute;
+    top: -50%;
+    height: 4px;
+    transition: all .7s ease-out;
+    display: inline-block;
+    --beforeContent: '';
+    --afterContent: ''; }
+    .timeline__segment::before, .timeline__segment::after {
+      position: absolute;
+      font-size: 1.3rem;
+      color: #1ae6d5; }
+    .timeline__segment::before {
+      content: var(--beforeContent);
+      top: -3rem;
+      width: 100%;
+      display: grid;
+      justify-content: flex-end;
+      grid-template-columns: max-content;
+      margin-left: -100%; }
+    .timeline__segment::after {
+      content: var(--afterContent);
+      top: 1.5rem;
+      width: 100%;
+      display: grid;
+      justify-content: flex-start;
+      grid-template-columns: max-content;
+      margin-left: 100%; }
+
+.card-work__header--left {
+  text-align: left; }
+
+.card-work__header--right {
+  text-align: right; }
+
+.card-work__summary, .card-work__additional {
+  padding: 3rem 4rem;
+  grid-row: 1 / span 1; }
+
+.card-work__summary {
+  background-color: #eef0f1;
+  color: #213345; }
+
+.card-work__additional {
+  background-color: #1a4de6;
+  color: #eef0f1;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; }
+  .card-work__additional > :first-child {
+    margin-bottom: 2rem; }
+  @media only screen and (max-width: 62.5em) {
+    .card-work__additional {
+      grid-row: 2 / span 1;
+      flex-direction: row; }
+      .card-work__additional > :first-child {
+        margin-right: 5rem;
+        margin-bottom: 0; } }
+  @media only screen and (max-width: 50em) {
+    .card-work__additional {
+      flex-direction: column; }
+      .card-work__additional > :first-child {
+        margin-right: 0;
+        margin-bottom: 2rem; } }
+
+.card-work__title {
+  margin-bottom: 3rem; }
+  .card-work__title :first-child {
+    margin-right: 2rem; }
+  .card-work__title img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 2rem; }
+  .card-work__title h3 {
+    margin: 0; }
+
+.map_europe_container {
+  position: relative;
+  align-self: center; }
+
+.map_europe_reload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem; }
+  .map_europe_reload img {
+    width: 3rem;
+    height: 3rem;
+    transition: transform .5s; }
+    .map_europe_reload img:hover {
+      transform: scale(1.1);
+      cursor: pointer; }
+
+.contact-header h1 {
+  margin: 0; }
+
+.contact__grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .contact__grid {
+      grid-template-columns: 1fr; } }
+
+.contact__message h2 {
+  color: #091c53; }
+
+.contact__grid-social {
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 4rem;
+  margin: 4rem auto 0;
+  width: 50%; }
+
+.contact__icon-github, .contact__icon-linkedin, .contact__icon-xing {
+  height: 3rem;
+  width: 3rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.contact__icon-github {
+  background-image: url(/img/socials/github.svg); }
+
+.contact__icon-linkedin {
+  background-image: url(/img/socials/linkedin.svg); }
+
+.contact__icon-xing {
+  background-image: url(/img/socials/xing.svg); }
+
+.contact__form {
+  background-color: #213345;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-items: start;
+  font-size: 1.75rem;
+  padding: 2rem 3rem; }
+
+.contact__label {
+  padding: 0 0 1rem;
+  font-weight: 600;
+  color: #c7ccd1; }
+  .contact__label--required:after {
+    content: " *";
+    color: red;
+    display: inline; }
+
+.contact__input, .contact__textarea {
+  background-color: #eef0f1;
+  color: #091c53;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  width: 100%; }
+
+.contact__input {
+  margin-bottom: 2rem;
+  height: 4rem; }
+
+.contact__button {
+  margin-top: 2rem;
+  align-self: center; }
+
+.color-container {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem; }
+  .color-container > div {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin-right: 1rem;
+    border: black 1px solid; }
+
+.netlify-recaptcha {
+  margin-bottom: 1rem; }
+
+/* CAREER SECTION */
+/* -------------- */
+.career__header {
+  text-align: center; }
+
+.career__paragraph {
+  width: 85%;
+  max-width: 80rem;
+  margin: 2rem auto 6rem; }
+  .career__paragraph a {
+    color: #1a4de6;
+    font-weight: 400; }
+  .career__paragraph span a {
+    display: inline-block;
+    position: relative; }
+    .career__paragraph span a::after {
+      content: '\2192';
+      font-size: 3rem;
+      position: absolute;
+      top: -1rem;
+      margin-left: 1rem; }
+
+.career-cards__grid {
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+  align-items: stretch; }
+
+.header-portfolio {
+  text-align: center;
+  background-color: #1a4de6;
+  padding-top: calc(3 * 1.8rem);
+  padding-bottom: calc(1.5 * 1.8rem); }
+  .header-portfolio__title {
+    color: white;
+    text-align: center;
+    margin-bottom: calc(1 * 1.8rem); }
+  .header-portfolio__text {
+    font-size: 2.52rem;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 60%;
+    margin: 2.5rem auto;
+    color: #eef0f1; }
+  .header-portfolio__cta {
+    margin-top: calc(3 * 1.8rem);
+    margin-bottom: calc(1.5 * 1.8rem); }
+    .header-portfolio__cta > a:first-child {
+      margin-right: 4rem; }
+
+.portfolio-intro__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 2rem; }
+  @media only screen and (max-width: 31.25em) {
+    .portfolio-intro__grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, min-content); } }
+
+.portfolio-intro__text {
+  margin-bottom: 0; }
+  .portfolio-intro__text--1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5; }
+    @media only screen and (max-width: 31.25em) {
+      .portfolio-intro__text--1 {
+        grid-row: 2 / span 1;
+        grid-column: 1 / -1; } }
+  .portfolio-intro__text--2 {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 5; }
+    @media only screen and (max-width: 31.25em) {
+      .portfolio-intro__text--2 {
+        grid-row: 4 / span 1;
+        grid-column: 1 / -1; } }
+  .portfolio-intro__text--3 {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 5; }
+    @media only screen and (max-width: 31.25em) {
+      .portfolio-intro__text--3 {
+        grid-row: 6 / span 1;
+        grid-column: 1 / -1; } }
+  @media only screen and (max-width: 31.25em) {
+    .portfolio-intro__text--1, .portfolio-intro__text--2, .portfolio-intro__text--3 {
+      margin-bottom: 4rem; } }
+
+.portfolio-intro__figure {
+  justify-self: center; }
+  .portfolio-intro__figure--1, .portfolio-intro__figure--2, .portfolio-intro__figure--3 {
+    align-self: center; }
+  .portfolio-intro__figure--1 {
+    grid-row: 1 / span 1;
+    grid-column: 6 / span 1; }
+    @media only screen and (max-width: 31.25em) {
+      .portfolio-intro__figure--1 {
+        grid-row: 1 / span 1;
+        grid-column: 1 / -1;
+        margin-top: 2rem; } }
+  .portfolio-intro__figure--2 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1; }
+    @media only screen and (max-width: 31.25em) {
+      .portfolio-intro__figure--2 {
+        grid-row: 3 / span 1;
+        grid-column: 1 / -1; } }
+  .portfolio-intro__figure--3 {
+    grid-row: 3 / span 1;
+    grid-column: 6 / span 1; }
+    @media only screen and (max-width: 31.25em) {
+      .portfolio-intro__figure--3 {
+        grid-row: 5 / span 1;
+        grid-column: 1 / -1; } }
+  .portfolio-intro__figure img {
+    width: 10vh;
+    height: auto;
+    /*In order to use object-fit, you need to define BOTH width and height.
+            Object-fit will make sur the element/image is resized to fit its parent container (being the <figure> tag).
+            'cover' --> the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit.*/
+    object-fit: cover;
+    /*Let's define it as block, otherwise it will have these weird white space after it because it's teated
+            as an inline element, like text.*/
+    display: block; }
+
+.portfolio__header {
+  margin-bottom: 4rem; }
+
+.portfolio__viewmore {
+  margin-top: calc(3 * 1.8rem);
+  margin-bottom: calc(3 * 1.8rem);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center; }
+
+.userguide__grid {
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(13, minmax(5rem, max-content));
+  grid-gap: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .userguide__grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, minmax(5rem, max-content)); } }
+
+.userguide__item {
+  padding: 2rem 3rem; }
+  .userguide__item--1, .userguide__item--3 {
+    background-color: #213345;
+    color: #eef0f1; }
+  .userguide__item--2, .userguide__item--4 {
+    background-color: #eef0f1;
+    color: #213345; }
+  .userguide__item--1 {
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 4; }
+  .userguide__item--2 {
+    grid-row: 4 / span 4;
+    grid-column: 5 / span 4; }
+  .userguide__item--3 {
+    grid-row: 8 / span 4;
+    grid-column: 1 / span 4; }
+  .userguide__item--4 {
+    grid-row: 11 / span 3;
+    grid-column: 5 / span 4; }
+  @media only screen and (max-width: 37.5em) {
+    .userguide__item--1 {
+      grid-row: 1 / span 1;
+      grid-column: 1 / -1; }
+    .userguide__item--2 {
+      grid-row: 3 / span 1;
+      grid-column: 1 / -1; }
+    .userguide__item--3 {
+      grid-row: 5 / span 1;
+      grid-column: 1 / -1; }
+    .userguide__item--4 {
+      grid-row: 7 / span 1;
+      grid-column: 1 / -1; } }
+
+.userguide__title {
+  margin-bottom: 2rem; }
+  .userguide__title h3 {
+    margin: 0 2rem; }
+  .userguide__title img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem; }
+  .userguide__title::before {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    text-align: center; }
+  .userguide__title--1::before {
+    content: '1'; }
+  .userguide__title--2::before {
+    content: '2'; }
+  .userguide__title--3::before {
+    content: '3'; }
+  .userguide__title--4::before {
+    content: '4'; }
+  .userguide__title--1::before, .userguide__title--3::before {
+    background-color: #eef0f1;
+    color: #1a4de6; }
+  .userguide__title--2::before, .userguide__title--4::before {
+    background-color: #1a4de6;
+    color: #eef0f1; }
+
+.userguide__figure--1 {
+  grid-row: 1 / span 3;
+  grid-column: 5 / span 4; }
+
+.userguide__figure--2 {
+  grid-row: 5 / span 3;
+  grid-column: 1 / span 4; }
+
+.userguide__figure--3 {
+  grid-row: 8 / span 3;
+  grid-column: 5 / span 4; }
+
+.userguide__figure--4 {
+  grid-row: 12 / span 2;
+  grid-column: 1 / span 4; }
+
+.userguide__figure img {
+  width: 100%;
+  height: 100%;
+  /*In order to use object-fit, you need to define BOTH width and height.
+            Object-fit will make sur the element/image is resized to fit its parent container (being the <figure> tag).
+            'cover' --> the image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit.*/
+  object-fit: cover;
+  /*Let's define it as block, otherwise it will have these weird white space after it because it's teated
+            as an inline element, like text.*/
+  display: block; }
+
+@media only screen and (max-width: 37.5em) {
+  .userguide__figure--1 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1; }
+  .userguide__figure--2 {
+    grid-row: 4 / span 1;
+    grid-column: 1 / -1; }
+  .userguide__figure--3 {
+    grid-row: 6 / span 1;
+    grid-column: 1 / -1; }
+  .userguide__figure--4 {
+    grid-row: 8 / span 1;
+    grid-column: 1 / -1; } }
+
+.techstack-design__grid {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .techstack-design__grid {
+      grid-template-columns: 1fr;
+      row-gap: 4rem; } }
+
+.techstack h2,
+.responsive-design h2 {
+  color: #091c53; }
+
+.techstack__grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem; }
+
+.techstack__frontend, .techstack__backend {
+  background-color: #213345;
+  color: #eef0f1;
+  padding: 1rem 2rem; }
+  .techstack__frontend h3, .techstack__backend h3 {
+    color: white; }
+
+.techstack-wrapper {
+  margin-bottom: 1rem; }
+  .techstack-wrapper :first-child {
+    margin-right: 2rem; }
+  .techstack-wrapper__name {
+    background-color: #394d60;
+    color: #eef0f1;
+    padding: .5rem 1rem; }
+
+.responsive-design img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  display: block; }
+
+.card-architecture {
+  width: 100%;
+  background-color: #394d60;
+  padding: 1rem 2rem; }
+  .card-architecture__title {
+    color: #eef0f1;
+    text-align: center; }
+    .card-architecture__title::first-letter {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #1ae6d5; }
+  .card-architecture__text {
+    color: #eef0f1; }
+
+/*
+-----------------------
+PORTFOLIO PERSONAL SITE
+-----------------------
+*/
+.design-tools h3,
+.typography h3,
+.palette h3,
+.architecture h3 {
+  margin-bottom: 2rem; }
+
+.design-tools,
+.typography {
+  margin-bottom: calc(5 * 1.8rem); }
+
+.design-tools__grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .design-tools__grid {
+      grid-template-columns: 1fr; } }
+
+.design-tools__figure img {
+  width: 100%; }
+
+.typography {
+  padding: 3rem 2rem;
+  max-width: 75rem; }
+  .typography__grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    align-items: stretch; }
+    @media only screen and (max-width: 37.5em) {
+      .typography__grid {
+        grid-template-columns: repeat(4, 1fr); } }
+  .typography__item, .typography__property {
+    background-color: #213345;
+    color: #eef0f1;
+    padding: .5rem 1rem; }
+  .typography__item {
+    grid-row: 1 / span 1; }
+    .typography__item--1 {
+      grid-column: 2 / span 1; }
+    .typography__item--2 {
+      grid-column: 3 / span 1; }
+    .typography__item--3 {
+      grid-column: 4 / span 1; }
+    .typography__item--4 {
+      grid-column: 5 / span 1; }
+    .typography__item--5 {
+      grid-column: 6 / span 1; }
+    @media only screen and (max-width: 37.5em) {
+      .typography__item {
+        grid-column: 1 / span 1; }
+        .typography__item--1 {
+          grid-row: 2 / span 1; }
+        .typography__item--2 {
+          grid-row: 3 / span 1; }
+        .typography__item--3 {
+          grid-row: 4 / span 1; }
+        .typography__item--4 {
+          grid-row: 5 / span 1; }
+        .typography__item--5 {
+          grid-row: 6 / span 1; } }
+  .typography__property {
+    grid-column: 1 / span 1; }
+    .typography__property--1 {
+      grid-row: 2 / span 1; }
+    .typography__property--2 {
+      grid-row: 3 / span 1; }
+    .typography__property--3 {
+      grid-row: 4 / span 1; }
+    @media only screen and (max-width: 37.5em) {
+      .typography__property {
+        grid-row: 1 / span 1; }
+        .typography__property--1 {
+          grid-column: 2 / span 1; }
+        .typography__property--2 {
+          grid-column: 3 / span 1; }
+        .typography__property--3 {
+          grid-column: 4 / span 1; } }
+  .typography__fontfamily, .typography__fontsize, .typography__fontweight {
+    background-color: #e9ebed;
+    border: 1px solid #a7b3be; }
+  .typography__fontfamily {
+    grid-row: 2 / span 1; }
+    .typography__fontfamily--body, .typography__fontfamily--paragraph {
+      grid-column: 2 / span 2;
+      font-family: "Roboto", sans-serif; }
+    .typography__fontfamily--h1, .typography__fontfamily--h2, .typography__fontfamily--h3 {
+      grid-column: 4 / span 3;
+      font-family: "Prata", sans-serif; }
+    @media only screen and (max-width: 37.5em) {
+      .typography__fontfamily {
+        grid-column: 2 / span 1; }
+        .typography__fontfamily--body, .typography__fontfamily--paragraph {
+          grid-row: 2 / span 2; }
+        .typography__fontfamily--h1, .typography__fontfamily--h2, .typography__fontfamily--h3 {
+          grid-row: 4 / span 3; } }
+  .typography__fontsize {
+    grid-row: 3 / span 1; }
+    .typography__fontsize--body, .typography__fontsize--paragraph {
+      grid-column: 2 / span 2;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.8rem; }
+    .typography__fontsize--h1, .typography__fontsize--h2, .typography__fontsize--h3 {
+      font-family: "Prata", sans-serif; }
+    .typography__fontsize--h1 {
+      grid-column: 4 / span 1; }
+    .typography__fontsize--h2 {
+      grid-column: 5 / span 1; }
+    .typography__fontsize--h3 {
+      grid-column: 6 / span 1; }
+    @media only screen and (max-width: 37.5em) {
+      .typography__fontsize {
+        grid-column: 3 / span 1; }
+        .typography__fontsize--body, .typography__fontsize--paragraph {
+          grid-row: 2 / span 2; }
+        .typography__fontsize--h1 {
+          grid-row: 4 / span 1; }
+        .typography__fontsize--h2 {
+          grid-row: 5 / span 1; }
+        .typography__fontsize--h3 {
+          grid-row: 6 / span 1; } }
+  .typography__fontweight {
+    grid-row: 4 / span 1; }
+    .typography__fontweight--body, .typography__fontweight--paragraph {
+      grid-column: 2 / span 2;
+      font-family: "Roboto", sans-serif; }
+    .typography__fontweight--h1, .typography__fontweight--h2, .typography__fontweight--h3 {
+      font-family: "Prata", sans-serif; }
+    .typography__fontweight--h1 {
+      grid-column: 4 / span 1; }
+    .typography__fontweight--h2 {
+      grid-column: 5 / span 1; }
+    .typography__fontweight--h3 {
+      grid-column: 6 / span 1; }
+    @media only screen and (max-width: 37.5em) {
+      .typography__fontweight {
+        grid-column: 4 / span 1; }
+        .typography__fontweight--body, .typography__fontweight--paragraph {
+          grid-row: 2 / span 2; }
+        .typography__fontweight--h1 {
+          grid-row: 4 / span 1; }
+        .typography__fontweight--h2 {
+          grid-row: 5 / span 1; }
+        .typography__fontweight--h3 {
+          grid-row: 6 / span 1; } }
+
+.palette {
+  padding: 3rem 2rem; }
+  .palette__grid {
+    grid-template-columns: repeat(5, minmax(min-content, max-content));
+    grid-gap: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .palette__grid {
+        grid-template-columns: repeat(2, 1fr); } }
+  .palette__label, .palette__feature, .palette__use {
+    margin-right: 2rem;
+    border-right: 1px solid #eef0f1; }
+    @media only screen and (max-width: 37.5em) {
+      .palette__label, .palette__feature, .palette__use {
+        margin-right: 0;
+        border-right: none; } }
+  .palette__label {
+    padding: .5rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    grid-row: 1 / span 1; }
+    .palette__label--primary {
+      grid-column: 1 / span 1; }
+    .palette__label--secondary {
+      grid-column: 2 / span 1; }
+    .palette__label--gray-dark {
+      grid-column: 3 / span 1; }
+    .palette__label--gray-light {
+      grid-column: 4 / span 1; }
+    .palette__label--white {
+      grid-column: 5 / span 1; }
+    @media only screen and (max-width: 37.5em) {
+      .palette__label {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-top: 1px solid #eef0f1;
+        grid-column: 1 / span 2; }
+        .palette__label--primary {
+          grid-row: 1 / span 1; }
+        .palette__label--secondary {
+          grid-row: 3 / span 1; }
+        .palette__label--gray-dark {
+          grid-row: 5 / span 1; }
+        .palette__label--gray-light {
+          grid-row: 7 / span 1; }
+        .palette__label--white {
+          grid-row: 9 / span 1; } }
+  .palette__feature {
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 37.5em) {
+      .palette__feature {
+        grid-column: 1 / span 1; }
+        .palette__feature--1 {
+          grid-row: 2 / span 1; }
+        .palette__feature--2 {
+          grid-row: 4 / span 1; }
+        .palette__feature--3 {
+          grid-row: 6 / span 1; }
+        .palette__feature--4 {
+          grid-row: 8 / span 1; }
+        .palette__feature--5 {
+          grid-row: 10 / span 1; } }
+  .palette__code {
+    padding: .5rem 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #8599ad; }
+  .palette__color {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    font-size: 1.4vw;
+    justify-self: center; }
+    .palette__color--primary {
+      background-color: #1a4de6; }
+    .palette__color--secondary {
+      background-color: #1ae6d5; }
+    .palette__color--gray-dark {
+      background-color: #213345; }
+    .palette__color--gray-light {
+      background-color: #eef0f1;
+      color: #213345;
+      border: 1px solid #eef0f1; }
+    .palette__color--white {
+      background-color: white;
+      color: #213345;
+      border: 1px solid #eef0f1; }
+  .palette__use {
+    grid-row: 3 / span 1;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    justify-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .palette__use {
+        padding-top: 0;
+        grid-column: 2 / span 1;
+        justify-self: center;
+        align-self: center; }
+        .palette__use--primary {
+          grid-row: 2 / span 1; }
+        .palette__use--secondary {
+          grid-row: 4 / span 1; }
+        .palette__use--gray-dark {
+          grid-row: 6 / span 1; }
+        .palette__use--gray-light {
+          grid-row: 8 / span 1; }
+        .palette__use--white {
+          grid-row: 10 / span 1; } }
+
+.architecture h2 {
+  color: #a3b8f5; }
+
+.architecture h3 {
+  color: #c7ccd1; }
+
+.architecture p {
+  color: #eef0f1; }
+
+.architecture li {
+  color: #e9ebed; }
+
+.architecture__grid-cards {
+  background-color: #4d6680;
+  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 50em) {
+    .architecture__grid-cards {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 37.5em) {
+    .architecture__grid-cards {
+      grid-template-columns: 1fr; } }
+
+.architecture__precompiler, .architecture__precompiler > p {
+  color: #eef0f1; }
+
+.architecture__miscelleanous {
+  margin-top: 3rem; }
+  .architecture__miscelleanous p {
+    color: #eef0f1; }

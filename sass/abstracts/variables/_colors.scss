@@ -1,0 +1,304 @@
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+
+
+// COLOR VARIABLES
+$base-color: #0E1E25;
+$colorText: rgba($base-color, .87); // 87% opacity
+$colorTextMuted: rgba($base-color, .54); // 54% opacity
+$colorPlaceHolder: rgba($base-color, .38); // 38% opacity
+$colorLight: rgba($base-color, .02); // 2% opacity
+
+/*
+To keep your color variables from becoming too granular, if a color name is duplicated, then it's not
+ worth having its own variable. Instead, use the built in Sass color functions. In the above example, 
+ you would use darken($mine-shaft, 2.5%) instead of #303030.
+*/
+
+/*---COLOR PALETTE---*/
+// Greens
+$shamrock: #4ad395;
+$jade: #00af80;
+// Oranges
+$tree-poppy: #fca120;
+// Grays
+$blue-zodiac: #0b2138;
+$oxford-blue: #374957;
+
+
+/*
+____PRIMARY____
+#4ad395 (153/61/56) --> Base for primary. Background of main cta buttons
+                    --> Some 'primary' paragraphs (.item-title). Sub-paragraphs (.item-title as well)
+                    will have the #374957 color (see below medium blue grays)
+#2bc48a (157/64/47) --> Hover on base color above (slightly darker)
+                    --> Background of navbar items (with white text color) on a surface color of #0b2138
+                    --> Background of footer items (with white text color) on a surface color of #08192b
+                    --> Background of 1 cta button (with white text color) on a surface color of #08192b
+#00af80 (164/100/34) --> Used when hovering on #2bc48a. Makes button border color lighter.
+#009d73 (164/100/31) --> Color for hyperlinks
+
+____DARK BLUE GRAYS____
+#0b2138 (210/68/13) --> background header/navbar and footer (Hue: 210, azzuro --> very dark)
+                    --> Two text color appearances (top 'heading' being actually a paragraph with 
+                        large font-size, and <h1> tag just below (smaller font-size)) 
+#0e2b49 (210/68/17) --> (lighter than #08192B). Used as background for some section with text, button, card on it.
+#143a6b (214/68/25) --> Used on top of the #0e2b49 section. Lighter blue as #0e2b49, nice contrast.
+
+____MEDIUM BLUE GRAYS____
+#374957 (206/23/28) --> h3 text and paragraph (.item-title). (Hue: 206, azzuro --> blue-gray medium)
+        --> Is actually on most of the text of the page
+#4a6375 (205/23/37) --> p (.item-text) (Hue: 205, azzuro --> blue-gray medium)
+#5f7d95 (207/22/48) --> body default text (Hue: 207, azzuro --> blue-gray medium). Used for default paragraphs.
+
+____LIGHT BLUE GRAYS____
+#839caf (206/22/60) --> also text on footer, more subtil (Hue: 206, azzuro --> very light blue)
+#CFD9E0 (205/22/85) --> text color on navbar & footer (Hue: 205, azzuro --> very light blue, 
+                        lighter than #869FB2, almost white)
+#eff3f6 (206/28/95) --> Hover on #cfd9e0 (above)
+                    --> background color for search bar on white surface.
+                    --> Can be used for section background as well
+#f8fafb (200/27/97) --> Very light section background (could be used with a linear-gradient as well!) 
+#fff (0/0/100) --> body background
+
+__ACCENT__
+#fca120 (35/97/56): Text on #0b2138 (navbar background) or on #08192b (footer background)
+#f69110 (34/93/51): hover on color above (slightly darker)
+*/
+
+/*
+- HUE: The Hue Property is a color picked from a palette of 360 colors. The colors are set in a circle, and 
+each hue is a degree in the color-wheel. The chosen color is the base from which we’ll create other 
+shades by adding saturation, lightness, or both.
+- SATURATION: The Saturation Property describes the color’s saturation. 0% means no color (the color will be grey)
+, and a value of 100% will show the color in its most vibrant color. It’s best to use a value in the range of 
+10% — 100% since that will allow us to see the base color.
+- LIGHTNESS: The Lightness Property describes the lighting intensity. The extreme values will eliminate the 
+color: 0% will look black, and 100% will look white. Therefore we prefer to use numbers between 10% and
+ 90% since that will allow us to see the base color.
+*/
+
+
+/*
+// CONFIG VARIABLES
+$color__primary: $shamrock;
+$color__primary--400: darken(saturate(adjust-hue($color__primary, 4deg), 3%), 9%);
+$color__primary--500:darken(saturate(adjust-hue($color__primary, 11deg), 39%), 22%);
+$color__primary--600: darken(saturate(adjust-hue($color__primary, 11deg), 39%), 25%);
+
+$color__accent: $tree-poppy;
+$color__accent--500: darken(desaturate(adjust-hue($color__accent, -1deg), 4%), 5%);
+
+// Dark grays
+$color__gray--900: $blue-zodiac; // Background header/navbar and footer + top headings (h1)
+$color__gray--850: lighten($color__gray--900, 4%); // Background for some section with text, button, card on it.
+$color__gray--800: lighten(adjust-hue($color__gray--900, 4deg), 12%); // On top of $color__gray--850
+
+// Medium grays
+$color__gray--700: $oxford-blue; // h3 text and paragraph (.item-title). Mostly the body's text
+$color__gray--600: lighten($color__gray--700, 10%); // Paragraph (.item-text)
+$color__gray--500: lighten($color__gray--700, 20%); // Body default text 
+$color__gray--300: lighten($color__gray--700, 30%); // Text on footer
+
+// Light grays
+$color__gray--150: lighten($color__gray--700, 55%); // text color on navbar & footer
+$color__gray--100: lighten(saturate($color__gray--700, 5%), 65%); // Hover for text on navbar & footer + used for section background
+$color__gray--50: lighten(saturate($color__gray--700, 5%), 70%);
+
+$color__white: #fff;
+*/
+
+
+
+/*
+$turquoise-blue: #5CEBDF;
+$color__primary--500: $turquoise-blue; // CTA bg (with 900 as text)
+
+$color__primary--900: darken(adjust-hue($turquoise-blue, 35deg), 55%); // Text for CTA (normal and hover) + Bg for some section with white text
+$color__primary--800: darken(adjust-hue($turquoise-blue, 17deg), 36%);
+$color__primary--700: darken(adjust-hue($turquoise-blue, 11deg), 27%);
+$color__primary--600: darken(adjust-hue($turquoise-blue, 5deg), 15%); // Bg moderate for a section (on top of white body surface) with white as text
+
+$color__primary--400: lighten(adjust-hue($turquoise-blue, -6deg), 10%);
+$color__primary--300: lighten(adjust-hue($turquoise-blue, -11deg), 16%);
+$color__primary--200: lighten(adjust-hue($turquoise-blue, -16deg), 23%); // Hover on CTA bg (with 900 as text)
+$color__primary--100: lighten(adjust-hue($turquoise-blue, -22deg), 30%); // Border around input when clicking inside
+$color__primary--050: lighten(adjust-hue($turquoise-blue, -40deg), 33%); // Bg light, with gray--800 as text
+*/
+
+/*For headings, CTA buttons, links, etc.*/
+//$science-blue: #1f66ad; //#2d6a9f; //#31A798; //#0573aa; //#0025cc;
+$science-blue: hsl(225, 80%, 50); //#2d6a9f; //#31A798; //#0573aa; //#0025cc;
+$color__primary: $science-blue;
+/*
+$color__primary--500: $science-blue;
+$color__primary--900: darken($science-blue, 25%);
+$color__primary--800: darken($science-blue, 20%);
+$color__primary--700: darken($science-blue, 15%);
+$color__primary--600: darken($science-blue, 10%);
+$color__primary--400: lighten($science-blue, 10%);
+$color__primary--300: lighten($science-blue, 15%);
+$color__primary--200: lighten($science-blue, 20%);
+$color__primary--100: lighten($science-blue, 25%);
+$color__primary--75: lighten(saturate(adjust-hue($science-blue, -20deg), 40%), 15%);
+$color__primary--50: lighten($science-blue, 55%);
+*/
+$color__primary--50: hsl(225, 80%, 95%);
+$color__primary--100: hsl(225, 80%, 90%);
+$color__primary--200: hsl(225, 80%, 80%);
+$color__primary--300: hsl(225, 80%, 70%);
+$color__primary--400: hsl(225, 80%, 60%);
+$color__primary--500: hsl(225, 80%, 50%);
+$color__primary--600: hsl(225, 80%, 40%);
+$color__primary--700: hsl(225, 80%, 30%);
+$color__primary--800: hsl(225, 80%, 18%);
+$color__primary--900: hsl(225, 80%, 13%);
+$color__primary--1000: hsl(225, 80%, 0%);
+
+//"Scale color names between 0 and 100 (or 0 and 1000) based HSL' lightess"
+// Be careful with -400, -500, -600 since they are mid-neutral and dangerous. Don't use them too much
+$color__gray--0: hsl(210, 0%, 100%);
+$color__gray--20: hsl(210, 10%, 97%);
+$color__gray--50: hsl(210, 10%, 94%);
+$color__gray--100: hsl(210, 10%, 92%);
+$color__gray--200: hsl(210, 10%, 80%);
+$color__gray--300: hsl(210, 15%, 70%);
+$color__gray--400: hsl(210, 20%, 60%);
+$color__gray--500: hsl(210, 20%, 50%);
+$color__gray--600: hsl(210, 25%, 40%);
+$color__gray--700: hsl(210, 25%, 30%);
+$color__gray--800: hsl(210, 35%, 20%);
+$color__gray--900: hsl(210, 35%, 10%);
+$color__gray--1000: hsl(210, 30%, 0%);
+$color__white: $color__gray--0;
+
+/*For primary actions, buttons, text links, for indicating progress, etc.*/
+/*
+$ocean-green: #00c2a2; // #03b4b4;
+$color__secondary: $ocean-green;
+$color__secondary--300: $ocean-green;
+
+$color__secondary--500: darken(saturate($ocean-green, 45%), 25%);
+$color__secondary--400: darken(saturate($ocean-green, 45%), 20%);
+$color__secondary--200: lighten($ocean-green, 15%);
+$color__secondary--100: lighten($ocean-green, 25%);
+$color__secondary--75: lighten($ocean-green, 35%);
+$color__secondary--50: lighten($ocean-green, 50%);
+*/
+$ocean-green: hsl(175, 80%, 50%);
+$color__secondary: $ocean-green;
+
+$color__secondary--50: hsl(170, 80%, 95%);
+$color__secondary--100: hsl(170, 80%, 90%);
+$color__secondary--200: hsl(170, 80%, 80%);
+$color__secondary--300: hsl(170, 80%, 70%);
+$color__secondary--400: hsl(170, 80%, 60%);
+$color__secondary--500: hsl(170, 80%, 50%);
+$color__secondary--600: hsl(170, 80%, 40%);
+$color__secondary--700: hsl(170, 80%, 30%);
+$color__secondary--800: hsl(170, 80%, 18%);
+$color__secondary--900: hsl(170, 80%, 12%);
+$color__secondary--1000: hsl(170, 80%, 0%);
+
+
+/*----NEUTRALS----*/
+/*
+$big-stone: #172B4D; //rgb(16, 20, 46);//#00364d; //#031d49; //#11213d; //#172B4D
+$color__gray: $big-stone;
+$color__gray--800: $big-stone;
+
+//Dark neutrals are very effective for creating contrast and are therefore the primary color used for 
+//typography. Occasionally the dark neutrals are found in illustration but they rarely dominate the palette
+$color__gray--900: darken(saturate($big-stone, 15%), 5%);
+$color__gray--700: lighten(desaturate($big-stone, 15%), 5%);
+$color__gray--600: lighten(desaturate($big-stone, 25%), 10%); // Usually some sub-section text color, underneath some base dark gray (--800)
+$color__gray--500: lighten(desaturate($big-stone, 32%), 15%); // Usually some sub-section text color, underneath some dark gray (--600)
+
+//Use mid-neutrals to create depth in components such as modal dialog blankets and cards. Avoid mid-neutrals 
+//as background colors because there is usually not enough contrast to remain AA compliant.
+//The mid-neutrals N400 to N200 can be used for subtle text and icons on light-neutral backgrounds.
+
+//Subtle text on light gray bg (N20). Ex: Bg: N20, Heading h1, h2, h3 (N800), paragraph underneath (N400).
+$color__gray--400: lighten(desaturate($big-stone, 37%), 20%);
+$color__gray--300: lighten(desaturate($big-stone, 40%), 25%);
+$color__gray--200: lighten(desaturate($big-stone, 40%), 30%);
+$color__gray--100: lighten(desaturate($big-stone, 40%), 35%);
+$color__gray--90: lighten(desaturate($big-stone, 40%), 40%);
+$color__gray--80: lighten(desaturate($big-stone, 40%), 45%);
+$color__gray--70: lighten(desaturate($big-stone, 40%), 50%);
+$color__gray--60: lighten(desaturate($big-stone, 40%), 55%);
+
+//We use light neutrals as subtle backgrounds to indicate various interactive states such as hover and 
+//disabled, or simply to create secondary attention towards a component. You'll find light neutrals in buttons,
+//text fields, tags, and illustrations. Light neutrals are helpful for offsetting content in a primarily white
+//layout without losing warmth and cleanliness and are therefore often used as a background color.
+$color__gray--50: lighten(desaturate($big-stone, 40%), 60%);
+$color__gray--40: lighten(desaturate($big-stone, 40%), 70%);
+// 30: Bg with N600 text
+$color__gray--30: lighten(desaturate($big-stone, 40%), 72%);
+// 20: Good card bg color on white surface
+$color__gray--20: lighten(desaturate($big-stone, 40%), 75%);
+//10: Bg color for sections (creates separation). For text, N800 and N400 for more subtle sub-title.
+//Refer to https://atlassian.design/foundations/color (top section of page).
+$color__gray--10: lighten(desaturate($big-stone, 40%), 78%);
+$color__white: #fff;
+*/
+
+/*
+$color__gray--0: hsl(210, 0%, 100%);
+$color__gray--50: hsl(210, 20%, 97%);
+$color__gray--100: hsl(210, 0%, 95%);
+$color__gray--200: hsl(210, 0%, 90%);
+$color__gray--300: hsl(210, 0%, 85%);
+$color__gray--400: hsl(210, 0%, 80%);
+$color__gray--500: hsl(210, 0%, 70%);
+$color__gray--600: hsl(210, 0%, 55%);
+$color__gray--700: hsl(210, 0%, 40%);
+$color__gray--800: hsl(210, 35%, 20%);
+$color__gray--900: hsl(210, 0%, 10%);
+$color__gray--1000: hsl(210, 0%, 0%);
+$color__white: $color__gray--0;
+*/
+
+
+
+/*
+Note: it seems that headings tend to have a Neutral 700 (<800, more colorful)
+whereas paragraphs a Neutral 900.
+
+Surface Bg: White
+Section Bg: Neutral 10
+Headline (h1) Text: Neutral 800
+Paragraph or Sub-title (h2 or h3?) Text: Neutral 400 
+
+Surface Bg: White
+Section Bg: Primary 50
+Headline (h1, h2, h3) Text: Neutral 700
+Text underneath headline (not paragraph, just 1 line): Neutral 500
+Normal Paragraph (multi-lines) underneath headline (h3): Neutral 900
+
+Surface Bg: White
+Large Card Bg: Neutral 20
+Bold/Important Text: Neutral 800
+More subtle Text: Neutral 300
+Colored Text: Primary
+
+Surface Bg: White
+Bold/Important Text: Neutral 800
+More subtle Text: Neutral 200 or Neutral 300, not much a difference!
+Colored Text: Primary
+
+Several sections example:
+1. White (you can have some primary--inversed button or some bg-color: primary--50 and text-color: primary)
+2. Neutral 800 + white text on top --> any other color (most likely light) welcome?)
+3. Neutral 20 + Neutral 700 (h2 & h3) and Neutral 900 (multi-lines paragraph underneath headings) 
+4. White again
+5. Primary bg + white text on top + (bg: accent, text: Neutral 800 for button)
+
+*/

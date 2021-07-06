@@ -1,0 +1,132 @@
+
+
+// FONT SIZES
+/*
+.u-fs-sm {font-size: $font-size-small !important;}
+.u-fs-md {font-size: $font-size-medium !important;}
+.u-fs-big {font-size: $font-size-big !important;}
+.u-fs-huge {font-size: $font-size-huge !important;}
+*/
+
+/*If the child of this div is an inline-block, then it is treated as text and
+therefore will be centered using 'text-align: center' on its parent div.
+If its child is a block element, it will be centered as well.
+If it is an inline element ('a' tag, etc.), then it will not center it. For that to work,
+you have to add your 'a' tag the attribute 'display: inline-block'.*/
+.u-center-text {text-align: center;}
+
+.u-margin-bottom-small {margin-bottom: 1.5rem !important;}
+/*We put !important here because for the form group ('<div class="form__group u-margin-bottom-medium">') in
+index.html, the class 'form__group' (with a margin-bottom of 2rem) is more specific (because it is 
+.form {form__group:not(:last-child) {margin-bottom: 2rem;}) and therefore takes precedence over our utility
+class 'u-margin-bottom-medium'. */
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+
+    /*
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+    */
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+
+    /*
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+    */
+}
+
+.u-margin-top-big {margin-top: 8rem !important;}
+.u-margin-top-huge {margin-top: 10rem !important;}
+
+.span-link {color: $color__primary;}
+.span-bold {font-weight: 600;}
+
+.text-center {text-align: center;}
+
+
+.bulletpt {
+    text-indent: -2.75rem;
+
+    &::before {
+        display: inline-block;
+        content: '';
+        border-radius: 50%;
+        height: .8rem;
+        width: .8rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    &--primary {
+        &::before {background-color:$color__primary;}
+    }
+    &--white {
+        color: $color__white;
+        &::before {background-color:$color__white;}
+    }
+}
+
+.bullet-triangle {
+    &::before {
+        content: '\2bc8';
+        display: inline-block;
+        margin-right: 1rem;
+        color: $color__secondary;
+    }
+
+    &--after {
+        &::after {
+            content: '\2bc8';
+            display: inline-block;
+            margin-left: 1rem;
+            color: $color__secondary;
+        }   
+    }
+}
+
+.bullet-triangle-down {
+    &--after {
+        &::after {
+            content: '\2bc6';
+            display: inline-block;
+            margin-left: 1rem;
+            color: $color__secondary;
+        }   
+    }
+}
+
+.bullet-plus {
+    &--after {
+        &::after {
+            content: '\002B';
+            display: inline-block;
+            font-size: 4rem;
+            margin-left: 1rem;
+            color: $color__primary;
+        }   
+    }
+}
+
+.bullet-minus {
+    &--after {
+        &::after {
+            content: '\002D';
+            display: inline-block;
+            font-size: 4rem;
+            margin-left: 1rem;
+            color: $color__primary--100;
+        }   
+    }
+}
+
+.separator {
+    width: 15%;
+    height: 2px;
+    background: $color__primary;
+    @include margin($top: xl, $bottom: xl, $left: auto, $right: auto);
+}

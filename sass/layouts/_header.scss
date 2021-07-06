@@ -1,0 +1,310 @@
+.header {
+    display: grid;
+    grid-template-rows: max-content auto;
+    align-items: stretch;
+    
+    &__logo {
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-left: 2rem;
+        color: $logo__color;
+        span {color: $color__primary;}
+    }
+    
+    &__nav {
+        background-image: linear-gradient(to right, $navbar__color-bg, $navbar__color-bg);
+        color: $navbar__color-text;
+        height: 8rem;
+        padding-top: 2rem;
+        @include flexbox(row, space-between, center, center, center);
+    }
+    
+    &__hamburger {
+        background-color: $color__white;
+        color: $color__primary;
+        
+        box-shadow: 0 1rem 2rem rgba($color__gray--800, .2);
+        position: fixed;
+        width: 6rem;
+        height: 6rem;
+        top: 1rem;
+        right: 2rem;
+        border-radius: 50%;
+        display: none;
+        opacity: 0;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;    
+            opacity: 1;
+            z-index: 11;
+        }
+
+        span {
+            position: relative;
+
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2px;
+                background-color: $color__primary;
+                display: inline-block;
+            }
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+    
+            &::before {top: -.7rem;}
+            &::after {top: .7rem;}
+        }
+
+        span.cross::before,
+        span.cross::after {top: 0;}
+
+        span.cross::before{transform: rotate(135deg);}
+        span.cross::after{transform: rotate(-135deg);}
+
+        &:hover span::before {top: -1rem;}
+        &:hover span::after {top: 1rem;}
+        
+        &:hover span.cross::before,
+        &:hover span.cross::after {top: 0;}
+    }
+
+    &__mobile-background {
+        background-image: radial-gradient($color__gray--900, $color__gray--500);
+        width: 6rem;
+        height: 6rem;
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        border-radius: 50%;
+        opacity: 0;
+        //transition: transform .7s ease-in-out;
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        &--active {transform: scale(50);}
+
+        @media only screen and (max-width: $bp-small) { 
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    &__mobile {
+        color: $navbar__color-text;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 10;
+        //transition: all .7s ease-in-out;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        
+        &--active {
+            display: none;
+
+            // Should be visible only for small breakpoint
+            @media only screen and (max-width: $bp-small) { 
+                width: 100%;
+                opacity: 1;
+                display: block;
+            }
+        }
+
+        > ul {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            //height: 50%;
+            margin-top: 5rem;
+            text-align: center;
+            font-size: 3rem;
+
+            /*
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 2rem;
+            */
+        }
+    }
+
+    &__grid-body {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.header-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to right, $navbar__color-bg, $navbar__color-bg);
+    color: $header__color-text;
+}
+
+/*PRESENTATION OF JMC*/
+.presentation {
+    grid-column: 2 / 12;
+    padding: 2rem 0;
+    margin: 0 4rem;
+
+    &__grid {
+        grid-template-rows: repeat(2, min-content) 1fr min-content;
+        grid-template-columns: minmax(min-content, max-content);
+        //grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+        grid-row-gap: 1.5rem;
+        justify-items: start;
+        margin-bottom: 2rem;
+    }
+
+    &__fullname {
+        color: $developer-text__color;
+        font-size: 2.2rem;
+        letter-spacing: .5rem;
+        line-height: 1.1;
+    }
+
+    &__title {
+        line-height: 1.4;
+        margin-bottom: 3rem;
+        /*Per default, span are inline elements. Change its display as block.
+        Block elements occupy the whole width available and they create line breaks after and before them*/
+
+        // Get direct first (main span) and second (sub span) child of type span
+        > span:nth-child(1) {@include animation-span(moveInLeft, .8s, ease-out);}
+        > span:nth-child(2) {@include animation-span(moveInRight, .8s, ease-out);}
+    }
+
+    &__summary {
+        p, span {
+            font-size: 2rem;
+            color: $summary-text__color;
+        }
+
+        span {
+            color: $summary-span-text__color;
+            font-weight: 600;
+        }   
+    }
+}
+
+/* PROFILE WITH PHOTO AND DESCRIPTION */
+.profile {
+    padding: 1rem;
+    padding-top: 4rem;
+    grid-column: 9 / 12;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 2 / 12;
+        grid-template-rows: min-content;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+        margin: 5rem auto;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 12;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    &__grid {
+        grid-template-rows: repeat(2, min-content);
+        grid-gap: 1rem;
+        align-content: space-evenly;
+        justify-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(2, minmax(min-content, max-content));
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image-wrapper {
+        /*Use flexbox in order to center our image horizontally.
+        APPARENTLY NOT NEEDED!!??*/
+        @include flexbox(row, center, null, center, null);
+        
+        @media only screen and (max-width: $bp-medium) {
+            margin: 0rem auto;
+        }
+    }
+
+    &__image {
+        background-image: url(/img/profile_photo.png);
+        background-size: contain; //Using 'cover' will make the image overflow outside...
+        background-position: center;
+        background-repeat: no-repeat; // Otherwise, the image will be repeated and mirrored
+        width: 45vh;
+        height: 45vh;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 35vh;
+            height: 35vh;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 25vh;
+            height: 25vh;
+        }
+    }
+
+    &__descriptions {
+        display: none;
+        padding: 0 1rem;
+        
+        &__grid {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1.2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__description {
+        @include flexbox(column, space-around, null, null, center);
+        padding: 1rem;
+        background-color: $description-item-bg__color;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            text-align: center;
+            margin: 0;
+            color: $description-item-text__color;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            flex-direction: row;
+        }
+    }
+}

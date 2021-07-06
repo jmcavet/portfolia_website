@@ -1,0 +1,69 @@
+
+.section {
+    &__container {@include flexbox(row, center);}
+
+    &__layout-container {
+        width: 100%;
+        max-width: 140rem;
+        margin: 0 8vw;
+    }
+
+    &__layout {@include padding($top: xxl, $bottom: xxl);}
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &--spacebetween {justify-content:space-between;}
+    &--center {justify-content: center;}
+    &--start {justify-content: start;}
+    &--end {justify-content: end;}
+}
+
+.grid {
+    display: grid;
+    grid-column-gap: 1rem;
+    justify-content: center; //Center the whole main div horizontally
+
+    // For all pages (except home)
+    &--body {
+        grid-template-rows: min-content auto min-content;
+        justify-content: stretch;
+    }
+    // For home page only
+    &--body-home {
+        grid-template-rows: 100vh auto min-content;
+        justify-content: stretch;
+
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-rows: auto auto min-content;
+        }
+    }
+
+
+    /* --- ABOUT PAGE --- */
+    // Card used 3 times so it makes sense to have it here.
+    &--card-work-2-3,
+    &--card-work-3-2 {
+        gap: 3rem;
+
+        grid-template-rows: 1fr;
+    }
+
+    &--card-work-2-3 {
+        grid-template-columns: 2fr 3fr;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, min-content);
+        }
+    }
+    &--card-work-3-2 {
+        grid-template-columns: 3fr 2fr;
+
+        @media only screen and (max-width: $bp-large) {grid-template-columns: 1fr;}
+    }
+    /* --- END OF ABOUT PAGE --- */
+}

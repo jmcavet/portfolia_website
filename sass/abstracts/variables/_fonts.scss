@@ -1,0 +1,49 @@
+
+/* FONT FAMILY */
+$font__heading: 'Prata', sans-serif;
+$font__body: 'Roboto', sans-serif;
+
+/* BASE FONT SIZE, HEIGHT, WEIGHT */
+$base-font-size: 1.8rem; // 18px
+$base-line-height: 1; // For medium: 1.4 * 1 * 16px = 22.4px
+$base-font-weight: 300;
+
+
+$font-scale: (
+  xxs: 0.25 * $base-font-size,  // small text
+  xs: 0.5 * $base-font-size,  // small text
+  sm: 0.75 * $base-font-size,  // small text
+  md: $base-font-size,      // Body text, paragraph
+  lg: 1.15 * $base-font-size,  // Large text
+  xl: 1.4 * $base-font-size,  // Heading 3
+  xxl: 2.2 * $base-font-size,   // Heading 2
+  xxxl: 2.8 * $base-font-size,   // Heading 1
+);
+
+
+/*line height (pixels) ÷ body copy font size (pixels) = 1.48.
+Note that 1.5 is a value that is commonly recommended in classic
+typographic books --> refer to my medium (md) value, used for paragraphs*/
+$line-height: (
+  xxs: $base-line-height * 1.8,
+  xs: $base-line-height * 1.7,
+  sm: $base-line-height * 1.6,
+  md: $base-line-height * 1.5,
+  lg: $base-line-height * 1.35,
+  xl: $base-line-height * 1.2,
+  xxl: $base-line-height * 1.1,
+  xxxl: $base-line-height * 1.05,
+);
+
+/*Make sure headings have some bold font-weight --> visual hierarchy!*/
+$font-weight: (
+  xxs: $base-font-weight - 100,
+  xs: $base-font-weight - 100,
+  sm: $base-font-weight - 100,
+  md: $base-font-weight,
+  lg: $base-font-weight,
+  xl: $base-font-weight + 100,
+  xxl: $base-font-weight + 200,
+  xxxl: $base-font-weight + 300,
+);
+

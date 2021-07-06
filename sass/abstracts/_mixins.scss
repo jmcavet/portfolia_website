@@ -1,0 +1,66 @@
+@mixin button-theme(
+    $color-bg,
+    $color-text,
+    $color-border,
+    $color-bg--hover,
+    $color-text--hover,
+    $color-border--hover,
+    $y-translation: -3px
+    ) {
+    background-color: $color-bg;
+    color: $color-text;
+    border-color: $color-border;
+
+    &:hover {
+        background-color: $color-bg--hover;
+        color: $color-text--hover;
+        border-color: $color-border--hover;
+        transform: translateY($y-translation);
+    }
+}
+
+@mixin color-bg-text(
+    $color-bg,
+    $color-text
+    ){
+        background-color: $color-bg;
+        color: $color-text;
+    }
+
+
+@mixin font-scale($level: md) {font-size: get-font-scale($level)};
+
+@mixin font-line-settings($level: md) {
+    font-size: get-font-scale($level);
+    font-weight: get-font-weight($level);
+    line-height: get-line-height($level);
+}
+
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+    margin-top: get-margin($top);
+    margin-right: get-margin($right);
+    margin-bottom: get-margin($bottom);
+    margin-left: get-margin($left);
+}
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    padding-top: get-padding($top);
+    padding-right: get-padding($right);
+    padding-bottom: get-padding($bottom);
+    padding-left: get-padding($left);
+}
+
+@mixin animation-span($name: null, $duration: null, $timing-function: null) {
+    display: block;
+    animation: $name $duration $timing-function;
+}
+
+@mixin flexbox($dir: row, $just-cont: null, $align-cont: null, $just-items: null, $align-items: null) {
+    display: flex;
+    flex-direction: $dir;
+    //padding: 0 2rem;
+    align-content: $align-cont;
+    justify-content: $just-cont;
+    align-items: $align-items;
+    justify-items: $just-items;
+}

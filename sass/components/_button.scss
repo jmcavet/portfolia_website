@@ -1,0 +1,36 @@
+
+/*I put this placeholder in the same file as class, and not in helpers file (recommended?) since problem
+with import (before/after) --> looping problem*/
+%button-shared {
+    @include font-line-settings(lg);
+    font-weight: 600;
+    @include padding($top: sm, $bottom: sm, $left: md, $right: md);
+    //padding: $button-padding;
+    text-transform: $button-text-transform;
+    border-width: $button-border-width;
+    border-style: $button-border-style;
+    border-radius: $button-border-radius;
+    transition: all $button-transition-time;
+    cursor: $button-cursor;
+}
+
+.btn {
+    @extend %button-shared;
+
+    &.primary {
+        @include button-theme($color__primary, $color__white, transparent, $color__primary--500, $color__white, transparent);
+        &--inversed {
+            @include button-theme(transparent, $color__white, $color__white, $color__primary--500, $color__white, $color__white);
+        }
+        &--border {
+            @include button-theme(transparent, $color__primary, $color__primary, $color__primary, $color__white, $color__white);
+        }
+    }
+
+    &.secondary {
+        @include button-theme($color__secondary, $color__gray--900, $color__secondary, $color__secondary--400, $color__white, transparent);
+        &--inversed {
+            @include button-theme(transparent, $color__white, $color__white, $color__secondary, $color__white, $color__white);
+        }
+    }
+}

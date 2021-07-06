@@ -1,0 +1,169 @@
+{
+    "companies": [
+        "Stirling Dynamics",
+        "Airbus Spain",
+        "Airbus Germany",
+        "MTU (Aero)",
+        "MTU (Software)"
+    ],
+    "place": [
+        "Bristol, UK",
+        "Madrid (Getafe), Spain",
+        "Bremen, Germany",
+        "Munich, Germany",
+        "Munich, Germany"
+    ],
+    "jobtitle": [
+        "Junior Engineer in Aerodynamic Loads",
+        "Research and Development Engineer",
+        "Engineer in Aerodynamics",
+        "Secondary Air System Engineer",
+        "Software Engineer - Methods & Tools"
+    ],
+    "jobstart": [
+        "2003.9",
+        "2005.5",
+        "2007.9",
+        "2008.25",
+        "2017.0"
+    ],
+    "jobMonthYear": [
+        [
+            "Dec 2003",
+            "Jun 2005"
+        ],
+        [
+            "Jun 2005",
+            "Oct 2007"
+        ],
+        [
+            "Nov 2007",
+            "Feb 2008"
+        ],
+        [
+            "March 2008",
+            "Dec 2016"
+        ],
+        [
+            "Jan 2017",
+            "Calculated in index.html file"
+        ]
+    ],
+    "activities": [
+        [
+            "Aerodynamic analysis of high-lift devices of the Airbus A320 and A380 aircrafts for several flight configurations.",
+            "English-French translation of technical nuclear documentation (for British Nuclear Fuel Group)"
+        ],
+        [
+            "Investigated the longitudinal and lateral aerodynamic characteristics of an Airbus V-tail plane for various flight conditions and aircraft configurations",
+            "Defined a mathematical model of aerodynamic coefficients, based on Wind tunnel test data."
+        ],
+        [
+            "Analysed the A350-XWB high-lift devices aerodynamic loads based on low speed wind tunnel data for longitudinal motion. In particular, I compared wind tunnel test data with CFD calculations."
+        ],
+        [
+            "Performed CFD analysis of Aero Engine Low Pressure Turbines and cavities",
+            "Developed processes for the internal multidisciplinary simulation lifecycle management",
+            "Developed a pre- and postprocessing software for Computational Fluid Dynamics (CFD) analysis"
+        ],
+        [
+            "Developing a thermal and aerodynamic Software for analysing engine test data and comparing them with numerical simulations",
+            "Building processes for scientific simulations, through Computed Aided Engineering (CAE)",
+            "Focal point for a post-processing CFD Tool and our simulation lifecycle management system within the Secondary Air System Department"
+        ]
+    ],
+    "summary": [
+        [
+            "After graduating from a double degree in Engineering, I began working for a medium-size engineering company in England, <span><a href='https://www.stirling-dynamics.com/' target='_blank'>Stirling Dynamics</a></span>.",
+            "I provided engineering support to various customers in the aerospace and energy sectors, such as Airbus UK, BAe Systems, BNFL.",
+            "More than the start of my profesionnal career, it was an enriching human experience within a diverse group of engineers."
+        ],
+        [
+            "As an employee of <span><a href='https://www.akka-technologies.com/' target='_blank'>Aeroconseil Iberica</a></span>, I have worked full time onsite for our main customer, Airbus Spain.",
+            "I worked on the 'New Empenage For Aircraft' <span><a href='https://trimis.ec.europa.eu/project/new-empennage-aircraft' target='_blank'>(NEFA)</a></span> R&D program.",
+            "Not only did I improve my knowledge in aerodynamic and mathematical modelling, but I also took the opportunity to learn spanish and use it on a daily basis."
+        ],
+        [
+            "As a freelancer/contractor, I performed aerodynamic calculations for the Flight Physics Department within Airbus Germany.",
+            "Since it was only a 4-month contract, this taught me to work efficiently and deliver analysis and reporting under time pressure."
+        ],
+        [
+            "While I was running aerodynamic simulations during my first years, I noticed the need to automate our processes and progressivly taught myself Software development accordingly.",
+            "In particular, I started improving our aerodynamic analysis and pre- and post-processes by developing a Graphical User Interface (GUI).",
+            "Within the CFD department, this platform has now become the standard tool for analysing simulation results."
+        ],
+        [
+            "Guided by my growing passion for Software Development, I changed position internally in 2017 to fully embrace this field.",
+            "My main focus are test and simulation data analysis, DataViz using GUIs and Dashboards, as well as <span><a href='https://www.4soft.de/references/mtu-eprotas/' target='_blank'>simulation lifecycle management</a></span> between multi-physic disciplines.",
+            "In particular, I commit myself to pushing our team towards a better UX Design, cleaner and better scructured lines of code, and more intuitive Visualization tools."
+        ]
+    ],
+    "cities": [
+        {
+            "name": "Orleans",
+            "coordinates": [
+                1.909251,
+                47.902964
+            ],
+            "information": [
+                "<div class='map-city'>Polytech' Orleans <span>[2000-2002]</span></div>",
+                "<div class='map-city__activity flex flex--center'>Engineering School Diploma</div>"
+            ]
+        },
+        {
+            "name": "Cranfield",
+            "coordinates": [
+                -0.628283,
+                52.074614
+            ],
+            "information": [
+                "<div class='map-city'>Cranfield University <span>[2002-2003]</span></div>",
+                "<div class='map-city__activity flex flex--center'>MSc Aerospace Dynamics</div>"
+            ]
+        },
+        {
+            "name": "Bristol",
+            "coordinates": [
+                -2.58791,
+                51.454513
+            ],
+            "information": [
+                "<div class='map-city'>Bristol <span>[2003-2005]</span></div>",
+                "<div class='map-city__activity flex flex--center'>Stirling Dynamics Ltd</div>"
+            ]
+        },
+        {
+            "name": "Madrid",
+            "coordinates": [
+                -3.70325,
+                40.4167
+            ],
+            "information": [
+                "<div class='map-city'>Madrid <span>[2005-2007]</span></div>",
+                "<div class='map-city__activity flex flex--center'>Airbus Spain</div>"
+            ]
+        },
+        {
+            "name": "Bremen",
+            "coordinates": [
+                8.806422,
+                53.073635
+            ],
+            "information": [
+                "<div class='map-city'>Bremen <span>[2007-2008]</span></div>",
+                "<div class='map-city__activity flex flex--center'>Airbus Germany</div>"
+            ]
+        },
+        {
+            "name": "Munich",
+            "coordinates": [
+                11.576124,
+                48.137154
+            ],
+            "information": [
+                "<div class='map-city'>Munich <span>[2008-Today]</span></div>",
+                "<div class='map-city__activity flex flex--center'>MTU Aero Engines</div>"
+            ]
+        }
+    ]
+}

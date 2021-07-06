@@ -1,0 +1,53 @@
+/*BASIC STYLES RELATED TO ALL TEXT ELEMENTS*/
+
+body {
+    /*Properties related to fonts are usually inherited.
+    
+    Alway specify Fonts here in the body, not in the '*' universal selector.
+
+    We set the Font family of the body element, which is the parent element of all other elements.
+    All children of body will inherit from this font-family*/
+    font-family: $font__body;
+    @include font-line-settings(md);
+    
+    // Colors
+    @include color-bg-text($color__white, $color__gray--900);
+}
+
+
+%heading {
+    font-family: $font__heading;
+}
+
+.heading-1 {
+    @extend %heading;
+    @include font-line-settings(xxxl);
+    @include margin($bottom: xl);
+}
+
+.heading-2 {
+    @extend %heading;
+    @include font-line-settings(xxl);
+    @include margin($bottom: lg);
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    /*
+    In the Clarity Design System, Headers can have apparently either dark gray (neutral--900) or 
+    dark primary (primary--700, primary--800) variations
+    Let's have some primary dark color instead of neutral gray for heading 2
+    */
+    color: $color__primary;
+}
+
+.heading-3 {
+    @extend %heading;
+    @include font-line-settings(xl);
+    @include margin($bottom: sm);
+    color: $color__gray--800;
+
+}
+
+.paragraph-container {
+    max-width: 80rem;
+}

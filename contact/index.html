@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
+
+    <script src="/scripts/scroll-down.js"></script>
+    <script src="/scripts/hamburger.js"></script>
+
+    <title>Jean-Marie Cavet | Personal Site</title>
+</head>
+
+<body class="grid grid--body">
+
+    <header class="header">
+        <header-component page="contact"></header-component>
+    </header>
+
+    <main>
+
+        <section class="flex flex--center bg-color-light">
+            <div class="section__layout-container">
+                <div class="section__layout contact-header">
+                    <h1 class="heading-1 u-center-text">Contact Me</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex--center">
+            <div class="section__layout-container">
+                <div class="section__layout">
+                    <div class="grid contact__grid">
+                        <div class="contact__message">
+                            <h2 class="heading-2">Want to talk?</h2>
+                            <p>My portfolio and skills convinced you and I may be a valuable asset for
+                                your company?</p>
+                            <p>Then, reach me directly via my Linkedin and Xing links, or simply use the
+                                contact form available on this page.</p>
+                            <div class="grid contact__grid-social">
+                                <a href="https://www.linkedin.com/in/jean-marie-cavet-24687216/" target="_blank"
+                                    role="button">
+                                    <div class="icon-social__linkedin icon-social--large"></div>
+                                </a>
+
+                                <a href="https://www.xing.com/profile/JeanMarie_Cavet" target="_blank" role="button">
+                                    <div class="icon-social__xing icon-social--large"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <form method="POST" data-netlify="true" data-netlify-recaptcha="true" class="contact__form"
+                            id="contact-form">
+                            <label for="fullname" class="contact__label contact__label--required">Your
+                                Name</label>
+                            <input type="text" class="contact__input" id="fullname" placeholder="Full Name" required
+                                autocomplete="off" name="name">
+
+                            <label for="email" class="contact__label contact__label--required">Your
+                                Email</label>
+                            <input type="email" class="contact__input" id="email" placeholder="Email" required
+                                autocomplete="off" name="email">
+
+                            <label for="message" class="contact__label">Your Message</label>
+                            <textarea name="message" id="message" cols="30" rows="5"
+                                class="contact__textarea"></textarea>
+                            <div class="netlify-recaptcha">
+                                <div data-netlify-recaptcha="true"></div>
+                            </div>
+                            <button type="submit" form="contact-form" value="Submit"
+                                class="btn primary contact__button">Send</button>
+
+                        </form>
+                    </div>
+                </div>
+                </d </section>
+
+    </main>
+
+    <footer-component></footer-component>
+
+
+</body>

@@ -1,0 +1,48 @@
+.icon-social {
+    &__github,
+    &__linkedin,
+    &__xing {
+        height: 3rem;
+        width: 3rem;
+        background-size: contain; //Using 'cover' will make SASS icon overflow outside...
+        background-position: center;
+        background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
+    }
+
+    &__github {background-image: url(/img/socials/github.svg);}
+    &__linkedin {background-image: url(/img/socials/linkedin.svg);}
+    &__xing {background-image: url(/img/socials/xing.svg);}
+
+    &--large {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+.icon-web {
+    &__html5,
+    &__css3,
+    &__sass,
+    &__jquery,
+    &__bootstrap,
+    &__javascript,
+    &__mongodb,
+    &__nodejs,
+    &__react {
+        height: 3rem;
+        width: 3rem;
+        background-size: contain; //Using 'cover' will make SASS icon overflow outside...
+        background-position: center;
+        background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
+    }
+
+    &__html5 {background-image: url(/img/projects/html5.svg);}
+    &__css3 {background-image: url(/img/projects/css3.svg);}
+    &__sass {background-image: url(/img/projects/sass.svg);}
+    &__jquery {background-image: url(/img/projects/jquery.svg);}
+    &__bootstrap {background-image: url(/img/projects/bootstrap.svg);}
+    &__javascript {background-image: url(/img/projects/javascript.svg);}
+    &__mongodb {background-image: url(/img/projects/mongodb.svg);}
+    &__nodejs {background-image: url(/img/projects/nodejs.svg);}
+    &__react {background-image: url(/img/projects/react.svg);}
+}

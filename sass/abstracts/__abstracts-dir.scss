@@ -1,0 +1,11 @@
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, sass tools, helpers, variables, mixins,
+functions and other config files. They have no direct output.
+*/
+
+//Import Abstracts files
+@import "helpers";
+@import "mixins";
+@import "variables/__variables";
+@import "colors";

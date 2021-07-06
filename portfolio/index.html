@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../../components/header.js" type="text/javascript" defer></script>
+    <script src="../../components/footer.js" type="text/javascript" defer></script>
+    <script src="../../components/project.js" type="text/javascript" defer></script>
+
+    <script src="/scripts/scroll-down.js"></script>
+    <script src="/scripts/hamburger.js"></script>
+
+    <title>Jean-Marie Cavet | Portfolio</title>
+</head>
+
+<body class="grid grid--body">
+
+    <header class="header">
+        <header-component page="portfolio" portfolio_project="all"></header-component>
+        <div class="header-portfolio">
+            <h1 class="heading-1 header-portfolio__title">Portfolio</h1>
+            <p class="header-portfolio__text">Collection of my personal projects, designed and built using various web
+                technologies I have acquired through online courses.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="flex flex--center">
+            <div class="section__layout-container">
+                <div class="section__layout">
+                    <div class="grid projects__grid">
+                        <project-component figure-path="/img/projects/project_personal.png" img-alt="Project-Personal"
+                            github-page="#" app-detail="/portfolio/personal/" app-page="#" header="Personal Webpage V1"
+                            description="First version of my personal website, developed without Front-End library."
+                            tech-stack="html5, css3, sass, jquery">
+                        </project-component>
+
+                        <project-component figure-path="/img/projects/linguappo-1.png" img-alt="Linguappo-App"
+                            github-page="https://github.com/jmcavet/linguappo" app-detail="/portfolio/linguappo/"
+                            app-page="https://linguappo.herokuapp.com/" header="Linguappo"
+                            description="Application to learn languages in a friendly way"
+                            tech-stack="html5, css3, jquery, nodejs, mongodb">
+                        </project-component>
+
+                        <project-component figure-path="/img/projects/cuising.png" img-alt="Cuising-App" github-page="#"
+                            app-detail="/portfolio/cuising/" app-page="#" header="Cuising"
+                            description="Application to keep your recipes safe" tech-stack="html5, css3, sass, react">
+                        </project-component>
+
+                        <project-component figure-path="/img/projects/cuising.png" img-alt="Cuising-App" github-page="#"
+                            app-detail="/portfolio/cuising/" app-page="#" header="Cuising"
+                            description="Application to keep your recipes safe" tech-stack="html5, css3, sass, react">
+                        </project-component>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer-component></footer-component>
+
+</body>

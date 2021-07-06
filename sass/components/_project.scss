@@ -1,0 +1,137 @@
+// List of Projects
+.projects {
+    &__grid {
+        //grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        //grid-auto-rows: 1fr;
+        grid-template-columns: repeat(2, minmax(min-content, max-content));
+        grid-gap: 5rem;
+
+        @media only screen and (max-width: 43.75em) {
+            grid-template-columns: 1fr;
+        }
+
+        
+    }
+}
+
+// Single Project
+.project {
+    position: relative;
+    //background-color: $color__gray--800;
+    background-color: $color__primary--900;
+    box-shadow: 0 5px 10px 0 rgba(168, 159, 159, 0.3);
+
+    /*If we do not specify overflow: hidden, we'll see the image overflow its parent frame when we hover.
+    Refer to '&:hover img {transform: scale(1.2);}'*/
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: inherit;
+        opacity: 0.95;
+        
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        transform: scale(1) translate(-100%, -100%) rotate(-35deg);
+        transition: transform 1s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    &:hover::after {transform: scale(1) translate(0, 0);}
+
+    &__grid {grid-template-rows: max-content auto max-content;}
+
+    &__figure {
+        display: block;
+        transition: transform .5s;
+        
+        img {
+            width: 100%;
+            display: block;
+            // Makes the image scale up (see '&:hover img')
+            transition: transform 1000ms cubic-bezier(0.2, 1, 0.3, 1);
+            object-fit: cover;
+        }
+    }
+
+    &:hover img {transform: scale(1.2);}
+
+    &__text {
+        position: absolute;
+        /*It fills the whole parent container*/
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        opacity: 0; // Makes it invisible at start. It will appear when hovering
+        text-align: center;
+        z-index: 1;
+        color: $color__white;
+        transition: opacity 1500ms cubic-bezier(0.2, 1, 0.3, 1), transform 1500ms cubic-bezier(0.2, 1, 0.3, 1);
+        transition-delay: 120ms;
+    }
+
+    &:hover .project__text {opacity: 1;}
+
+    &__buttons {
+        padding-top: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        a:first-child {
+            transition: transform .3s;
+
+            &:hover {transform: scale(1.5);}
+        }
+
+        a:nth-last-child(2),
+        a:nth-last-child(1) {
+            border: none;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: .6rem 1.3rem;
+            cursor: pointer;
+
+            transition: transform .3s;
+
+            &:hover {transform: scale(1.2);}
+        }
+
+        a:nth-last-child(2) {
+            @include color-bg-text($color__secondary--500, $color__gray--800);
+        }
+
+        a:nth-last-child(1) {
+            @include color-bg-text($color__primary--500, $color__white);
+        }
+    }
+
+    &__description {
+        margin: 1rem 2rem;
+        align-items: center;
+        
+        h3 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        div {
+            font-size: 1.6rem;
+            line-height: 1.4;
+        }
+    }
+
+    &__tech-used {
+        padding: 1rem;
+        
+        & > :not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+}

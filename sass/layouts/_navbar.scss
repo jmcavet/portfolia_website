@@ -1,0 +1,230 @@
+
+// Submenu under 'Portfolio': list all projects
+.dropdown {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    left: 0rem;
+    text-align:center;
+    list-style: none;
+    transition: opacity 1s;
+    
+    &__list {
+        padding: 1rem 1.5rem;
+        background-color: $navbar__color-bg;
+        box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .3);
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            border-bottom: 3px transparent solid;
+            display: inline-block;
+            padding-bottom: .7rem;
+            transition: border-color 1s, opacity 1s;
+            opacity: .7;
+        }
+
+        &:hover,
+        &.active {
+            border-color: $color__secondary;
+            color: $navbar__color-text--hover;
+            opacity: 1;
+        }
+    }
+}
+
+.navbar__item:hover .dropdown {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    z-index: 10;
+}
+
+
+/*
+.dropdown-right {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    //left: calc(50% + 10rem);
+    left: 65%;
+    top: 1rem;
+    list-style: none;
+    transition: opacity 1s;
+    width: 30%;
+    text-align: left;
+    
+    &__list {
+        padding: 1rem 1.5rem;
+        background-color: $navbar__color-bg;
+        box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .3);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            border-bottom: 3px transparent solid;
+            display: inline-block;
+            padding-bottom: .7rem;
+            transition: border-color 1s, opacity 1s;
+            opacity: .7;
+        }
+
+        &:hover,
+        &.active {
+            border-color: $color__secondary;
+            color: $navbar__color-text--hover;
+            opacity: 1;
+        }
+    }
+}
+*/
+
+.dropdown-mobile {
+    display: none;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 1rem;
+    
+    &__list {
+        background-color: transparent;
+        padding: 1rem 1.5rem;
+        box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .2);
+        width: 75%;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            border-bottom: 3px transparent solid;
+            display: inline-block;
+            padding-bottom: .7rem;
+            transition: border-color .7s;
+        }
+
+        &:hover,
+        &.active {
+            border-color: $color__secondary;
+            color: $navbar__color-text--hover;
+        }
+    }
+
+    &--activated {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/*
+.navbar__item:hover .dropdown-right {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+    z-index: 10;    
+}
+*/
+
+
+
+
+// MAIN NAVBAR
+.navbar {
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+    
+    &__list {
+        @include flexbox(row, space-between, start, center, center);
+        font-size: 1.5rem;
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+        padding: 1.5rem .5rem;
+        @include padding($left: xs, $right: xs, $top: md, $bottom: md);
+
+        img {
+            height: 100%;
+            width: 4rem;
+            padding-bottom: .7rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: yellow;
+        transform: scaleY(0);
+        transition: transform .1s,
+                    width .3s
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            border-bottom: 3px transparent solid;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding-bottom: .7rem;
+            //transition: border-color .6s;
+            transition: all .6s;
+
+            /*z-index only works if we have a relative position. We use z-index here in order to make the link
+            appear on top of the '::before' selector when the link is being hovered (see '&__item:hover::before')*/
+            position: relative;
+            z-index: 1;
+        }
+
+        &:hover,
+        &.active {
+            border-color: $navbar__color-borderbottom;
+            color: $navbar__color-text--hover;
+        }
+
+        &:hover {transform: translateX(0rem);}
+    }
+
+    &__link--portfolio {
+        &:hover + .dropdown-right {
+            visibility: visible;
+            display: block;
+            opacity: 1;
+            z-index: 20;
+        }
+    }
+
+    &__portfolio-items {
+        background-color: $color__gray--700;
+        color: $color__gray--50;
+        font-size: 1.6rem;
+        width: 35%;
+        margin: 0 auto;
+
+        opacity: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+}

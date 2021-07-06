@@ -1,0 +1,21 @@
+
+.color-primary {
+    color: $color__primary;
+}
+
+.color-primary--200 {
+    color: $color__primary--200;
+}
+
+.color-secondary {
+    color: $color__secondary;
+}
+
+.color-gray--500 {
+    color: $color__gray--500;
+}
+
+// Light and background for creating separation between sections
+.bg-color-light {background-color: $color__gray--20;}
+.bg-color-medium {background-color: $color__gray--300;}
+.bg-color-dark {background-color: $color__gray--800;}
