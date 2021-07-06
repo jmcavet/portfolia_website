@@ -108,32 +108,7 @@ $color__primary--100: lighten(adjust-hue($turquoise-blue, -22deg), 30%); // Bord
 $color__primary--050: lighten(adjust-hue($turquoise-blue, -40deg), 33%); // Bg light, with gray--800 as text
 */
 /*For headings, CTA buttons, links, etc.*/
-/*
-$color__primary--500: $science-blue;
-$color__primary--900: darken($science-blue, 25%);
-$color__primary--800: darken($science-blue, 20%);
-$color__primary--700: darken($science-blue, 15%);
-$color__primary--600: darken($science-blue, 10%);
-$color__primary--400: lighten($science-blue, 10%);
-$color__primary--300: lighten($science-blue, 15%);
-$color__primary--200: lighten($science-blue, 20%);
-$color__primary--100: lighten($science-blue, 25%);
-$color__primary--75: lighten(saturate(adjust-hue($science-blue, -20deg), 40%), 15%);
-$color__primary--50: lighten($science-blue, 55%);
-*/
 /*For primary actions, buttons, text links, for indicating progress, etc.*/
-/*
-$ocean-green: #00c2a2; // #03b4b4;
-$color__secondary: $ocean-green;
-$color__secondary--300: $ocean-green;
-
-$color__secondary--500: darken(saturate($ocean-green, 45%), 25%);
-$color__secondary--400: darken(saturate($ocean-green, 45%), 20%);
-$color__secondary--200: lighten($ocean-green, 15%);
-$color__secondary--100: lighten($ocean-green, 25%);
-$color__secondary--75: lighten($ocean-green, 35%);
-$color__secondary--50: lighten($ocean-green, 50%);
-*/
 /*----NEUTRALS----*/
 /*
 $big-stone: #172B4D; //rgb(16, 20, 46);//#00364d; //#031d49; //#11213d; //#172B4D
@@ -293,13 +268,13 @@ Note: no colors specified here, but rather within the button-theme mixin
 /* NAVBAR */
 /* FOOTER */
 .color-primary {
-  color: #1a4de6; }
+  color: #174be8; }
 
 .color-primary--200 {
-  color: #a3b8f5; }
+  color: #a2b7f6; }
 
 .color-secondary {
-  color: #1ae6d5; }
+  color: #1ae6e6; }
 
 .color-gray--500 {
   color: #668099; }
@@ -385,7 +360,7 @@ body {
 
 a {
   background-color: transparent;
-  color: #1a4de6;
+  color: #174be8;
   color: inherit;
   text-decoration: none; }
 
@@ -404,7 +379,7 @@ li {
 
 /*Used to select some text (for copy/paste for instance)*/
 ::selection {
-  background-color: #1a4de6;
+  background-color: #174be8;
   color: white; }
 
 /*BASIC STYLES RELATED TO ALL TEXT ELEMENTS*/
@@ -444,7 +419,7 @@ body {
     dark primary (primary--700, primary--800) variations
     Let's have some primary dark color instead of neutral gray for heading 2
     */
-  color: #1a4de6; }
+  color: #174be8; }
 
 .heading-3 {
   font-size: 2.52rem;
@@ -500,7 +475,7 @@ class 'u-margin-bottom-medium'. */
   margin-top: 10rem !important; }
 
 .span-link {
-  color: #1a4de6; }
+  color: #174be8; }
 
 .span-bold {
   font-weight: 600; }
@@ -519,7 +494,7 @@ class 'u-margin-bottom-medium'. */
     margin-right: 1rem;
     margin-left: 1rem; }
   .bulletpt--primary::before {
-    background-color: #1a4de6; }
+    background-color: #174be8; }
   .bulletpt--white {
     color: white; }
     .bulletpt--white::before {
@@ -529,26 +504,26 @@ class 'u-margin-bottom-medium'. */
   content: '\2bc8';
   display: inline-block;
   margin-right: 1rem;
-  color: #1ae6d5; }
+  color: #1ae6e6; }
 
 .bullet-triangle--after::after {
   content: '\2bc8';
   display: inline-block;
   margin-left: 1rem;
-  color: #1ae6d5; }
+  color: #1ae6e6; }
 
 .bullet-triangle-down--after::after {
   content: '\2bc6';
   display: inline-block;
   margin-left: 1rem;
-  color: #1ae6d5; }
+  color: #1ae6e6; }
 
 .bullet-plus--after::after {
   content: '\002B';
   display: inline-block;
   font-size: 4rem;
   margin-left: 1rem;
-  color: #1a4de6; }
+  color: #174be8; }
 
 .bullet-minus--after::after {
   content: '\002D';
@@ -560,7 +535,7 @@ class 'u-margin-bottom-medium'. */
 .separator {
   width: 15%;
   height: 2px;
-  background: #1a4de6;
+  background: #174be8;
   margin-top: calc(3 * 1.8rem);
   margin-right: auto;
   margin-bottom: calc(3 * 1.8rem);
@@ -590,11 +565,11 @@ with import (before/after) --> looping problem*/
   cursor: pointer; }
 
 .btn.primary {
-  background-color: #1a4de6;
+  background-color: #174be8;
   color: white;
   border-color: transparent; }
   .btn.primary:hover {
-    background-color: #1a4de6;
+    background-color: #174be8;
     color: white;
     border-color: transparent;
     transform: translateY(-3px); }
@@ -603,26 +578,26 @@ with import (before/after) --> looping problem*/
     color: white;
     border-color: white; }
     .btn.primary--inversed:hover {
-      background-color: #1a4de6;
+      background-color: #174be8;
       color: white;
       border-color: white;
       transform: translateY(-3px); }
   .btn.primary--border {
     background-color: transparent;
-    color: #1a4de6;
-    border-color: #1a4de6; }
+    color: #174be8;
+    border-color: #174be8; }
     .btn.primary--border:hover {
-      background-color: #1a4de6;
+      background-color: #174be8;
       color: white;
       border-color: white;
       transform: translateY(-3px); }
 
 .btn.secondary {
-  background-color: #1ae6d5;
+  background-color: #1ae6e6;
   color: #111a22;
-  border-color: #1ae6d5; }
+  border-color: #1ae6e6; }
   .btn.secondary:hover {
-    background-color: #47ebcf;
+    background-color: #47ebeb;
     color: white;
     border-color: transparent;
     transform: translateY(-3px); }
@@ -631,14 +606,14 @@ with import (before/after) --> looping problem*/
     color: white;
     border-color: white; }
     .btn.secondary--inversed:hover {
-      background-color: #1ae6d5;
+      background-color: #1ae6e6;
       color: white;
       border-color: white;
       transform: translateY(-3px); }
 
 .career-card {
   background-color: white;
-  box-shadow: 0px 2px 2px rgba(26, 77, 230, 0.1), 0px 0px 2px 0px rgba(26, 77, 230, 0.1);
+  box-shadow: 0px 2px 2px rgba(23, 75, 232, 0.1), 0px 0px 2px 0px rgba(23, 75, 232, 0.1);
   border-radius: .8rem;
   overflow: hidden;
   transition: all .3s;
@@ -656,7 +631,7 @@ with import (before/after) --> looping problem*/
     object-fit: cover;
     display: block; }
   .career-card__title {
-    background-color: #091c53;
+    background-color: #081b54;
     color: #eef0f1;
     font-size: 1.8rem;
     font-weight: 300;
@@ -681,7 +656,7 @@ with import (before/after) --> looping problem*/
   .career-card__item:not(:last-child) {
     margin-bottom: 1.3rem; }
   .career-card__link {
-    color: #1a4de6;
+    color: #174be8;
     font-weight: 500;
     display: inline-block;
     position: relative;
@@ -750,6 +725,18 @@ with import (before/after) --> looping problem*/
 .icon-web__react {
   background-image: url(/img/projects/react.svg); }
 
+.icon-portfolio-arrow {
+  width: 3rem !important;
+  height: 3rem !important;
+  margin-right: 1rem;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: rotate(0);
+  transition: transform .5s; }
+  .icon-portfolio-arrow.activated {
+    transform: rotate(810deg) scale(1.3); }
+
 .projects__grid {
   grid-template-columns: repeat(2, minmax(min-content, max-content));
   grid-gap: 5rem; }
@@ -759,7 +746,7 @@ with import (before/after) --> looping problem*/
 
 .project {
   position: relative;
-  background-color: #07143c;
+  background-color: #051133;
   box-shadow: 0 5px 10px 0 rgba(168, 159, 159, 0.3);
   /*If we do not specify overflow: hidden, we'll see the image overflow its parent frame when we hover.
     Refer to '&:hover img {transform: scale(1.2);}'*/
@@ -825,10 +812,10 @@ with import (before/after) --> looping problem*/
       .project__buttons a:nth-last-child(1):hover {
         transform: scale(1.2); }
     .project__buttons a:nth-last-child(2) {
-      background-color: #1ae6c4;
+      background-color: #1ae6e6;
       color: #213345; }
     .project__buttons a:nth-last-child(1) {
-      background-color: #1a4de6;
+      background-color: #174be8;
       color: white; }
   .project__description {
     margin: 1rem 2rem;
@@ -850,7 +837,7 @@ This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
 .footer {
-  background-color: #07143c;
+  background-image: linear-gradient(to right, #051133, #081b54);
   color: #eef0f1;
   grid-column: 1 / -1;
   padding: 5rem; }
@@ -951,9 +938,9 @@ Files inside this folder can contain specific element styles and layout.
     margin-left: 2rem;
     color: white; }
     .header__logo span {
-      color: #1a4de6; }
+      color: #174be8; }
   .header__nav {
-    background-image: linear-gradient(to right, #07143c, #07143c);
+    background-image: linear-gradient(to right, #051133, #081b54);
     color: #eef0f1;
     height: 8rem;
     padding-top: 2rem;
@@ -965,7 +952,7 @@ Files inside this folder can contain specific element styles and layout.
     justify-items: center; }
   .header__hamburger {
     background-color: white;
-    color: #1a4de6;
+    color: #174be8;
     box-shadow: 0 1rem 2rem rgba(33, 51, 69, 0.2);
     position: fixed;
     width: 6rem;
@@ -986,7 +973,7 @@ Files inside this folder can contain specific element styles and layout.
       .header__hamburger span, .header__hamburger span::before, .header__hamburger span::after {
         width: 3rem;
         height: 2px;
-        background-color: #1a4de6;
+        background-color: #174be8;
         display: inline-block; }
       .header__hamburger span::before, .header__hamburger span::after {
         content: "";
@@ -1012,12 +999,12 @@ Files inside this folder can contain specific element styles and layout.
     .header__hamburger:hover span.cross::after {
       top: 0; }
   .header__mobile-background {
-    background-image: radial-gradient(#111a22, #668099);
-    width: 6rem;
-    height: 6rem;
+    background-image: radial-gradient(#051133, #0e2d8b);
+    width: 5.6rem;
+    height: 5.6rem;
     position: fixed;
-    top: 1rem;
-    right: 2rem;
+    top: 1.1rem;
+    right: 2.2rem;
     border-radius: 50%;
     opacity: 0;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -1065,7 +1052,7 @@ Files inside this folder can contain specific element styles and layout.
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, #07143c, #07143c);
+  background-image: linear-gradient(to right, #051133, #081b54);
   color: white; }
 
 /*PRESENTATION OF JMC*/
@@ -1200,7 +1187,7 @@ Files inside this folder can contain specific element styles and layout.
   transition: opacity 1s; }
   .dropdown__list {
     padding: 1rem 1.5rem;
-    background-color: #07143c;
+    background-color: #051133;
     box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem rgba(167, 179, 190, 0.3);
     font-size: 1.3rem;
     text-transform: uppercase; }
@@ -1211,7 +1198,7 @@ Files inside this folder can contain specific element styles and layout.
     transition: border-color 1s, opacity 1s;
     opacity: .7; }
   .dropdown__link:hover, .dropdown__link.active {
-    border-color: #1ae6d5;
+    border-color: #1ae6e6;
     color: white;
     opacity: 1; }
 
@@ -1221,46 +1208,6 @@ Files inside this folder can contain specific element styles and layout.
   opacity: 1;
   z-index: 10; }
 
-/*
-.dropdown-right {
-    visibility: hidden;
-    display: none;
-    position: absolute;
-    //left: calc(50% + 10rem);
-    left: 65%;
-    top: 1rem;
-    list-style: none;
-    transition: opacity 1s;
-    width: 30%;
-    text-align: left;
-    
-    &__list {
-        padding: 1rem 1.5rem;
-        background-color: $navbar__color-bg;
-        box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .3);
-        font-size: 1.5rem;
-        text-transform: uppercase;
-    }
-
-    &__link {
-        &:link,
-        &:visited {
-            border-bottom: 3px transparent solid;
-            display: inline-block;
-            padding-bottom: .7rem;
-            transition: border-color 1s, opacity 1s;
-            opacity: .7;
-        }
-
-        &:hover,
-        &.active {
-            border-color: $color__secondary;
-            color: $navbar__color-text--hover;
-            opacity: 1;
-        }
-    }
-}
-*/
 .dropdown-mobile {
   display: none;
   align-items: center;
@@ -1281,7 +1228,7 @@ Files inside this folder can contain specific element styles and layout.
     padding-bottom: .7rem;
     transition: border-color .7s; }
   .dropdown-mobile__link:hover, .dropdown-mobile__link.active {
-    border-color: #1ae6d5;
+    border-color: #1ae6e6;
     color: white; }
   .dropdown-mobile--activated {
     opacity: 0;
@@ -1349,7 +1296,7 @@ Files inside this folder can contain specific element styles and layout.
   z-index: 1; }
 
 .navbar__link:hover, .navbar__link.active {
-  border-color: #1a4de6;
+  border-color: #174be8;
   color: white; }
 
 .navbar__link:hover {
@@ -1380,7 +1327,7 @@ Files inside this folder can contain specific styles for pages.
 .tooltip-map {
   background-color: #4d6680;
   color: white;
-  border: #1a4de6 2px solid;
+  border: #174be8 2px solid;
   padding: .5rem 1rem;
   position: absolute; }
 
@@ -1414,7 +1361,7 @@ Files inside this folder can contain specific styles for pages.
     .about-header__grid0 p span {
       font-size: 2.7rem;
       font-weight: 600;
-      color: #0f2e8a; }
+      color: #0e2d8b; }
   .about-header__grid0 figure img {
     border-radius: 50%;
     box-shadow: 0 1rem 2rem rgba(33, 51, 69, 0.3);
@@ -1432,6 +1379,14 @@ Files inside this folder can contain specific styles for pages.
   @media only screen and (max-width: 37.5em) {
     .about-header__grid0 {
       grid-template-columns: 1fr; } }
+
+@media only screen and (max-width: 37.5em) {
+  .about-header__bonjour {
+    grid-row: 2 / span 1; } }
+
+@media only screen and (max-width: 37.5em) {
+  .about-header__figure {
+    grid-row: 1 / span 1; } }
 
 .about-header__grid1 {
   grid-template-columns: repeat(2, 1fr);
@@ -1501,12 +1456,12 @@ Files inside this folder can contain specific styles for pages.
     border-radius: 0;
     transition: transform .3s; }
     .experience__company--active {
-      color: #e8edfc;
-      border-top: 2px solid #e8edfc;
-      border-bottom: 2px solid #e8edfc;
+      color: #e8edfd;
+      border-top: 2px solid #e8edfd;
+      border-bottom: 2px solid #e8edfd;
       transform: translateY(-0.3rem); }
     .experience__company:hover {
-      color: #e8edfc;
+      color: #e8edfd;
       transition: transform 1s;
       transform: translateY(-0.3rem); }
   .experience__cv-description {
@@ -1515,7 +1470,7 @@ Files inside this folder can contain specific styles for pages.
     background-color: #eef0f1;
     color: #213345; }
     .experience__cv-description span {
-      color: #1a4de6; }
+      color: #174be8; }
   .experience__job-header {
     margin-bottom: 3rem; }
 
@@ -1580,7 +1535,7 @@ Files inside this folder can contain specific styles for pages.
     height: 2px;
     position: relative; }
   .timeline__segment {
-    background-color: #1ae6d5;
+    background-color: #1ae6e6;
     position: absolute;
     top: -50%;
     height: 4px;
@@ -1591,7 +1546,7 @@ Files inside this folder can contain specific styles for pages.
     .timeline__segment::before, .timeline__segment::after {
       position: absolute;
       font-size: 1.3rem;
-      color: #1ae6d5; }
+      color: #1ae6e6; }
     .timeline__segment::before {
       content: var(--beforeContent);
       top: -3rem;
@@ -1624,7 +1579,7 @@ Files inside this folder can contain specific styles for pages.
   color: #213345; }
 
 .card-work__additional {
-  background-color: #1a4de6;
+  background-color: #174be8;
   color: #eef0f1;
   display: flex;
   justify-content: space-evenly;
@@ -1684,7 +1639,7 @@ Files inside this folder can contain specific styles for pages.
       grid-template-columns: 1fr; } }
 
 .contact__message h2 {
-  color: #091c53; }
+  color: #081b54; }
 
 .contact__grid-social {
   grid-template-columns: repeat(2, 1fr);
@@ -1729,7 +1684,7 @@ Files inside this folder can contain specific styles for pages.
 
 .contact__input, .contact__textarea {
   background-color: #eef0f1;
-  color: #091c53;
+  color: #081b54;
   font-size: 2rem;
   padding: 1rem 1.5rem;
   width: 100%; }
@@ -1771,7 +1726,7 @@ Files inside this folder can contain specific styles for pages.
   max-width: 80rem;
   margin: 2rem auto 6rem; }
   .career__paragraph a {
-    color: #1a4de6;
+    color: #174be8;
     font-weight: 400; }
   .career__paragraph span a {
     display: inline-block;
@@ -1790,7 +1745,7 @@ Files inside this folder can contain specific styles for pages.
 
 .header-portfolio {
   text-align: center;
-  background-color: #1a4de6;
+  background-color: #174be8;
   padding-top: calc(3 * 1.8rem);
   padding-bottom: calc(1.5 * 1.8rem); }
   .header-portfolio__title {
@@ -1964,9 +1919,9 @@ Files inside this folder can contain specific styles for pages.
     content: '4'; }
   .userguide__title--1::before, .userguide__title--3::before {
     background-color: #eef0f1;
-    color: #1a4de6; }
+    color: #174be8; }
   .userguide__title--2::before, .userguide__title--4::before {
-    background-color: #1a4de6;
+    background-color: #174be8;
     color: #eef0f1; }
 
 .userguide__figure--1 {
@@ -2020,7 +1975,7 @@ Files inside this folder can contain specific styles for pages.
 
 .techstack h2,
 .responsive-design h2 {
-  color: #091c53; }
+  color: #081b54; }
 
 .techstack__grid {
   grid-template-columns: repeat(2, 1fr);
@@ -2059,7 +2014,7 @@ Files inside this folder can contain specific styles for pages.
     .card-architecture__title::first-letter {
       font-size: 3rem;
       font-weight: 600;
-      color: #1ae6d5; }
+      color: #1ae6e6; }
   .card-architecture__text {
     color: #eef0f1; }
 
@@ -2289,9 +2244,9 @@ PORTFOLIO PERSONAL SITE
     font-size: 1.4vw;
     justify-self: center; }
     .palette__color--primary {
-      background-color: #1a4de6; }
+      background-color: #174be8; }
     .palette__color--secondary {
-      background-color: #1ae6d5; }
+      background-color: #1ae6e6; }
     .palette__color--gray-dark {
       background-color: #213345; }
     .palette__color--gray-light {
@@ -2325,7 +2280,7 @@ PORTFOLIO PERSONAL SITE
           grid-row: 10 / span 1; } }
 
 .architecture h2 {
-  color: #a3b8f5; }
+  color: #a2b7f6; }
 
 .architecture h3 {
   color: #c7ccd1; }

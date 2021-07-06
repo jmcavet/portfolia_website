@@ -133,33 +133,36 @@ $color__primary--050: lighten(adjust-hue($turquoise-blue, -40deg), 33%); // Bg l
 */
 
 /*For headings, CTA buttons, links, etc.*/
-//$science-blue: #1f66ad; //#2d6a9f; //#31A798; //#0573aa; //#0025cc;
-$science-blue: hsl(225, 80%, 50); //#2d6a9f; //#31A798; //#0573aa; //#0025cc;
+$science-blue: hsl(225, 82%, 50);
 $color__primary: $science-blue;
-/*
-$color__primary--500: $science-blue;
-$color__primary--900: darken($science-blue, 25%);
-$color__primary--800: darken($science-blue, 20%);
-$color__primary--700: darken($science-blue, 15%);
-$color__primary--600: darken($science-blue, 10%);
-$color__primary--400: lighten($science-blue, 10%);
-$color__primary--300: lighten($science-blue, 15%);
-$color__primary--200: lighten($science-blue, 20%);
-$color__primary--100: lighten($science-blue, 25%);
-$color__primary--75: lighten(saturate(adjust-hue($science-blue, -20deg), 40%), 15%);
-$color__primary--50: lighten($science-blue, 55%);
-*/
-$color__primary--50: hsl(225, 80%, 95%);
-$color__primary--100: hsl(225, 80%, 90%);
-$color__primary--200: hsl(225, 80%, 80%);
-$color__primary--300: hsl(225, 80%, 70%);
-$color__primary--400: hsl(225, 80%, 60%);
-$color__primary--500: hsl(225, 80%, 50%);
-$color__primary--600: hsl(225, 80%, 40%);
-$color__primary--700: hsl(225, 80%, 30%);
-$color__primary--800: hsl(225, 80%, 18%);
-$color__primary--900: hsl(225, 80%, 13%);
-$color__primary--1000: hsl(225, 80%, 0%);
+
+$color__primary--50: hsl(225, 82%, 95%);
+$color__primary--100: hsl(225, 82%, 90%);
+$color__primary--200: hsl(225, 82%, 80%);
+$color__primary--300: hsl(225, 82%, 70%);
+$color__primary--400: hsl(225, 82%, 60%);
+$color__primary--500: hsl(225, 82%, 50%);
+$color__primary--600: hsl(225, 82%, 40%);
+$color__primary--700: hsl(225, 82%, 30%);
+$color__primary--800: hsl(225, 82%, 18%);
+$color__primary--900: hsl(225, 82%, 11%);
+$color__primary--1000: hsl(225, 82%, 0%);
+
+/*For primary actions, buttons, text links, for indicating progress, etc.*/
+$ocean-green: hsl(180, 80%, 50%);
+$color__secondary: $ocean-green;
+
+$color__secondary--50: hsl(180, 80%, 95%);
+$color__secondary--100: hsl(180, 80%, 90%);
+$color__secondary--200: hsl(180, 80%, 80%);
+$color__secondary--300: hsl(180, 80%, 70%);
+$color__secondary--400: hsl(180, 80%, 60%);
+$color__secondary--500: hsl(180, 80%, 50%);
+$color__secondary--600: hsl(180, 80%, 40%);
+$color__secondary--700: hsl(180, 80%, 30%);
+$color__secondary--800: hsl(180, 80%, 18%);
+$color__secondary--900: hsl(180, 80%, 12%);
+$color__secondary--1000: hsl(180, 80%, 0%);
 
 //"Scale color names between 0 and 100 (or 0 and 1000) based HSL' lightess"
 // Be careful with -400, -500, -600 since they are mid-neutral and dangerous. Don't use them too much
@@ -178,33 +181,6 @@ $color__gray--900: hsl(210, 35%, 10%);
 $color__gray--1000: hsl(210, 30%, 0%);
 $color__white: $color__gray--0;
 
-/*For primary actions, buttons, text links, for indicating progress, etc.*/
-/*
-$ocean-green: #00c2a2; // #03b4b4;
-$color__secondary: $ocean-green;
-$color__secondary--300: $ocean-green;
-
-$color__secondary--500: darken(saturate($ocean-green, 45%), 25%);
-$color__secondary--400: darken(saturate($ocean-green, 45%), 20%);
-$color__secondary--200: lighten($ocean-green, 15%);
-$color__secondary--100: lighten($ocean-green, 25%);
-$color__secondary--75: lighten($ocean-green, 35%);
-$color__secondary--50: lighten($ocean-green, 50%);
-*/
-$ocean-green: hsl(175, 80%, 50%);
-$color__secondary: $ocean-green;
-
-$color__secondary--50: hsl(170, 80%, 95%);
-$color__secondary--100: hsl(170, 80%, 90%);
-$color__secondary--200: hsl(170, 80%, 80%);
-$color__secondary--300: hsl(170, 80%, 70%);
-$color__secondary--400: hsl(170, 80%, 60%);
-$color__secondary--500: hsl(170, 80%, 50%);
-$color__secondary--600: hsl(170, 80%, 40%);
-$color__secondary--700: hsl(170, 80%, 30%);
-$color__secondary--800: hsl(170, 80%, 18%);
-$color__secondary--900: hsl(170, 80%, 12%);
-$color__secondary--1000: hsl(170, 80%, 0%);
 
 
 /*----NEUTRALS----*/

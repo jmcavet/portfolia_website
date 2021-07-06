@@ -46,3 +46,18 @@
     &__nodejs {background-image: url(/img/projects/nodejs.svg);}
     &__react {background-image: url(/img/projects/react.svg);}
 }
+
+.icon-portfolio-arrow {
+    width: 3rem !important;
+    height: 3rem !important;
+    margin-right: 1rem;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: rotate(0);
+    transition: transform .5s;
+
+    &.activated {
+        transform: rotate(810deg) scale(1.3);    
+    }
+}

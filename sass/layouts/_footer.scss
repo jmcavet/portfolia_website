@@ -1,5 +1,5 @@
 .footer {
-    background-color: $footer__color-bg;
+    background-image: linear-gradient(to right, $navbar__color1-bg, $navbar__color2-bg);
     color: $footer__color-text;
     grid-column: 1 / -1;
     padding: 5rem;

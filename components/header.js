@@ -45,7 +45,8 @@ class Header extends HTMLElement {
                     </li>
                     <li class="navbar__item">
                         <div class="flex flex--center">
-                            <a href="#" ${this.page == 'portfolio' ? 'class="navbar__link active navbar__link--portfolio bullet-triangle--after" onclick="openPortfolioSubmenu()"' : 'class="navbar__link navbar__link--portfolio bullet-triangle--after" onclick="openPortfolioSubmenu()"'}>Portfolio</a>
+                            <a href="#" ${this.page == 'portfolio' ? 'class="navbar__link active navbar__link--portfolio" onclick="openPortfolioSubmenu()"' : 'class="navbar__link navbar__link--portfolio" onclick="openPortfolioSubmenu()"'}>Portfolio</a>
+                            <img src="/img/portfolio-arrow.svg" class="icon-portfolio-arrow" alt="Portfolio arrow" />
                         </div>
                         <ul class="dropdown-mobile">
                             <li class="dropdown-mobile__list"><a href="/portfolio/" ${this.portfolio_project == 'all' ? 'class="dropdown-mobile__link active"' : 'class="dropdown-mobile__link"'}>All</a></li>

@@ -11,7 +11,7 @@
     
     &__list {
         padding: 1rem 1.5rem;
-        background-color: $navbar__color-bg;
+        background-color: $navbar__color1-bg;
         box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .3);
         font-size: 1.3rem;
         text-transform: uppercase;
@@ -42,48 +42,6 @@
     opacity: 1;
     z-index: 10;
 }
-
-
-/*
-.dropdown-right {
-    visibility: hidden;
-    display: none;
-    position: absolute;
-    //left: calc(50% + 10rem);
-    left: 65%;
-    top: 1rem;
-    list-style: none;
-    transition: opacity 1s;
-    width: 30%;
-    text-align: left;
-    
-    &__list {
-        padding: 1rem 1.5rem;
-        background-color: $navbar__color-bg;
-        box-shadow: .2rem .2rem .6rem .2rem rgba($color__gray--300, .3);
-        font-size: 1.5rem;
-        text-transform: uppercase;
-    }
-
-    &__link {
-        &:link,
-        &:visited {
-            border-bottom: 3px transparent solid;
-            display: inline-block;
-            padding-bottom: .7rem;
-            transition: border-color 1s, opacity 1s;
-            opacity: .7;
-        }
-
-        &:hover,
-        &.active {
-            border-color: $color__secondary;
-            color: $navbar__color-text--hover;
-            opacity: 1;
-        }
-    }
-}
-*/
 
 .dropdown-mobile {
     display: none;

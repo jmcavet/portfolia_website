@@ -20,24 +20,21 @@ function openHamburger() {
         dropdown_mobile.removeClass("dropdown-mobile--activated");
     }
 
-    let navbar_link_portfolio = $('.navbar__link--portfolio');
-    if (navbar_link_portfolio.hasClass("bullet-triangle-down--after")) {
-        navbar_link_portfolio.removeClass("bullet-triangle-down--after");
-        navbar_link_portfolio.addClass("bullet-triangle--after");
+    let portfolio_arrow = $('.icon-portfolio-arrow');
+    if (portfolio_arrow.hasClass("activated")) {
+        portfolio_arrow.removeClass("activated");
     }
 }
 
 function openPortfolioSubmenu() {
     let dropdown_mobile = $('.dropdown-mobile');
-    let navbar_link_portfolio = $('.navbar__link--portfolio');
+    let portfolio_arrow = $('.icon-portfolio-arrow');
 
     if (dropdown_mobile.css("display") === "flex") {
         dropdown_mobile.removeClass("dropdown-mobile--activated");
-        navbar_link_portfolio.removeClass('bullet-triangle-down--after');
-        navbar_link_portfolio.addClass('bullet-triangle--after');
+        portfolio_arrow.removeClass('activated');
     } else {
         dropdown_mobile.addClass("dropdown-mobile--activated").animate({ opacity: 1 }, 750);
-        navbar_link_portfolio.removeClass('bullet-triangle--after');
-        navbar_link_portfolio.addClass('bullet-triangle-down--after');
+        portfolio_arrow.addClass('activated');
     }
 }
