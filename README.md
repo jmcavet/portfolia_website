@@ -10,13 +10,14 @@ A personal website showcasing my web development projects, skills, and portfolio
 
 ## Installation
 
-1. Clone the repository:
-
-git clone [Repo personal Website](https://github.com/jmcavet/portfolia_website.git)
+Clone the repository from GitHub: [https://github.com/jmcavet/portfolia_website.git](https://github.com/jmcavet/portfolia_website.git)
 
 ## Deployment
 
-The website is hosted on Vercel: [Jean-Marie Cavet Website](https://app.netlify.com/projects/jeanmariecavet/)
+The website is hosted on Netlify: [Jean-Marie Cavet Website](https://app.netlify.com/projects/jeanmariecavet/)
+
+1. Commit your changes, and push to github
+2. The Netlify project is linked to the github repo. Therefore, Netlify will automatically create a build and deploy the website
 
 ## Tech Stack
 
