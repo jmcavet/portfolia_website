@@ -1,68 +1,120 @@
 .icon-social {
-    &__github,
-    &__linkedin,
-    &__xing {
-        height: 3rem;
-        width: 3rem;
-        background-size: contain; //Using 'cover' will make SASS icon overflow outside...
-        background-position: center;
-        background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
-    }
+  &__github,
+  &__linkedin,
+  &__xing {
+    height: 3rem;
+    width: 3rem;
+    background-size: contain; //Using 'cover' will make SASS icon overflow outside...
+    background-position: center;
+    background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
+  }
 
-    &__github {background-image: url(/img/socials/github.svg);}
-    &__linkedin {background-image: url(/img/socials/linkedin.svg);}
-    &__xing {background-image: url(/img/socials/xing.svg);}
+  &__github {
+    background-image: url(/img/socials/github.svg);
+  }
+  &__linkedin {
+    background-image: url(/img/socials/linkedin.svg);
+  }
+  &__xing {
+    background-image: url(/img/socials/xing.svg);
+  }
 
-    &--large {
-        width: 4rem;
-        height: 4rem;
-    }
+  &--large {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 .icon-web {
-    &__html5,
-    &__css3,
-    &__sass,
-    &__jquery,
-    &__bootstrap,
-    &__javascript,
-    &__mongodb,
-    &__nodejs,
-    &__react {
-        height: 3rem;
-        width: 3rem;
-        background-size: contain; //Using 'cover' will make SASS icon overflow outside...
-        background-position: center;
-        background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
-    }
+  &__html5,
+  &__css3,
+  &__sass,
+  &__jquery,
+  &__bootstrap,
+  &__javascript,
+  &__mongodb,
+  &__nodejs,
+  &__react,
+  &__angular,
+  &__tailwind,
+  &__supabase,
+  &__firebase,
+  &__redux,
+  &__figma,
+  &__d3js {
+    height: 3rem;
+    width: 3rem;
+    background-size: contain; //Using 'cover' will make SASS icon overflow outside...
+    background-position: center;
+    background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
+  }
 
-    &__html5 {background-image: url(/img/projects/html5.svg);}
-    &__css3 {background-image: url(/img/projects/css3.svg);}
-    &__sass {background-image: url(/img/projects/sass.svg);}
-    &__jquery {background-image: url(/img/projects/jquery.svg);}
-    &__bootstrap {background-image: url(/img/projects/bootstrap.svg);}
-    &__javascript {background-image: url(/img/projects/javascript.svg);}
-    &__mongodb {background-image: url(/img/projects/mongodb.svg);}
-    &__nodejs {background-image: url(/img/projects/nodejs.svg);}
-    &__react {background-image: url(/img/projects/react.svg);}
+  &__html5 {
+    background-image: url(/img/projects/html5.svg);
+  }
+  &__css3 {
+    background-image: url(/img/projects/css3.svg);
+  }
+  &__sass {
+    background-image: url(/img/projects/sass.svg);
+  }
+  &__jquery {
+    background-image: url(/img/projects/jquery.svg);
+  }
+  &__bootstrap {
+    background-image: url(/img/projects/bootstrap.svg);
+  }
+  &__javascript {
+    background-image: url(/img/projects/javascript.svg);
+  }
+  &__mongodb {
+    background-image: url(/img/projects/mongodb.svg);
+  }
+  &__nodejs {
+    background-image: url(/img/projects/nodejs.svg);
+  }
+  &__react {
+    background-image: url(/img/projects/react.svg);
+  }
+  &__angular {
+    background-image: url(/img/projects/angular.svg);
+  }
+  &__tailwind {
+    background-image: url(/img/projects/tailwind.svg);
+  }
+  &__redux {
+    background-image: url(/img/projects/redux.svg);
+  }
+  &__figma {
+    background-image: url(/img/projects/figma.svg);
+  }
+  &__d3js {
+    background-image: url(/img/projects/d3js.svg);
+  }
+  &__firebase {
+    background-image: url(/img/projects/firebase.svg);
+  }
+  &__supabase {
+    background-image: url(/img/projects/supabase.svg);
+  }
 }
 
 .icon-portfolio-arrow {
-    width: 3rem !important;
-    height: 3rem !important;
-    margin-right: 1rem;
-    align-self: flex-start;
-    margin-top: auto;
-    margin-bottom: auto;
-    transform: rotate(0);
-    transition: transform .5s;
+  width: 3rem !important;
+  height: 3rem !important;
+  margin-right: 1rem;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: rotate(0);
+  transition: transform 0.5s;
 
-    &.activated {
-        transform: rotate(810deg) scale(1.3);    
-    }
+  &.activated {
+    transform: rotate(810deg) scale(1.3);
+  }
 
-    &--small {
-        width: 1.5rem !important;
-        height: 1.5rem !important;
-    }
+  &--small {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
 }

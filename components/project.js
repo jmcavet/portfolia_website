@@ -1,67 +1,87 @@
 class Project extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    get githubPage() {
-        return this.getAttribute('github-page');
-    }
+  get githubPage() {
+    return this.getAttribute("github-page");
+  }
 
-    get appPage() {
-        return this.getAttribute('app-page');
-    }
+  get appPage() {
+    return this.getAttribute("app-page");
+  }
 
-    get appDetail() {
-        return this.getAttribute('app-detail');
-    }
+  get appDetail() {
+    return this.getAttribute("app-detail");
+  }
 
-    get figurePath() {
-        return this.getAttribute('figure-path');
-    }
+  get figurePath() {
+    return this.getAttribute("figure-path");
+  }
 
-    get imgAlt() {
-        return this.getAttribute('img-alt');
-    }
+  get imgAlt() {
+    return this.getAttribute("img-alt");
+  }
 
-    get header() {
-        return this.getAttribute('header');
-    }
+  get header() {
+    return this.getAttribute("header");
+  }
 
-    get description() {
-        return this.getAttribute('description');
-    }
+  get description() {
+    return this.getAttribute("description");
+  }
 
-    get techStach() {
-        let tech_stack = this.getAttribute("tech-stack");
-        let available_tech_stack = ['html5', 'css3', 'sass', 'jquery', 'bootstrap', 'nodejs', 'mongodb', 'react'];
-        let html_techStack = '';
+  get techStach() {
+    let tech_stack = this.getAttribute("tech-stack");
+    let available_tech_stack = [
+      "html5",
+      "css3",
+      "sass",
+      "jquery",
+      "bootstrap",
+      "nodejs",
+      "mongodb",
+      "react",
+      "angular",
+      "tailwind",
+      "firebase",
+      "supabase",
+      "redux",
+      "figma",
+      "d3js",
+    ];
+    let html_techStack = "";
 
-        available_tech_stack.forEach((stack) => {
-            if (tech_stack !== null && tech_stack.includes(stack)) {
-                html_techStack += `<div class="icon-web__${stack}"></div>`
-            }
-        })
+    available_tech_stack.forEach((stack) => {
+      if (tech_stack !== null && tech_stack.includes(stack)) {
+        html_techStack += `<div class="icon-web__${stack}"></div>`;
+      }
+    });
 
-        return html_techStack;
-    }
+    return html_techStack;
+  }
 
-    get scrollDown() {
-        return this.getAttribute('scroll-down');
-    }
+  get scrollDown() {
+    return this.getAttribute("scroll-down");
+  }
 
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
             <div class="project ${this.scrollDown}">
                 <figure class="project__figure">
                     <img src=${this.figurePath} alt=${this.imgAlt} />
                 </figure>
                 <div class="project__text grid project__grid">
                     <div class="project__buttons flex flex--spacebetween">
-                        <a href=${this.githubPage} target="_blank" role="button">
+                        <a href=${
+                          this.githubPage
+                        } target="_blank" role="button">
                             <div class="icon-social__github"></div>
                         </a>
                         <a href=${this.appDetail} role="button">Detail</a>
-                        <a href=${this.appPage} target="_blank" role="button" ${this.appPage == '#' ? 'style="display: none"' : ''}>Visit Site</a>
+                        <a href=${this.appPage} target="_blank" role="button" ${
+      this.appPage == "#" ? 'style="display: none"' : ""
+    }>Visit Site</a>
                     </div>
                     <div class="project__description grid">
                         <h3>${this.header}</h3>
@@ -72,8 +92,17 @@ class Project extends HTMLElement {
                     </div>
                 </div>
             </div>
-        `
-    }
+        `;
+
+    // Attach click handler to the outer container of the project card
+    const container = this.querySelector(".project");
+    container.onclick = (e) => {
+      if (e.target.closest("a")) return;
+
+      // Navigate to the page itself
+      window.location.href = this.appDetail;
+    };
+  }
 }
 
-customElements.define('project-component', Project);
+customElements.define("project-component", Project);

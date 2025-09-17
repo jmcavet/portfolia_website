@@ -1,103 +1,114 @@
-
 .contact-header {
-    h1 {margin: 0;}
+  h1 {
+    margin: 0;
+  }
 }
-
 
 $color__section: $color__white;
 $color__section-text: $color__gray--900;
 
 .contact {
-    &__grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 4rem;
-        
-        @media only screen and (max-width: $bp-small) {
-            grid-template-columns: 1fr;
-        }
+  &__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    &__message {
-        h2 {color: $color__primary--800;}
+  &__message {
+    h2 {
+      color: $color__primary--800;
     }
+  }
 
-    &__grid-social {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        grid-gap: 4rem;
-        
-        margin: 4rem auto 0;
-        width: 50%;
+  &__grid-social {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 4rem;
+
+    margin: 4rem auto 0;
+    width: 100%;
+  }
+
+  &__icon-github,
+  &__icon-linkedin,
+  &__icon-xing {
+    height: 3rem;
+    width: 3rem;
+    background-size: contain; //Using 'cover' will make SASS icon overflow outside...
+    background-position: center;
+    background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
+  }
+
+  &__icon-github {
+    background-image: url(/img/socials/github.svg);
+  }
+  &__icon-linkedin {
+    background-image: url(/img/socials/linkedin.svg);
+  }
+
+  &__icon-xing {
+    background-image: url(/img/socials/xing.svg);
+  }
+
+  &__form {
+    background-color: $color__gray--800;
+
+    @include flexbox(column, null, null, start, start);
+
+    font-size: 1.75rem;
+    padding: 2rem 3rem;
+  }
+
+  &__label {
+    padding: 0 0 1rem;
+    font-weight: 600;
+    color: $color__gray--200;
+
+    &--required:after {
+      content: " *";
+      color: red;
+      display: inline;
     }
+  }
 
-    &__icon-github,
-    &__icon-linkedin,
-    &__icon-xing {
-        height: 3rem;
-        width: 3rem;
-        background-size: contain; //Using 'cover' will make SASS icon overflow outside...
-        background-position: center;
-        background-repeat: no-repeat; // Otherwise, SASS icon will be repeated and mirrored
-    }
+  &__input,
+  &__textarea {
+    background-color: $color__gray--50;
+    color: $color__primary--800;
+    font-size: 2rem;
 
-    &__icon-github {background-image: url(/img/socials/github.svg);}
-    &__icon-linkedin {background-image: url(/img/socials/linkedin.svg);}
-    &__icon-xing {background-image: url(/img/socials/xing.svg);}
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
 
-    &__form {
-        background-color: $color__gray--800;
-    
-        @include flexbox(column, null, null, start, start);
+  &__input {
+    margin-bottom: 2rem;
+    height: 4rem;
+  }
 
-        font-size: 1.75rem;
-        padding: 2rem 3rem;
-    }
-
-    &__label {
-        padding: 0 0 1rem;
-        font-weight: 600;
-        color: $color__gray--200;
-
-        &--required:after {
-            content: " *";
-            color: red;
-            display: inline;
-        }
-    }
-    
-    &__input,
-    &__textarea {
-        background-color: $color__gray--50;
-        color: $color__primary--800;
-        font-size: 2rem;
-
-        padding: 1rem 1.5rem;
-        width: 100%;
-    }
-
-    &__input {
-        margin-bottom: 2rem;
-        height: 4rem;
-    }
-
-    &__button {
-        margin-top: 2rem;
-        align-self: center;
-    }
+  &__button {
+    margin-top: 2rem;
+    align-self: center;
+  }
 }
 
 .color-container {
-    color: black;
-    @include flexbox(row, center);
-    margin-bottom: 1rem;
+  color: black;
+  @include flexbox(row, center);
+  margin-bottom: 1rem;
 
-    & > div {
-        font-size: 2rem;
-        @include flexbox(row, center, null, null, center);
-        padding: 1rem 1rem;
-        margin-right: 1rem;
-        border: black 1px solid;
-    }
+  & > div {
+    font-size: 2rem;
+    @include flexbox(row, center, null, null, center);
+    padding: 1rem 1rem;
+    margin-right: 1rem;
+    border: black 1px solid;
+  }
 }
 
-.netlify-recaptcha {margin-bottom: 1rem;}
+.netlify-recaptcha {
+  margin-bottom: 1rem;
+}
