@@ -73,15 +73,10 @@ class Project extends HTMLElement {
                 </figure>
                 <div class="project__text grid project__grid">
                     <div class="project__buttons flex flex--spacebetween">
-                        <a href=${
-                          this.githubPage
-                        } target="_blank" role="button">
+                        <a href=${this.githubPage} target="_blank" role="button">
                             <div class="icon-social__github"></div>
                         </a>
                         <a href=${this.appDetail} role="button">Detail</a>
-                        <a href=${this.appPage} target="_blank" role="button" ${
-      this.appPage == "#" ? 'style="display: none"' : ""
-    }>Visit Site</a>
                     </div>
                     <div class="project__description grid">
                         <h3>${this.header}</h3>
