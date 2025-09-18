@@ -38,10 +38,14 @@
       <div class="header-portfolio">
         <h1 class="heading-1 header-portfolio__title">Fluento</h1>
         <p class="header-portfolio__text">
-          Learn a new foreign language with context.
+          Learn a new foreign language with <span>context</span>.
+        </p>
+        <p class="header-portfolio__text">
+          Choose the vocabulary <span>YOU</span> want to learn and improve your
+          language through a fun game.
         </p>
         <div class="header-portfolio__cta flex flex--center">
-          <a href="https://linguappo.herokuapp.com/" target="_blank"
+          <a href="https://fluento-jm.netlify.app/" target="_blank"
             ><button class="btn primary--inversed">View Website</button></a
           >
           <a href="https://github.com/jmcavet/linguappo" target="_blank"
@@ -52,10 +56,214 @@
     </header>
 
     <main>
+      <section class="flex flex--center bg-color-light">
+        <div class="section__layout-container">
+          <div class="section__layout portfolio-intro">
+            <h2 class="heading-2 portfolio-intro__title">
+              Motives for developing a brand new Language App
+            </h2>
+            <p class="portfolio-intro__text">
+              While learning React and Redux back in 2020, I took a chance at
+              applying my knowledge by developing a new Progressive Web
+              Application (PWA) for learning foreign languages.
+            </p>
+            <br />
+            <p class="portfolio-intro__text">
+              I used Firestore and Firebase for my backend, giving me more time
+              to focus on the frontend side. While my previous language app was
+              not particularly solid in terms of design, I chose to implement
+              the whole UI/UX processes in Figma. It provided me with
+              prototypes.
+            </p>
+            <br />
+          </div>
+        </div>
+      </section>
+
       <section class="flex flex--center">
         <div class="section__layout-container">
-          <div class="section__layout">
-            <div>Some information</div>
+          <div class="section__layout userguide">
+            <h2 class="heading-2">How it works</h2>
+            <div class="grid userguide__grid">
+              <div class="userguide__item userguide__item--1">
+                <div
+                  class="userguide__title userguide__title--1 flex flex--spacebetween"
+                >
+                  <h3>Sign-up and Dashboard</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_dashboard.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--1">
+                  Users must first signup and create an account, which
+                  information is saved in the MongoDb database. Then, they will
+                  land on the main dashboard, where they can:
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Create a new project for a specific language and theme.
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Manage and visualize data of a project: number of incomplete
+                  and total vocabulary, chronological entries in graphic form.
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Directly complete the missing translations.
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--1">
+                <img
+                  src="/img/portfolio/fluento/fluento_voca.gif"
+                  alt="Responsive Design Gif"
+                />
+              </figure>
+
+              <div class="userguide__item userguide__item--2">
+                <div
+                  class="userguide__title userguide__title--2 flex -spacebetween"
+                >
+                  <h3>Vocabulary and Tags</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_vocabulary.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--2">
+                  For a specific project, users can save their own items:
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Enter some data (word, expression, verb, etc.) and its
+                  translation (directly or complete at a later date).
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Create as many tags as needed in order to regroup the items,
+                  e.g. 'Adjective', 'Verb', 'Expression', 'Slang', etc.
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Manage tags: edit or delete them. It will update automatically
+                  the database.
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--2">
+                <img
+                  src="/img/portfolio/fluento/fluento_login.gif"
+                  alt="Login"
+                />
+              </figure>
+              <div class="userguide__item userguide__item--3">
+                <div
+                  class="userguide__title userguide__title--3 flex -spacebetween"
+                >
+                  <h3>Game</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_game.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--3">
+                  The central part of the app. It enables users to:
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Filter data according to various information: tags, number of
+                  items, sampling method, their evaluation of knowledge.
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Play the 'Flipping Card' game in both language directions,
+                  validate their knowledge (pass or fail), and get the final
+                  score.
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Manage the item: delete it or update its information
+                  (vocabulary, translation, tags, knowledge evaluation).
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--3">
+                <img
+                  src="/img/portfolio/fluento/fluento_dictionary.gif"
+                  alt="Dictionary"
+                />
+              </figure>
+              <div class="userguide__item userguide__item--4">
+                <div
+                  class="userguide__title userguide__title--4 flex -spacebetween"
+                >
+                  <h3>Dictionary</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_dictionary.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--4">
+                  Users can search for an item for a specific project. They can:
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Look for either the vocabulary and get in return its
+                  translation, or vice-versa.
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--4">
+                <img src="/img/portfolio/fluento/fluento_game.gif" alt="Game" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-medium">
+        <div class="section__layout-container">
+          <div class="section__layout techstack-design">
+            <div class="grid techstack-design__grid">
+              <div class="techstack">
+                <h2 class="heading-2 flex flex--center">Technology Stack</h2>
+                <div class="grid techstack__grid">
+                  <div class="techstack__frontend">
+                    <h3 class="heading-3">Front-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__html5"></div>
+                      <div class="techstack-wrapper__name">HTML5</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__css3"></div>
+                      <div class="techstack-wrapper__name">CSS3</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__javascript"></div>
+                      <div class="techstack-wrapper__name">Javascript</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__jquery"></div>
+                      <div class="techstack-wrapper__name">JQuery</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__bootstrap"></div>
+                      <div class="techstack-wrapper__name">Bootstrap</div>
+                    </div>
+                  </div>
+                  <div class="techstack__backend">
+                    <h3 class="heading-3">Back-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__nodejs"></div>
+                      <div class="techstack-wrapper__name">
+                        Nodes.js + Express
+                      </div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__mongodb"></div>
+                      <div class="techstack-wrapper__name">MongoDb</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-design">
+                <h2 class="heading-2 flex flex--center">Figma Design</h2>
+                <figure>
+                  <img
+                    src="/img/portfolio/fluento/figma.gif"
+                    alt="Figma Design"
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>

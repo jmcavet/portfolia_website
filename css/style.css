@@ -877,7 +877,8 @@ with import (before/after) --> looping problem*/
 
 .projects__grid {
   grid-template-columns: repeat(2, minmax(min-content, max-content));
-  grid-gap: 5rem;
+  grid-row-gap: 5rem;
+  grid-row-gap: 5rem;
 }
 @media only screen and (max-width: 43.75em) {
   .projects__grid {
@@ -955,16 +956,26 @@ with import (before/after) --> looping problem*/
 .project__buttons a:first-child:hover {
   transform: scale(1.5);
 }
-.project__buttons a:nth-last-child(2),
+
 .project__buttons a:nth-last-child(1) {
   border: none;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding: 0.6rem 1.3rem;
   cursor: pointer;
   transition: transform 0.3s;
   border-radius: 5px;
 }
+
+.project__buttons a:nth-last-child(2) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+}
+
 .project__buttons a:nth-last-child(2):hover,
 .project__buttons a:nth-last-child(1):hover {
   transform: scale(1.2);
@@ -974,19 +985,19 @@ with import (before/after) --> looping problem*/
   color: hsl(210, 35%, 20%);
 }
 .project__buttons a:nth-last-child(1) {
-  background-color: hsl(225, 82%, 50%);
-  color: hsl(210, 0%, 100%);
+  background-color: hsl(180, 80%, 50%);
+  color: hsl(210, 35%, 20%);
 }
 .project__description {
   margin: 1rem 2rem;
   align-items: center;
 }
 .project__description h3 {
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   margin-bottom: 2rem;
 }
 .project__description div {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   line-height: 1.4;
 }
 .project__tech-used {
@@ -1082,7 +1093,7 @@ Files inside this folder can contain specific element styles and layout.
 
 .grid {
   display: grid;
-  grid-column-gap: 1rem;
+  grid-column-gap: 4rem;
   justify-content: center;
 }
 .grid--body {
@@ -1098,9 +1109,7 @@ Files inside this folder can contain specific element styles and layout.
     grid-template-rows: auto auto min-content;
   }
 }
-.grid {
-  /* --- ABOUT PAGE --- */
-}
+
 .grid--card-work-2-3,
 .grid--card-work-3-2 {
   gap: 3rem;
@@ -2168,6 +2177,14 @@ Files inside this folder can contain specific styles for pages.
   margin: 2.5rem auto;
   color: hsl(210, 10%, 94%);
 }
+.header-portfolio__text span {
+  font-weight: 700;
+  font-style: oblique;
+  background-color: hsl(225, 89%, 38%);
+  padding: 0.2em 0.4em;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 .header-portfolio__cta {
   margin-top: calc(3 * 1.8rem);
   margin-bottom: calc(1.5 * 1.8rem);
@@ -2294,7 +2311,8 @@ Files inside this folder can contain specific styles for pages.
 .userguide__grid {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(13, minmax(5rem, max-content));
-  grid-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-column-gap: 6rem;
 }
 @media only screen and (max-width: 37.5em) {
   .userguide__grid {
@@ -2945,3 +2963,24 @@ PORTFOLIO PERSONAL SITE
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.split {
+  display: flex;
+  width: 100%;
+  /* use content height (text) to size the row; columns will stretch to match */
+  align-items: stretch; /* make both columns equal height */
+  gap: 0;
+  box-sizing: border-box;
+}
+
+/* Left column: text */
+.left {
+  flex: 1 1 50%; /* take half of available width */
+  padding: 3rem;
+  background: #f6fbff;
+  color: #071832;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  font-size: 1.6rem; /* uses rem; adjust as needed */
+  line-height: 1.5;
+}
