@@ -402,6 +402,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a.link-blue {
+  color: hsl(225, 82%, 50%);
+  text-decoration: none;
+}
 
 p {
   font-size: 1.8rem;
