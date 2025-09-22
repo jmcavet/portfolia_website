@@ -69,13 +69,114 @@
             </p>
             <br />
             <p class="portfolio-intro__text">
-              I used Firestore and Firebase for my backend, giving me more time
-              to focus on the frontend side. While my previous language app was
-              not particularly solid in terms of design, I chose to implement
-              the whole UI/UX processes in Figma. It provided me with
-              prototypes.
+              I used Supabase for my backend, giving me more time to focus on
+              the frontend. While my previous language app (<a
+                href="https://jeanmariecavet.netlify.app/portfolio/linguappo/"
+                >Linguappo</a
+              >) was not particularly solid in terms of design, I chose to
+              consolidate my knowledge of UI & UX by designing every page using
+              Figma.
             </p>
             <br />
+            <p>
+              For more information regarding my design process in Figma, please
+              open the following links:
+            </p>
+            <div class="flex flex--spacebetween">
+              <div class="flex" style="gap: 0.5rem">
+                <figure>
+                  <img
+                    style="width: 3rem"
+                    src="/img/portfolio/fluento/sitemap.svg"
+                    alt="FLuento sitemap"
+                  />
+                </figure>
+                <a
+                  class="link-blue"
+                  href="https://www.figma.com/board/IyryBsjwpiQMxjbgashgY7/Fluento-Sitemap?node-id=0-1&t=bNJ9bmJ7raj1zdsA-1"
+                  >Basic Sitemap</a
+                >
+              </div>
+              <div class="flex" style="gap: 0.5rem">
+                <figure>
+                  <img
+                    style="width: 3rem"
+                    src="/img/portfolio/fluento/low-fidelity.svg"
+                    alt="FLuento sitemap"
+                  />
+                </figure>
+                <a
+                  class="link-blue"
+                  href="https://www.figma.com/design/fgJLOvjYgRFDRIw2Ua5Hq7/Fluento?node-id=1-2&t=VqlLnusWdfkubVeq-1"
+                  >Mobile Low Fidelity</a
+                >
+              </div>
+              <div class="flex" style="gap: 0.5rem">
+                <figure>
+                  <img
+                    style="width: 3rem"
+                    src="/img/portfolio/fluento/prototype.svg"
+                    alt="FLuento sitemap"
+                  />
+                </figure>
+                <a
+                  class="link-blue"
+                  href="https://www.figma.com/proto/fgJLOvjYgRFDRIw2Ua5Hq7/Fluento?node-id=492-2618&starting-point-node-id=1%3A4&t=j2CIVdwotJYv5NUG-1"
+                  >Prototyping</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-medium">
+        <div class="section__layout-container">
+          <div class="section__layout techstack-design">
+            <div class="grid techstack-design__grid">
+              <div class="techstack">
+                <h2 class="heading-2 flex flex--center">Technology Stack</h2>
+                <div class="grid techstack__grid">
+                  <div class="techstack__frontend">
+                    <h3 class="heading-3">Front-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__figma"></div>
+                      <div class="techstack-wrapper__name">Figma</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__react"></div>
+                      <div class="techstack-wrapper__name">React</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__redux"></div>
+                      <div class="techstack-wrapper__name">Redux</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__tailwind"></div>
+                      <div class="techstack-wrapper__name">Tailwind</div>
+                    </div>
+                  </div>
+                  <div class="techstack__backend">
+                    <h3 class="heading-3">Back-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__supabase"></div>
+                      <div class="techstack-wrapper__name">Supabase</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-design">
+                <h2 class="heading-2 flex flex--center">Figma Design</h2>
+
+                <figure>
+                  <img
+                    style="height: 25rem"
+                    src="/img/portfolio/fluento/figma.gif"
+                    alt="Figma Design"
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -96,19 +197,22 @@
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--1">
-                  Users must first signup and create an account, which
-                  information is saved in the MongoDb database. Then, they will
-                  land on the main dashboard, where they can:
+                  If an account already exists, users can just log in with their
+                  email. <br />
+                  Otherwise, they must first signup, which creates an account in
+                  the <i>Supabase</i> database. Once valided, they can:
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Create a new project for a specific language and theme.
+                  Create a new project by defining the learning language they
+                  want to learn as well as their mother tongue
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Manage and visualize data of a project: number of incomplete
-                  and total vocabulary, chronological entries in graphic form.
+                  Start adding some vocabulary for this specific project
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Directly complete the missing translations.
+                  View all their projects on the dashboard represented as cards
+                  or graphs (total number of words, categories, incomplete
+                  vocabulary, etc.)
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--1">
@@ -133,11 +237,19 @@
                 </p>
                 <p class="bulletpt bulletpt--primary">
                   Enter some data (word, expression, verb, etc.) and its
-                  translation (directly or complete at a later date).
+                  translation (directly or complete at a later date). If
+                  available, add some context and its translation for this
+                  specific item.
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Any incomplete translation can be completed later. <br />
+                  Users can enter <i>quickies</i> in case they are in a hurry
+                  (e.g. listening to a conversation)
                 </p>
                 <p class="bulletpt bulletpt--primary">
                   Create as many tags as needed in order to regroup the items,
-                  e.g. 'Adjective', 'Verb', 'Expression', 'Slang', etc.
+                  e.g. <i>Adjective</i>, <i>Verb</i>, <i>Expression</i>,
+                  <i>Slang</i>, etc.
                 </p>
                 <p class="bulletpt bulletpt--primary">
                   Manage tags: edit or delete them. It will update automatically
@@ -164,17 +276,24 @@
                   The central part of the app. It enables users to:
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Filter data according to various information: tags, number of
-                  items, sampling method, their evaluation of knowledge.
+                  Select 1 or a few corresponding projects for 1 specific
+                  language
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Play the 'Flipping Card' game in both language directions,
-                  validate their knowledge (pass or fail), and get the final
-                  score.
+                  Select the language you want to play with (learning or own
+                  language)
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Manage the item: delete it or update its information
-                  (vocabulary, translation, tags, knowledge evaluation).
+                  Select the method presenting the words (random or sorted by
+                  date) and the number of words to play with
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Filter data according to various information: word types,
+                  categories, allocated score
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  Play the game by guessing the translation (blurred) and
+                  provide a grade (failed, neutral, passed)
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--3">
@@ -194,11 +313,25 @@
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--4">
-                  Users can search for an item for a specific project. They can:
+                  For a specific project and language, users can search for 1 or
+                  multiple items. In particular, they are able to:
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Look for either the vocabulary and get in return its
-                  translation, or vice-versa.
+                  Search a specific item by its name
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Sort the list of items by date
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Filter data according to various information: word types,
+                  categories, allocated score, items complete or incomplete,
+                  favourites
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Select a specific item and update its properties
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  Select 1 or multiple items and delete them
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--4">
@@ -211,59 +344,16 @@
 
       <section class="flex flex--center bg-color-medium">
         <div class="section__layout-container">
-          <div class="section__layout techstack-design">
-            <div class="grid techstack-design__grid">
-              <div class="techstack">
-                <h2 class="heading-2 flex flex--center">Technology Stack</h2>
-                <div class="grid techstack__grid">
-                  <div class="techstack__frontend">
-                    <h3 class="heading-3">Front-End</h3>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__html5"></div>
-                      <div class="techstack-wrapper__name">HTML5</div>
-                    </div>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__css3"></div>
-                      <div class="techstack-wrapper__name">CSS3</div>
-                    </div>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__javascript"></div>
-                      <div class="techstack-wrapper__name">Javascript</div>
-                    </div>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__jquery"></div>
-                      <div class="techstack-wrapper__name">JQuery</div>
-                    </div>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__bootstrap"></div>
-                      <div class="techstack-wrapper__name">Bootstrap</div>
-                    </div>
-                  </div>
-                  <div class="techstack__backend">
-                    <h3 class="heading-3">Back-End</h3>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__nodejs"></div>
-                      <div class="techstack-wrapper__name">
-                        Nodes.js + Express
-                      </div>
-                    </div>
-                    <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__mongodb"></div>
-                      <div class="techstack-wrapper__name">MongoDb</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="responsive-design">
-                <h2 class="heading-2 flex flex--center">Figma Design</h2>
-                <figure>
-                  <img
-                    src="/img/portfolio/fluento/figma.gif"
-                    alt="Figma Design"
-                  />
-                </figure>
-              </div>
-            </div>
+          <div class="section__layout">
+            <p>
+              I use this app on a weekly basis to help me assimilate words,
+              expressions, verbs that I need for my daily job. It helps me
+              especially communicate more clearly during meetings and technical
+              presentations.
+              <br />
+              At home, I take advantage of it to check any new word when the
+              conversations turn into italian or german within the family :)
+            </p>
           </div>
         </div>
       </section>
