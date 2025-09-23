@@ -41,7 +41,8 @@
   &__firebase,
   &__redux,
   &__figma,
-  &__d3js {
+  &__d3js,
+  &__material-ui {
     height: 3rem;
     width: 3rem;
     background-size: contain; //Using 'cover' will make SASS icon overflow outside...
