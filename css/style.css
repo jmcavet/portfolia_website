@@ -376,12 +376,12 @@ html {
 }
 @media only screen and (max-width: 62.5em) {
   html {
-    font-size: 60%;
+    font-size: 56.25%;
   }
 }
 @media only screen and (max-width: 50em) {
   html {
-    font-size: 54%;
+    font-size: 50%;
   }
 }
 
@@ -400,10 +400,6 @@ a {
   background-color: transparent;
   color: hsl(225, 82%, 50%);
   color: inherit;
-  text-decoration: none;
-}
-a.link-blue {
-  color: hsl(225, 82%, 50%);
   text-decoration: none;
 }
 
@@ -805,9 +801,10 @@ with import (before/after) --> looping problem*/
 .icon-web__firebase,
 .icon-web__redux,
 .icon-web__figma,
-.icon-web__d3js {
-  height: 3.5rem;
-  width: 3.5rem;
+.icon-web__d3js,
+.icon-web__material-ui {
+  height: 3rem;
+  width: 3rem;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -860,6 +857,9 @@ with import (before/after) --> looping problem*/
 .icon-web__supabase {
   background-image: url(/img/projects/supabase.svg);
 }
+.icon-web__material-ui {
+  background-image: url(/img/projects/material-ui.svg);
+}
 
 .icon-portfolio-arrow {
   width: 3rem !important;
@@ -881,8 +881,7 @@ with import (before/after) --> looping problem*/
 
 .projects__grid {
   grid-template-columns: repeat(2, minmax(min-content, max-content));
-  grid-row-gap: 5rem;
-  grid-row-gap: 5rem;
+  grid-gap: 5rem;
 }
 @media only screen and (max-width: 43.75em) {
   .projects__grid {
@@ -947,7 +946,6 @@ with import (before/after) --> looping problem*/
 }
 .project:hover .project__text {
   opacity: 1;
-  cursor: pointer;
 }
 .project__buttons {
   padding-top: 1.5rem;
@@ -960,26 +958,15 @@ with import (before/after) --> looping problem*/
 .project__buttons a:first-child:hover {
   transform: scale(1.5);
 }
-
+.project__buttons a:nth-last-child(2),
 .project__buttons a:nth-last-child(1) {
   border: none;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 0.6rem 1.3rem;
   cursor: pointer;
   transition: transform 0.3s;
-  border-radius: 5px;
 }
-
-.project__buttons a:nth-last-child(2) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
-}
-
 .project__buttons a:nth-last-child(2):hover,
 .project__buttons a:nth-last-child(1):hover {
   transform: scale(1.2);
@@ -989,19 +976,19 @@ with import (before/after) --> looping problem*/
   color: hsl(210, 35%, 20%);
 }
 .project__buttons a:nth-last-child(1) {
-  background-color: hsl(180, 80%, 50%);
-  color: hsl(210, 35%, 20%);
+  background-color: hsl(225, 82%, 50%);
+  color: hsl(210, 0%, 100%);
 }
 .project__description {
   margin: 1rem 2rem;
   align-items: center;
 }
 .project__description h3 {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 .project__description div {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   line-height: 1.4;
 }
 .project__tech-used {
@@ -1097,7 +1084,7 @@ Files inside this folder can contain specific element styles and layout.
 
 .grid {
   display: grid;
-  grid-column-gap: 4rem;
+  grid-column-gap: 1rem;
   justify-content: center;
 }
 .grid--body {
@@ -1113,7 +1100,9 @@ Files inside this folder can contain specific element styles and layout.
     grid-template-rows: auto auto min-content;
   }
 }
-
+.grid {
+  /* --- ABOUT PAGE --- */
+}
 .grid--card-work-2-3,
 .grid--card-work-3-2 {
   gap: 3rem;
@@ -1146,32 +1135,15 @@ Files inside this folder can contain specific element styles and layout.
   align-items: stretch;
 }
 .header__logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 5rem;
-  height: 5rem;
   text-decoration: none;
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-left: 2rem;
-
-  background: hsl(225, 82%, 50%);
-  color: hsl(0, 0%, 90%);
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-}
-.header__logo .logo-main {
-  letter-spacing: -1px;
-}
-.header__logo .logo-sub {
+  font-size: 2.5rem;
   font-weight: 500;
-  font-size: 2.4rem;
-  color: hsl(225, 46%, 68%);
+  margin-left: 2rem;
+  color: hsl(210, 0%, 100%);
 }
-
+.header__logo span {
+  color: hsl(225, 82%, 50%);
+}
 .header__nav {
   background-image: linear-gradient(
     to right,
@@ -2181,14 +2153,6 @@ Files inside this folder can contain specific styles for pages.
   margin: 2.5rem auto;
   color: hsl(210, 10%, 94%);
 }
-.header-portfolio__text span {
-  font-weight: 700;
-  font-style: oblique;
-  background-color: hsl(225, 89%, 38%);
-  padding: 0.2em 0.4em;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 .header-portfolio__cta {
   margin-top: calc(3 * 1.8rem);
   margin-bottom: calc(1.5 * 1.8rem);
@@ -2315,8 +2279,7 @@ Files inside this folder can contain specific styles for pages.
 .userguide__grid {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(13, minmax(5rem, max-content));
-  grid-row-gap: 2rem;
-  grid-column-gap: 6rem;
+  grid-gap: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .userguide__grid {
@@ -2967,24 +2930,3 @@ PORTFOLIO PERSONAL SITE
 }
 
 /*# sourceMappingURL=style.css.map */
-
-.split {
-  display: flex;
-  width: 100%;
-  /* use content height (text) to size the row; columns will stretch to match */
-  align-items: stretch; /* make both columns equal height */
-  gap: 0;
-  box-sizing: border-box;
-}
-
-/* Left column: text */
-.left {
-  flex: 1 1 50%; /* take half of available width */
-  padding: 3rem;
-  background: #f6fbff;
-  color: #071832;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial;
-  font-size: 1.6rem; /* uses rem; adjust as needed */
-  line-height: 1.5;
-}

@@ -49,6 +49,7 @@ class Project extends HTMLElement {
       "redux",
       "figma",
       "d3js",
+      "material-ui",
     ];
     let html_techStack = "";
 
@@ -67,6 +68,7 @@ class Project extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
+            <h2 class="flex flex--center" style="margin-bottom: 0.5rem;">${this.header}</h2>
             <div class="project ${this.scrollDown}">
                 <figure class="project__figure">
                     <img src=${this.figurePath} alt=${this.imgAlt} />
