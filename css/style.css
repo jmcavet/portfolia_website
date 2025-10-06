@@ -376,12 +376,12 @@ html {
 }
 @media only screen and (max-width: 62.5em) {
   html {
-    font-size: 60%;
+    font-size: 56.25%;
   }
 }
 @media only screen and (max-width: 50em) {
   html {
-    font-size: 54%;
+    font-size: 50%;
   }
 }
 
@@ -440,9 +440,7 @@ body {
   color: hsl(210, 35%, 10%);
 }
 
-.heading-3,
-.heading-2,
-.heading-1 {
+.heading-3, .heading-2, .heading-1 {
   font-family: "Prata", sans-serif;
 }
 
@@ -617,9 +615,7 @@ Files inside this folder should contain all styles relating to a reusable compon
 */
 /*I put this placeholder in the same file as class, and not in helpers file (recommended?) since problem
 with import (before/after) --> looping problem*/
-.company,
-.experience__company,
-.btn {
+.company, .experience__company, .btn {
   font-size: 2.07rem;
   font-weight: 300;
   line-height: 1.35;
@@ -694,8 +690,7 @@ with import (before/after) --> looping problem*/
 
 .career-card {
   background-color: hsl(210, 0%, 100%);
-  box-shadow: 0px 2px 2px rgba(22.95, 75.225, 232.05, 0.1),
-    0px 0px 2px 0px rgba(22.95, 75.225, 232.05, 0.1);
+  box-shadow: 0px 2px 2px rgba(22.95, 75.225, 232.05, 0.1), 0px 0px 2px 0px rgba(22.95, 75.225, 232.05, 0.1);
   border-radius: 0.8rem;
   overflow: hidden;
   transition: all 0.3s;
@@ -763,9 +758,7 @@ with import (before/after) --> looping problem*/
   margin-left: 1rem;
 }
 
-.icon-social__github,
-.icon-social__linkedin,
-.icon-social__xing {
+.icon-social__github, .icon-social__linkedin, .icon-social__xing {
   height: 3rem;
   width: 3rem;
   background-size: contain;
@@ -786,24 +779,9 @@ with import (before/after) --> looping problem*/
   height: 4rem;
 }
 
-.icon-web__html5,
-.icon-web__css3,
-.icon-web__sass,
-.icon-web__jquery,
-.icon-web__bootstrap,
-.icon-web__javascript,
-.icon-web__mongodb,
-.icon-web__nodejs,
-.icon-web__react,
-.icon-web__angular,
-.icon-web__tailwind,
-.icon-web__supabase,
-.icon-web__firebase,
-.icon-web__redux,
-.icon-web__figma,
-.icon-web__d3js {
-  height: 3.5rem;
-  width: 3.5rem;
+.icon-web__html5, .icon-web__css3, .icon-web__sass, .icon-web__jquery, .icon-web__bootstrap, .icon-web__javascript, .icon-web__mongodb, .icon-web__nodejs, .icon-web__react, .icon-web__angular, .icon-web__tailwind, .icon-web__supabase, .icon-web__firebase, .icon-web__redux, .icon-web__figma, .icon-web__d3js {
+  height: 3rem;
+  width: 3rem;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -936,13 +914,11 @@ with import (before/after) --> looping problem*/
   text-align: center;
   z-index: 1;
   color: hsl(210, 0%, 100%);
-  transition: opacity 1500ms cubic-bezier(0.2, 1, 0.3, 1),
-    transform 1500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: opacity 1500ms cubic-bezier(0.2, 1, 0.3, 1), transform 1500ms cubic-bezier(0.2, 1, 0.3, 1);
   transition-delay: 120ms;
 }
 .project:hover .project__text {
   opacity: 1;
-  cursor: pointer;
 }
 .project__buttons {
   padding-top: 1.5rem;
@@ -963,7 +939,6 @@ with import (before/after) --> looping problem*/
   padding: 0.6rem 1.3rem;
   cursor: pointer;
   transition: transform 0.3s;
-  border-radius: 5px;
 }
 .project__buttons a:nth-last-child(2):hover,
 .project__buttons a:nth-last-child(1):hover {
@@ -1002,11 +977,7 @@ This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
 .footer {
-  background-image: linear-gradient(
-    to right,
-    hsl(225, 82%, 11%),
-    hsl(225, 82%, 18%)
-  );
+  background-image: linear-gradient(to right, hsl(225, 82%, 11%), hsl(225, 82%, 18%));
   color: hsl(210, 10%, 94%);
   grid-column: 1/-1;
   padding: 5rem;
@@ -1101,8 +1072,7 @@ Files inside this folder can contain specific element styles and layout.
 .grid {
   /* --- ABOUT PAGE --- */
 }
-.grid--card-work-2-3,
-.grid--card-work-3-2 {
+.grid--card-work-2-3, .grid--card-work-3-2 {
   gap: 3rem;
   grid-template-rows: 1fr;
 }
@@ -1133,38 +1103,17 @@ Files inside this folder can contain specific element styles and layout.
   align-items: stretch;
 }
 .header__logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 5rem;
-  height: 5rem;
   text-decoration: none;
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-left: 2rem;
-
-  background: hsl(225, 82%, 50%);
-  color: hsl(0, 0%, 90%);
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-}
-.header__logo .logo-main {
-  letter-spacing: -1px;
-}
-.header__logo .logo-sub {
+  font-size: 2.5rem;
   font-weight: 500;
-  font-size: 2.4rem;
-  color: hsl(225, 46%, 68%);
+  margin-left: 2rem;
+  color: hsl(210, 0%, 100%);
 }
-
+.header__logo span {
+  color: hsl(225, 82%, 50%);
+}
 .header__nav {
-  background-image: linear-gradient(
-    to right,
-    hsl(225, 82%, 11%),
-    hsl(225, 82%, 18%)
-  );
+  background-image: linear-gradient(to right, hsl(225, 82%, 11%), hsl(225, 82%, 18%));
   color: hsl(210, 10%, 94%);
   height: 8rem;
   padding-top: 2rem;
@@ -1199,16 +1148,13 @@ Files inside this folder can contain specific element styles and layout.
 .header__hamburger span {
   position: relative;
 }
-.header__hamburger span,
-.header__hamburger span::before,
-.header__hamburger span::after {
+.header__hamburger span, .header__hamburger span::before, .header__hamburger span::after {
   width: 3rem;
   height: 2px;
   background-color: hsl(225, 82%, 50%);
   display: inline-block;
 }
-.header__hamburger span::before,
-.header__hamburger span::after {
+.header__hamburger span::before, .header__hamburger span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1236,8 +1182,7 @@ Files inside this folder can contain specific element styles and layout.
 .header__hamburger:hover span::after {
   top: 1rem;
 }
-.header__hamburger:hover span.cross::before,
-.header__hamburger:hover span.cross::after {
+.header__hamburger:hover span.cross::before, .header__hamburger:hover span.cross::after {
   top: 0;
 }
 .header__mobile-background {
@@ -1304,11 +1249,7 @@ Files inside this folder can contain specific element styles and layout.
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    to right,
-    hsl(225, 82%, 11%),
-    hsl(225, 82%, 18%)
-  );
+  background-image: linear-gradient(to right, hsl(225, 82%, 11%), hsl(225, 82%, 18%));
   color: hsl(210, 0%, 100%);
 }
 
@@ -1345,8 +1286,7 @@ Files inside this folder can contain specific element styles and layout.
   display: block;
   animation: moveInRight 0.8s ease-out;
 }
-.presentation__summary p,
-.presentation__summary span {
+.presentation__summary p, .presentation__summary span {
   font-size: 2rem;
   color: hsl(210, 10%, 80%);
 }
@@ -1486,16 +1426,14 @@ Files inside this folder can contain specific element styles and layout.
   font-size: 1.3rem;
   text-transform: uppercase;
 }
-.dropdown__link:link,
-.dropdown__link:visited {
+.dropdown__link:link, .dropdown__link:visited {
   border-bottom: 3px transparent solid;
   display: inline-block;
   padding-bottom: 0.7rem;
   transition: border-color 1s, opacity 1s;
   opacity: 0.7;
 }
-.dropdown__link:hover,
-.dropdown__link.active {
+.dropdown__link:hover, .dropdown__link.active {
   border-color: hsl(180, 80%, 50%);
   color: hsl(210, 0%, 100%);
   opacity: 1;
@@ -1524,15 +1462,13 @@ Files inside this folder can contain specific element styles and layout.
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-.dropdown-mobile__link:link,
-.dropdown-mobile__link:visited {
+.dropdown-mobile__link:link, .dropdown-mobile__link:visited {
   border-bottom: 3px transparent solid;
   display: inline-block;
   padding-bottom: 0.7rem;
   transition: border-color 0.7s;
 }
-.dropdown-mobile__link:hover,
-.dropdown-mobile__link.active {
+.dropdown-mobile__link:hover, .dropdown-mobile__link.active {
   border-color: hsl(180, 80%, 50%);
   color: hsl(210, 0%, 100%);
 }
@@ -1590,8 +1526,7 @@ Files inside this folder can contain specific element styles and layout.
   transform: scaleY(0);
   transition: transform 0.1s, width 0.3s;
 }
-.navbar__link:link,
-.navbar__link:visited {
+.navbar__link:link, .navbar__link:visited {
   text-decoration: none;
   border-bottom: 3px transparent solid;
   text-transform: uppercase;
@@ -1605,8 +1540,7 @@ Files inside this folder can contain specific element styles and layout.
   position: relative;
   z-index: 1;
 }
-.navbar__link:hover,
-.navbar__link.active {
+.navbar__link:hover, .navbar__link.active {
   border-color: hsl(225, 82%, 50%);
   color: hsl(210, 0%, 100%);
 }
@@ -1665,10 +1599,7 @@ Files inside this folder can contain specific styles for pages.
   }
 }
 .about-header__grid0 {
-  grid-template-columns: minmax(min-content, 45rem) minmax(
-      min-content,
-      max-content
-    );
+  grid-template-columns: minmax(min-content, 45rem) minmax(min-content, max-content);
   align-items: center;
   grid-gap: 3rem;
 }
@@ -1709,12 +1640,12 @@ Files inside this folder can contain specific styles for pages.
 }
 @media only screen and (max-width: 37.5em) {
   .about-header__bonjour {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .about-header__figure {
-    grid-row: 1 / span 1;
+    grid-row: 1/span 1;
   }
 }
 .about-header__grid1 {
@@ -1913,8 +1844,7 @@ Files inside this folder can contain specific styles for pages.
   --beforeContent: "";
   --afterContent: "";
 }
-.timeline__segment::before,
-.timeline__segment::after {
+.timeline__segment::before, .timeline__segment::after {
   position: absolute;
   font-size: 1.3rem;
   color: hsl(180, 80%, 50%);
@@ -1944,10 +1874,9 @@ Files inside this folder can contain specific styles for pages.
 .card-work__header--right {
   text-align: right;
 }
-.card-work__summary,
-.card-work__additional {
+.card-work__summary, .card-work__additional {
   padding: 3rem 4rem;
-  grid-row: 1 / span 1;
+  grid-row: 1/span 1;
 }
 .card-work__summary {
   background-color: hsl(210, 10%, 94%);
@@ -1965,7 +1894,7 @@ Files inside this folder can contain specific styles for pages.
 }
 @media only screen and (max-width: 62.5em) {
   .card-work__additional {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
     flex-direction: row;
   }
   .card-work__additional > :first-child {
@@ -2041,9 +1970,7 @@ Files inside this folder can contain specific styles for pages.
   margin: 4rem auto 0;
   width: 100%;
 }
-.contact__icon-github,
-.contact__icon-linkedin,
-.contact__icon-xing {
+.contact__icon-github, .contact__icon-linkedin, .contact__icon-xing {
   height: 3rem;
   width: 3rem;
   background-size: contain;
@@ -2078,8 +2005,7 @@ Files inside this folder can contain specific styles for pages.
   color: red;
   display: inline;
 }
-.contact__input,
-.contact__textarea {
+.contact__input, .contact__textarea {
   background-color: hsl(210, 10%, 94%);
   color: hsl(225, 82%, 18%);
   font-size: 2rem;
@@ -2192,78 +2118,74 @@ Files inside this folder can contain specific styles for pages.
   margin-bottom: 0;
 }
 .portfolio-intro__text--1 {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 5;
+  grid-row: 1/span 1;
+  grid-column: 1/span 5;
 }
 @media only screen and (max-width: 31.25em) {
   .portfolio-intro__text--1 {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
     grid-column: 1/-1;
   }
 }
 .portfolio-intro__text--2 {
-  grid-row: 2 / span 1;
-  grid-column: 2 / span 5;
+  grid-row: 2/span 1;
+  grid-column: 2/span 5;
 }
 @media only screen and (max-width: 31.25em) {
   .portfolio-intro__text--2 {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
     grid-column: 1/-1;
   }
 }
 .portfolio-intro__text--3 {
-  grid-row: 3 / span 1;
-  grid-column: 1 / span 5;
+  grid-row: 3/span 1;
+  grid-column: 1/span 5;
 }
 @media only screen and (max-width: 31.25em) {
   .portfolio-intro__text--3 {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
     grid-column: 1/-1;
   }
 }
 @media only screen and (max-width: 31.25em) {
-  .portfolio-intro__text--1,
-  .portfolio-intro__text--2,
-  .portfolio-intro__text--3 {
+  .portfolio-intro__text--1, .portfolio-intro__text--2, .portfolio-intro__text--3 {
     margin-bottom: 4rem;
   }
 }
 .portfolio-intro__figure {
   justify-self: center;
 }
-.portfolio-intro__figure--1,
-.portfolio-intro__figure--2,
-.portfolio-intro__figure--3 {
+.portfolio-intro__figure--1, .portfolio-intro__figure--2, .portfolio-intro__figure--3 {
   align-self: center;
 }
 .portfolio-intro__figure--1 {
-  grid-row: 1 / span 1;
-  grid-column: 6 / span 1;
+  grid-row: 1/span 1;
+  grid-column: 6/span 1;
 }
 @media only screen and (max-width: 31.25em) {
   .portfolio-intro__figure--1 {
-    grid-row: 1 / span 1;
+    grid-row: 1/span 1;
     grid-column: 1/-1;
     margin-top: 2rem;
   }
 }
 .portfolio-intro__figure--2 {
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 1;
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
 }
 @media only screen and (max-width: 31.25em) {
   .portfolio-intro__figure--2 {
-    grid-row: 3 / span 1;
+    grid-row: 3/span 1;
     grid-column: 1/-1;
   }
 }
 .portfolio-intro__figure--3 {
-  grid-row: 3 / span 1;
-  grid-column: 6 / span 1;
+  grid-row: 3/span 1;
+  grid-column: 6/span 1;
 }
 @media only screen and (max-width: 31.25em) {
   .portfolio-intro__figure--3 {
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
     grid-column: 1/-1;
   }
 }
@@ -2305,47 +2227,45 @@ Files inside this folder can contain specific styles for pages.
 .userguide__item {
   padding: 2rem 3rem;
 }
-.userguide__item--1,
-.userguide__item--3 {
+.userguide__item--1, .userguide__item--3 {
   background-color: hsl(210, 35%, 20%);
   color: hsl(210, 10%, 97%);
 }
-.userguide__item--2,
-.userguide__item--4 {
+.userguide__item--2, .userguide__item--4 {
   background-color: hsl(210, 10%, 97%);
   color: hsl(210, 35%, 20%);
 }
 .userguide__item--1 {
-  grid-row: 1 / span 4;
-  grid-column: 1 / span 4;
+  grid-row: 1/span 4;
+  grid-column: 1/span 4;
 }
 .userguide__item--2 {
-  grid-row: 4 / span 4;
-  grid-column: 5 / span 4;
+  grid-row: 4/span 4;
+  grid-column: 5/span 4;
 }
 .userguide__item--3 {
-  grid-row: 8 / span 4;
-  grid-column: 1 / span 4;
+  grid-row: 8/span 4;
+  grid-column: 1/span 4;
 }
 .userguide__item--4 {
-  grid-row: 11 / span 3;
-  grid-column: 5 / span 4;
+  grid-row: 11/span 3;
+  grid-column: 5/span 4;
 }
 @media only screen and (max-width: 37.5em) {
   .userguide__item--1 {
-    grid-row: 1 / span 1;
+    grid-row: 1/span 1;
     grid-column: 1/-1;
   }
   .userguide__item--2 {
-    grid-row: 3 / span 1;
+    grid-row: 3/span 1;
     grid-column: 1/-1;
   }
   .userguide__item--3 {
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
     grid-column: 1/-1;
   }
   .userguide__item--4 {
-    grid-row: 7 / span 1;
+    grid-row: 7/span 1;
     grid-column: 1/-1;
   }
 }
@@ -2381,39 +2301,35 @@ Files inside this folder can contain specific styles for pages.
 .userguide__title--4::before {
   content: "4";
 }
-.userguide__title--1::before,
-.userguide__title--3::before {
+.userguide__title--1::before, .userguide__title--3::before {
   background-color: hsl(210, 10%, 94%);
   color: hsl(225, 82%, 50%);
 }
-.userguide__title--2::before,
-.userguide__title--4::before {
+.userguide__title--2::before, .userguide__title--4::before {
   background-color: hsl(225, 82%, 50%);
   color: hsl(210, 10%, 94%);
 }
-.userguide__intro--1,
-.userguide__intro--3 {
+.userguide__intro--1, .userguide__intro--3 {
   color: hsl(225, 82%, 90%);
 }
-.userguide__intro--2,
-.userguide__intro--4 {
+.userguide__intro--2, .userguide__intro--4 {
   color: hsl(225, 82%, 18%);
 }
 .userguide__figure--1 {
-  grid-row: 1 / span 3;
-  grid-column: 5 / span 4;
+  grid-row: 1/span 3;
+  grid-column: 5/span 4;
 }
 .userguide__figure--2 {
-  grid-row: 5 / span 3;
-  grid-column: 1 / span 4;
+  grid-row: 5/span 3;
+  grid-column: 1/span 4;
 }
 .userguide__figure--3 {
-  grid-row: 8 / span 3;
-  grid-column: 5 / span 4;
+  grid-row: 8/span 3;
+  grid-column: 5/span 4;
 }
 .userguide__figure--4 {
-  grid-row: 12 / span 2;
-  grid-column: 1 / span 4;
+  grid-row: 12/span 2;
+  grid-column: 1/span 4;
 }
 .userguide__figure img {
   width: 100%;
@@ -2428,19 +2344,19 @@ Files inside this folder can contain specific styles for pages.
 }
 @media only screen and (max-width: 37.5em) {
   .userguide__figure--1 {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
     grid-column: 1/-1;
   }
   .userguide__figure--2 {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
     grid-column: 1/-1;
   }
   .userguide__figure--3 {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
     grid-column: 1/-1;
   }
   .userguide__figure--4 {
-    grid-row: 8 / span 1;
+    grid-row: 8/span 1;
     grid-column: 1/-1;
   }
 }
@@ -2465,14 +2381,12 @@ Files inside this folder can contain specific styles for pages.
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 2rem;
 }
-.techstack__frontend,
-.techstack__backend {
+.techstack__frontend, .techstack__backend {
   background-color: hsl(210, 35%, 20%);
   color: hsl(210, 10%, 94%);
   padding: 1rem 2rem;
 }
-.techstack__frontend h3,
-.techstack__backend h3 {
+.techstack__frontend h3, .techstack__backend h3 {
   color: hsl(210, 0%, 100%);
 }
 
@@ -2558,189 +2472,172 @@ PORTFOLIO PERSONAL SITE
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.typography__item,
-.typography__property {
+.typography__item, .typography__property {
   background-color: hsl(210, 35%, 20%);
   color: hsl(210, 10%, 94%);
   padding: 0.5rem 1rem;
 }
 .typography__item {
-  grid-row: 1 / span 1;
+  grid-row: 1/span 1;
 }
 .typography__item--1 {
-  grid-column: 2 / span 1;
+  grid-column: 2/span 1;
 }
 .typography__item--2 {
-  grid-column: 3 / span 1;
+  grid-column: 3/span 1;
 }
 .typography__item--3 {
-  grid-column: 4 / span 1;
+  grid-column: 4/span 1;
 }
 .typography__item--4 {
-  grid-column: 5 / span 1;
+  grid-column: 5/span 1;
 }
 .typography__item--5 {
-  grid-column: 6 / span 1;
+  grid-column: 6/span 1;
 }
 @media only screen and (max-width: 37.5em) {
   .typography__item {
-    grid-column: 1 / span 1;
+    grid-column: 1/span 1;
   }
   .typography__item--1 {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
   }
   .typography__item--2 {
-    grid-row: 3 / span 1;
+    grid-row: 3/span 1;
   }
   .typography__item--3 {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
   }
   .typography__item--4 {
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
   }
   .typography__item--5 {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
   }
 }
 .typography__property {
-  grid-column: 1 / span 1;
+  grid-column: 1/span 1;
 }
 .typography__property--1 {
-  grid-row: 2 / span 1;
+  grid-row: 2/span 1;
 }
 .typography__property--2 {
-  grid-row: 3 / span 1;
+  grid-row: 3/span 1;
 }
 .typography__property--3 {
-  grid-row: 4 / span 1;
+  grid-row: 4/span 1;
 }
 @media only screen and (max-width: 37.5em) {
   .typography__property {
-    grid-row: 1 / span 1;
+    grid-row: 1/span 1;
   }
   .typography__property--1 {
-    grid-column: 2 / span 1;
+    grid-column: 2/span 1;
   }
   .typography__property--2 {
-    grid-column: 3 / span 1;
+    grid-column: 3/span 1;
   }
   .typography__property--3 {
-    grid-column: 4 / span 1;
+    grid-column: 4/span 1;
   }
 }
-.typography__fontfamily,
-.typography__fontsize,
-.typography__fontweight {
+.typography__fontfamily, .typography__fontsize, .typography__fontweight {
   background-color: hsl(210, 10%, 92%);
   border: 1px solid hsl(210, 15%, 70%);
 }
 .typography__fontfamily {
-  grid-row: 2 / span 1;
+  grid-row: 2/span 1;
 }
-.typography__fontfamily--body,
-.typography__fontfamily--paragraph {
-  grid-column: 2 / span 2;
+.typography__fontfamily--body, .typography__fontfamily--paragraph {
+  grid-column: 2/span 2;
   font-family: "Roboto", sans-serif;
 }
-.typography__fontfamily--h1,
-.typography__fontfamily--h2,
-.typography__fontfamily--h3 {
-  grid-column: 4 / span 3;
+.typography__fontfamily--h1, .typography__fontfamily--h2, .typography__fontfamily--h3 {
+  grid-column: 4/span 3;
   font-family: "Prata", sans-serif;
 }
 @media only screen and (max-width: 37.5em) {
   .typography__fontfamily {
-    grid-column: 2 / span 1;
+    grid-column: 2/span 1;
   }
-  .typography__fontfamily--body,
-  .typography__fontfamily--paragraph {
-    grid-row: 2 / span 2;
+  .typography__fontfamily--body, .typography__fontfamily--paragraph {
+    grid-row: 2/span 2;
   }
-  .typography__fontfamily--h1,
-  .typography__fontfamily--h2,
-  .typography__fontfamily--h3 {
-    grid-row: 4 / span 3;
+  .typography__fontfamily--h1, .typography__fontfamily--h2, .typography__fontfamily--h3 {
+    grid-row: 4/span 3;
   }
 }
 .typography__fontsize {
-  grid-row: 3 / span 1;
+  grid-row: 3/span 1;
 }
-.typography__fontsize--body,
-.typography__fontsize--paragraph {
-  grid-column: 2 / span 2;
+.typography__fontsize--body, .typography__fontsize--paragraph {
+  grid-column: 2/span 2;
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
 }
-.typography__fontsize--h1,
-.typography__fontsize--h2,
-.typography__fontsize--h3 {
+.typography__fontsize--h1, .typography__fontsize--h2, .typography__fontsize--h3 {
   font-family: "Prata", sans-serif;
 }
 .typography__fontsize--h1 {
-  grid-column: 4 / span 1;
+  grid-column: 4/span 1;
 }
 .typography__fontsize--h2 {
-  grid-column: 5 / span 1;
+  grid-column: 5/span 1;
 }
 .typography__fontsize--h3 {
-  grid-column: 6 / span 1;
+  grid-column: 6/span 1;
 }
 @media only screen and (max-width: 37.5em) {
   .typography__fontsize {
-    grid-column: 3 / span 1;
+    grid-column: 3/span 1;
   }
-  .typography__fontsize--body,
-  .typography__fontsize--paragraph {
-    grid-row: 2 / span 2;
+  .typography__fontsize--body, .typography__fontsize--paragraph {
+    grid-row: 2/span 2;
   }
   .typography__fontsize--h1 {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
   }
   .typography__fontsize--h2 {
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
   }
   .typography__fontsize--h3 {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
   }
 }
 .typography__fontweight {
-  grid-row: 4 / span 1;
+  grid-row: 4/span 1;
 }
-.typography__fontweight--body,
-.typography__fontweight--paragraph {
-  grid-column: 2 / span 2;
+.typography__fontweight--body, .typography__fontweight--paragraph {
+  grid-column: 2/span 2;
   font-family: "Roboto", sans-serif;
 }
-.typography__fontweight--h1,
-.typography__fontweight--h2,
-.typography__fontweight--h3 {
+.typography__fontweight--h1, .typography__fontweight--h2, .typography__fontweight--h3 {
   font-family: "Prata", sans-serif;
 }
 .typography__fontweight--h1 {
-  grid-column: 4 / span 1;
+  grid-column: 4/span 1;
 }
 .typography__fontweight--h2 {
-  grid-column: 5 / span 1;
+  grid-column: 5/span 1;
 }
 .typography__fontweight--h3 {
-  grid-column: 6 / span 1;
+  grid-column: 6/span 1;
 }
 @media only screen and (max-width: 37.5em) {
   .typography__fontweight {
-    grid-column: 4 / span 1;
+    grid-column: 4/span 1;
   }
-  .typography__fontweight--body,
-  .typography__fontweight--paragraph {
-    grid-row: 2 / span 2;
+  .typography__fontweight--body, .typography__fontweight--paragraph {
+    grid-row: 2/span 2;
   }
   .typography__fontweight--h1 {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
   }
   .typography__fontweight--h2 {
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
   }
   .typography__fontweight--h3 {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
   }
 }
 
@@ -2756,16 +2653,12 @@ PORTFOLIO PERSONAL SITE
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.palette__label,
-.palette__feature,
-.palette__use {
+.palette__label, .palette__feature, .palette__use {
   margin-right: 2rem;
   border-right: 1px solid hsl(210, 10%, 94%);
 }
 @media only screen and (max-width: 37.5em) {
-  .palette__label,
-  .palette__feature,
-  .palette__use {
+  .palette__label, .palette__feature, .palette__use {
     margin-right: 0;
     border-right: none;
   }
@@ -2774,48 +2667,48 @@ PORTFOLIO PERSONAL SITE
   padding: 0.5rem 1rem;
   text-align: center;
   font-weight: 600;
-  grid-row: 1 / span 1;
+  grid-row: 1/span 1;
 }
 .palette__label--primary {
-  grid-column: 1 / span 1;
+  grid-column: 1/span 1;
 }
 .palette__label--secondary {
-  grid-column: 2 / span 1;
+  grid-column: 2/span 1;
 }
 .palette__label--gray-dark {
-  grid-column: 3 / span 1;
+  grid-column: 3/span 1;
 }
 .palette__label--gray-light {
-  grid-column: 4 / span 1;
+  grid-column: 4/span 1;
 }
 .palette__label--white {
-  grid-column: 5 / span 1;
+  grid-column: 5/span 1;
 }
 @media only screen and (max-width: 37.5em) {
   .palette__label {
     margin-top: 2rem;
     margin-bottom: 1rem;
     border-top: 1px solid hsl(210, 10%, 94%);
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
   .palette__label--primary {
-    grid-row: 1 / span 1;
+    grid-row: 1/span 1;
   }
   .palette__label--secondary {
-    grid-row: 3 / span 1;
+    grid-row: 3/span 1;
   }
   .palette__label--gray-dark {
-    grid-row: 5 / span 1;
+    grid-row: 5/span 1;
   }
   .palette__label--gray-light {
-    grid-row: 7 / span 1;
+    grid-row: 7/span 1;
   }
   .palette__label--white {
-    grid-row: 9 / span 1;
+    grid-row: 9/span 1;
   }
 }
 .palette__feature {
-  grid-row: 2 / span 1;
+  grid-row: 2/span 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2823,22 +2716,22 @@ PORTFOLIO PERSONAL SITE
 }
 @media only screen and (max-width: 37.5em) {
   .palette__feature {
-    grid-column: 1 / span 1;
+    grid-column: 1/span 1;
   }
   .palette__feature--1 {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
   }
   .palette__feature--2 {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
   }
   .palette__feature--3 {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
   }
   .palette__feature--4 {
-    grid-row: 8 / span 1;
+    grid-row: 8/span 1;
   }
   .palette__feature--5 {
-    grid-row: 10 / span 1;
+    grid-row: 10/span 1;
   }
 }
 .palette__code {
@@ -2874,30 +2767,30 @@ PORTFOLIO PERSONAL SITE
   border: 1px solid hsl(210, 10%, 94%);
 }
 .palette__use {
-  grid-row: 3 / span 1;
+  grid-row: 3/span 1;
   padding-top: 2rem;
   padding-right: 1rem;
   justify-self: start;
 }
 @media only screen and (max-width: 37.5em) {
   .palette__use {
-    grid-column: 2 / span 1;
+    grid-column: 2/span 1;
     padding-top: 0;
   }
   .palette__use--primary {
-    grid-row: 2 / span 1;
+    grid-row: 2/span 1;
   }
   .palette__use--secondary {
-    grid-row: 4 / span 1;
+    grid-row: 4/span 1;
   }
   .palette__use--gray-dark {
-    grid-row: 6 / span 1;
+    grid-row: 6/span 1;
   }
   .palette__use--gray-light {
-    grid-row: 8 / span 1;
+    grid-row: 8/span 1;
   }
   .palette__use--white {
-    grid-row: 10 / span 1;
+    grid-row: 10/span 1;
   }
 }
 
@@ -2933,8 +2826,7 @@ PORTFOLIO PERSONAL SITE
 .architecture__7-1 img {
   margin-top: 0.6rem;
 }
-.architecture__precompiler,
-.architecture__precompiler > p {
+.architecture__precompiler, .architecture__precompiler > p {
   color: hsl(210, 10%, 94%);
 }
 .architecture__miscelleanous {
