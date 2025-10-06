@@ -779,7 +779,7 @@ with import (before/after) --> looping problem*/
   height: 4rem;
 }
 
-.icon-web__html5, .icon-web__css3, .icon-web__sass, .icon-web__jquery, .icon-web__bootstrap, .icon-web__javascript, .icon-web__mongodb, .icon-web__nodejs, .icon-web__react, .icon-web__angular, .icon-web__tailwind, .icon-web__supabase, .icon-web__firebase, .icon-web__redux, .icon-web__figma, .icon-web__d3js {
+.icon-web__html5, .icon-web__css3, .icon-web__sass, .icon-web__jquery, .icon-web__bootstrap, .icon-web__javascript, .icon-web__mongodb, .icon-web__nodejs, .icon-web__react, .icon-web__angular, .icon-web__tailwind, .icon-web__supabase, .icon-web__firebase, .icon-web__redux, .icon-web__figma, .icon-web__d3js, .icon-web__material-ui {
   height: 3rem;
   width: 3rem;
   background-size: contain;

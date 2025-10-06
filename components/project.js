@@ -49,6 +49,7 @@ class Project extends HTMLElement {
       "redux",
       "figma",
       "d3js",
+      "material-ui",
     ];
     let html_techStack = "";
 
@@ -67,21 +68,17 @@ class Project extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
+            <h2 class="flex flex--center" style="margin-bottom: 0.5rem;">${this.header}</h2>
             <div class="project ${this.scrollDown}">
                 <figure class="project__figure">
                     <img src=${this.figurePath} alt=${this.imgAlt} />
                 </figure>
                 <div class="project__text grid project__grid">
                     <div class="project__buttons flex flex--spacebetween">
-                        <a href=${
-                          this.githubPage
-                        } target="_blank" role="button">
+                        <a href=${this.githubPage} target="_blank" role="button">
                             <div class="icon-social__github"></div>
                         </a>
                         <a href=${this.appDetail} role="button">Detail</a>
-                        <a href=${this.appPage} target="_blank" role="button" ${
-      this.appPage == "#" ? 'style="display: none"' : ""
-    }>Visit Site</a>
                     </div>
                     <div class="project__description grid">
                         <h3>${this.header}</h3>

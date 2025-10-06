@@ -12,6 +12,10 @@ A personal website showcasing my web development projects, skills, and portfolio
 
 Clone the repository from GitHub: [https://github.com/jmcavet/portfolia_website.git](https://github.com/jmcavet/portfolia_website.git)
 
+## Development
+
+npm run dev
+
 ## Deployment
 
 The website is hosted on Netlify: [Jean-Marie Cavet Website](https://app.netlify.com/projects/jeanmariecavet/)

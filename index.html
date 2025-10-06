@@ -55,56 +55,6 @@
           </div>
         </div>
       </div>
-
-      <!--
-        <div class="header__body">
-            <div class="grid header__grid-body">
-                <div class="presentation">
-                    <div class="grid presentation__grid">
-                        <h3 class="presentation__fullname">Jean-Marie Cavet</h3>
-                        <h1 class="heading-1 presentation__title">
-                            <span>Software Engineer,</span>
-                            <span>with a passion for <span class="color-primary--600">Web
-                                    Apps</span></span>
-                        </h1>
-                        <div class="presentation__summary">
-                            <p>I build Software and develop processes for engineering applications.</p>
-                            <p>I particularly love working on <span>UI</span> and <span>Data Visualization</span>.
-                            </p>
-                            <p>I am now eager and ready to transition to a web development career.</p>
-                        </div>
-                        <a href="portfolio" class="btn primary--inversed">My Projects</a>
-                    </div>
-                </div>
-
-                <div class="profile">
-                    <div class="grid profile__grid">
-                        <div class="profile__image-wrapper">
-                            <div class="profile__image"></div>
-                        </div>
-                        <div class="profile__descriptions grid profile__descriptions__grid">
-                            <div class="profile__description">
-                                <img src="/img/location.svg" alt="Icon location" />
-                                <p>Munich, Germany</p>
-                            </div>
-                            <div class="profile__description">
-                                <img src="/img/family.svg" alt="Icon family" />
-                                <p>Married, 2 children</p>
-                            </div>
-                            <div class="profile__description">
-                                <img src="/img/developer.svg" alt="Icon developer" />
-                                <p>6 years as Software Developer</p>
-                            </div>
-                            <div class="profile__description">
-                                <img src="/img/airplane.svg" alt="Icon airplane" />
-                                <p>12 years as Aerodynamicist</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
     </header>
 
     <main>
@@ -129,9 +79,9 @@
                 </p>
                 <p>
                   With an ever-growing interest in Web Applications, I have been
-                  exploring new fields for the last 3 years, from Front-end to
-                  Back-end. Building apps nutures my creativity and motivation
-                  to keep learning. This is the direction I want to give to my
+                  exploring new fields for the last 6 years, from Frontend to
+                  Backend. Building apps nutures my creativity and motivation to
+                  keep learning. This is the direction I want to give to my
                   career.
                 </p>
               </div>
@@ -145,7 +95,7 @@
                   <div class="career-card__title">Work expertise in ...</div>
                   <ul class="career-card__items">
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      GUI Design & Development
+                      Desktop (GUI) & Web App Design and Development
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
                       Processes and algorithms for scientific numerical
@@ -171,10 +121,10 @@
                   <div class="career-card__title">Currently learning ...</div>
                   <ul class="career-card__items">
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      HTML5, CSS3, Javascript
+                      Angular 19, React
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      React, Redux
+                      Redux
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
                       Bootstrap, semanticUI, MaterialUI
@@ -200,13 +150,13 @@
                       <span class="career-card__bold">Frontend developer</span>
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      For the Industry 4.0 (Digitalisation, AI), SAAS, etc.
+                      For the Industry (Digitalisation, AI), SAAS
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
                       Small to medium size Company
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      Dynamic Team
+                      Dynamic and international Team
                     </li>
                   </ul>
                   <a href="about/#jobsearch" class="career-card__link"
@@ -229,16 +179,20 @@
                 My first projects have been developed using plain html, css, and
                 javascript. I have continuously commited myself to build a more
                 <a href="about/#about-architecture">solid architecture</a>,
-                using semantic html and CSS-preprocessing for instance. The most
-                recent ones are built using frameworks, such as React.
+                using semantic html and CSS-preprocessing.
+              </div>
+              <br />
+              <div>
+                The most recent ones are built using frameworks, such as React
+                and Angular.
               </div>
             </div>
             <div class="portfolio__body">
               <div class="projects grid projects__grid">
                 <project-component
-                  figure-path="/img/projects/project_personal.png"
+                  figure-path="/img/projects/famappy.png"
                   img-alt="Famappy"
-                  github-page="#"
+                  github-page="https://github.com/jmcavet/famappy"
                   app-detail="/portfolio/famappy/"
                   app-page="#"
                   header="Famappy"
@@ -249,14 +203,27 @@
                 </project-component>
 
                 <project-component
-                  figure-path="/img/projects/project_personal.png"
+                  figure-path="/img/projects/fluento.png"
                   img-alt="Fluento"
                   github-page="#"
                   app-detail="/portfolio/fluento/"
                   app-page="https://fluento-jm.netlify.app/"
                   header="Fluento"
-                  description="Learn a new foreign language with context."
+                  description="Learn a new foreign language with context"
                   tech-stack="figma, react, tailwind, redux, supabase"
+                  scroll-down="scroll-down"
+                >
+                </project-component>
+
+                <project-component
+                  figure-path="/img/projects/familiapp.png"
+                  img-alt="Familiapp"
+                  github-page="https://github.com/jmcavet/todo_app_react_redux"
+                  app-detail="/portfolio/familiapp/"
+                  app-page="https://react-redux-todo-app-ba25e.web.app/"
+                  header="Familiapp"
+                  description="Manage shopping cart"
+                  tech-stack="react, material-ui, redux, firebase"
                   scroll-down="scroll-down"
                 >
                 </project-component>
@@ -277,11 +244,11 @@
                 <project-component
                   figure-path="/img/projects/project_personal.png"
                   img-alt="Project-Personal"
-                  github-page="#"
+                  github-page="https://github.com/jmcavet/portfolia_website"
                   app-detail="/portfolio/personal/"
-                  app-page="#"
-                  header="Personal Webpage"
-                  description="First version of my personal website, developed without Front-end library."
+                  app-page="https://jeanmariecavet.netlify.app/"
+                  header="Personal Website"
+                  description="First version of my personal website, developed with vanilla JavaScript"
                   tech-stack="html5, css3, sass, jquery, d3js"
                   scroll-down="scroll-down"
                 >
