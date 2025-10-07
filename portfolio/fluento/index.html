@@ -48,7 +48,7 @@
           <a href="https://fluento-jm.netlify.app/" target="_blank"
             ><button class="btn primary--inversed">View Website</button></a
           >
-          <a href="https://github.com/jmcavet/linguappo" target="_blank"
+          <a href="https://github.com/jmcavet/fluento" target="_blank"
             ><button class="btn primary--inversed">View Code</button></a
           >
         </div>
@@ -60,29 +60,58 @@
         <div class="section__layout-container">
           <div class="section__layout portfolio-intro">
             <h2 class="heading-2 portfolio-intro__title">
-              Motives for developing a brand new Language App
+              Motivation for Developing a New Language Application
             </h2>
-            <p class="portfolio-intro__text">
-              While learning React and Redux back in 2020, I took a chance at
-              applying my knowledge by developing a new Progressive Web
-              Application (PWA) for learning foreign languages.
+            <p>
+              In 2020, while learning <span class="bold">React</span> and
+              <span class="bold">Redux</span>, I decided to put my knowledge
+              into practice by creating a Progressive Web Application (<span
+                class="bold"
+                >PWA</span
+              >) for learning foreign languages.
             </p>
-            <br />
-            <p class="portfolio-intro__text">
-              I used Supabase for my backend, giving me more time to focus on
-              the frontend. While my previous language app (<a
+
+            <p>
+              I built this application with a specific purpose in mind:
+              reinforce words, expressions, and verbs that are essential for my
+              daily work. It has been so far especially helpful for
+              communicating clearly during meetings and technical presentations.
+            </p>
+
+            <p>The goal of this project was threefold:</p>
+
+            <p class="bulletpt bulletpt--primary">
+              <span class="bulletpt--span-dark"
+                >Create a practical application</span
+              >
+              that I could use daily in any context
+            </p>
+            <p class="bulletpt bulletpt--primary">
+              <span class="bulletpt--span-dark"
+                >Develop web technology skills</span
+              >
+              using a modern frontend framework, React
+            </p>
+            <p class="bulletpt bulletpt--primary">
+              <span class="bulletpt--span-dark"
+                >Gain solid experience in UI/UX design</span
+              >
+              covering the process from concept to completion
+            </p>
+            <p class="m-b-4">
+              For the backend, I chose <span class="bold">Supabase</span>, which
+              allowed me to focus on the frontend experience. Unlike my previous
+              language app (<a
                 href="https://jeanmariecavet.netlify.app/portfolio/linguappo/"
                 >Linguappo</a
-              >) was not particularly solid in terms of design, I chose to
-              consolidate my knowledge of UI & UX by designing every page using
-              Figma.
+              >) which lacked design consistency, I aimed to strengthen my UI&UX
+              skills by designing every page in <span class="bold">Figma</span>.
             </p>
-            <br />
+
             <p>
-              For more information regarding my design process in Figma, please
-              open the following links:
+              You can explore my design process through the following links:
             </p>
-            <div class="flex flex--spacebetween">
+            <div class="portfolio-intro__figma-links heading-4">
               <div class="flex" style="gap: 0.5rem">
                 <figure>
                   <img
@@ -197,29 +226,38 @@
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--1">
-                  If an account already exists, users can just log in with their
+                  Users with an existing account can log in directly using their
                   email. <br />
-                  Otherwise, they must first signup, which creates an account in
-                  the <i>Supabase</i> database. Once valided, they can:
+                  New users first sign up, which automatically creates their
+                  account in the <i>Supabase</i> database. <br />Once validated,
+                  they can:
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Create a new project by defining the learning language they
-                  want to learn as well as their mother tongue
+                  <span class="bulletpt--span-light">Create new projects</span>
+                  — Select the target language to learn and their native
+                  language
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Start adding some vocabulary for this specific project
+                  <span class="bulletpt--span-light">Add vocabulary</span>
+                  — Enter words, translations, and contextual notes for each
+                  project
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  View all their projects on the dashboard represented as cards
-                  or graphs (total number of words, categories, incomplete
-                  vocabulary, etc.)
+                  <span class="bulletpt--span-light"
+                    >Explore the dashboard</span
+                  >
+                  View all projects as cards or graphs showing key stats such as
+                  total words, categories, and incomplete items
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--1">
-                <img
-                  src="/img/portfolio/fluento/fluento_voca.gif"
-                  alt="Responsive Design Gif"
-                />
+                <video
+                  src="/img/portfolio/fluento/vocabulary_animation.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
               </figure>
 
               <div class="userguide__item userguide__item--2">
@@ -233,34 +271,43 @@
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--2">
-                  For a specific project, users can save their own items:
+                  For each project, users can create and manage their own
+                  vocabulary items:
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Enter some data (word, expression, verb, etc.) and its
-                  translation (directly or complete at a later date). If
-                  available, add some context and its translation for this
-                  specific item.
+                  <span class="bulletpt--span-dark">Add new entries</span> —
+                  Enter a word, expression, or verb with its translation. If
+                  it’s not ready, complete it later. Optionally, include a
+                  context sentence and translation for better understanding
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Any incomplete translation can be completed later. <br />
-                  Users can enter <i>quickies</i> in case they are in a hurry
-                  (e.g. listening to a conversation)
+                  <span class="bulletpt--span-dark"
+                    >Complete translations later</span
+                  >
+                  — Update incomplete items anytime, or add
+                  <i>quick entries</i> on the go — for example, when hearing new
+                  words in conversation
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Create as many tags as needed in order to regroup the items,
-                  e.g. <i>Adjective</i>, <i>Verb</i>, <i>Expression</i>,
-                  <i>Slang</i>, etc.
+                  <span class="bulletpt--span-dark">Organize with tags</span> —
+                  Create custom tags (e.g., <i>Adjective</i>, <i>Verb</i>,
+                  <i>Expression</i>, <i>Slang</i>) to group and filter
+                  vocabulary
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Manage tags: edit or delete them. It will update automatically
-                  the database.
+                  <span class="bulletpt--span-dark">Manage tags easily</span> —
+                  Edit or delete tags; all changes sync automatically with the
+                  database
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--2">
-                <img
-                  src="/img/portfolio/fluento/fluento_login.gif"
-                  alt="Login"
-                />
+                <video
+                  src="/img/portfolio/fluento/dashboard_animation.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
               </figure>
               <div class="userguide__item userguide__item--3">
                 <div
@@ -273,34 +320,40 @@
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--3">
-                  The central part of the app. It enables users to:
+                  The heart of the application, where users review and test
+                  their vocabulary:
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Select 1 or a few corresponding projects for 1 specific
-                  language
+                  <span class="bulletpt--span-light">Select projects</span> —
+                  Choose one or more projects for a specific language
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Select the language you want to play with (learning or own
-                  language)
+                  <span class="bulletpt--span-light">Choose the mode</span> —
+                  Play using either your learning or native language
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Select the method presenting the words (random or sorted by
-                  date) and the number of words to play with
+                  <span class="bulletpt--span-light">Pick a method</span> — Show
+                  words randomly or by date, and set how many to review
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Filter data according to various information: word types,
-                  categories, allocated score
+                  <span class="bulletpt--span-light">Filter your data</span> —
+                  Focus on selected word types, categories, or scores
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Play the game by guessing the translation (blurred) and
-                  provide a grade (failed, neutral, passed)
+                  <span class="bulletpt--span-light">Play the game</span> —
+                  Guess blurred translation and rate your answer as
+                  <i>failed</i>, <i>neutral</i>, or <i>passed</i> to track your
+                  progress
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--3">
-                <img
-                  src="/img/portfolio/fluento/fluento_dictionary.gif"
-                  alt="Dictionary"
-                />
+                <video
+                  src="/img/portfolio/fluento/dictionary_animation.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
               </figure>
               <div class="userguide__item userguide__item--4">
                 <div
@@ -313,25 +366,31 @@
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--4">
-                  For a specific project and language, users can search for 1 or
-                  multiple items. In particular, they are able to:
+                  For each project and language, users can search, filter, and
+                  manage their saved items:
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Search a specific item by its name
+                  <span class="bulletpt--span-dark">Search items</span> — Find
+                  specific words or expressions by name
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Sort the list of items by date
+                  <span class="bulletpt--span-dark">Sort by date</span> —
+                  Organize the vocabulary list chronologically to track progress
+                  over time
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Filter data according to various information: word types,
-                  categories, allocated score, items complete or incomplete,
-                  favourites
+                  <span class="bulletpt--span-dark">Filter results</span> —
+                  Narrow down items by word type, category, score, completion
+                  status, or favorites
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Select a specific item and update its properties
+                  <span class="bulletpt--span-dark">Edit items</span> — Select
+                  any entry to update its properties or correct information
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Select 1 or multiple items and delete them
+                  <span class="bulletpt--span-dark">Delete items</span> — Choose
+                  one or several entries to remove them permanently from the
+                  project
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--4">
@@ -342,18 +401,77 @@
         </div>
       </section>
 
-      <section class="flex flex--center bg-color-medium">
+      <section class="flex flex--center bg-color-dark">
         <div class="section__layout-container">
-          <div class="section__layout">
+          <div class="section__layout architecture">
+            <h2 class="heading-2">Architecture</h2>
+            <h3 class="heading-3">Summary</h3>
             <p>
-              I use this app on a weekly basis to help me assimilate words,
-              expressions, verbs that I need for my daily job. It helps me
-              especially communicate more clearly during meetings and technical
-              presentations.
-              <br />
-              At home, I take advantage of it to check any new word when the
-              conversations turn into italian or german within the family :)
+              This application combines <i>React</i>, <i>Redux</i>, and
+              <i>React Router DOM</i> with <i>Supabase</i> as backend.
             </p>
+            <p>
+              It uses context-based state management for each major feature and
+              a dedicated service layer for API communication. Routing is
+              managed in the <i>App.jsx</i> file with protected and public
+              routes, while <i>React Query</i> handles caching and data
+              synchronization.
+            </p>
+            <p style="margin-bottom: 6rem">
+              This architecture ensures a clear separation between logic, data,
+              and presentation.
+            </p>
+
+            <h3 class="heading-3">The main pillars</h3>
+            <div class="grid architecture__grid-cards">
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  Router & Entry Point
+                </h3>
+                <p class="card-architecture__text">
+                  The app is initialized in <i>main.jsx</i>, wrapped in
+                  <i>BrowserRouter</i>. Routes are defined in <i>App.jsx</i>,
+                  where a <i>ProtectedRoute</i> guards authenticated pages while
+                  keeping public routes like <i>Login</i>, <i>Sign-Up</i>, and
+                  <i>Landing Page</i> accessible.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  Global Providers
+                </h3>
+                <p class="card-architecture__text">
+                  The application is wrapped in several global providers:
+                  <i>MainProvider</i> for shared context,
+                  <i>QueryClientProvider</i> for caching and server state (via
+                  <i>React Query</i>), <i>GlobalStyles</i> for consistent UI,
+                  and <i>Toaster</i> for user notifications.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  State Management
+                </h3>
+                <p class="card-architecture__text">
+                  The app combines Redux for managing global state with
+                  <i>React Context</i> + <i>Reducer</i> for feature-specific
+                  logic. This hybrid setup ensures consistent data handling
+                  across the app while keeping each module isolated, scalable,
+                  and easy to maintain.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  Service Layer
+                </h3>
+                <p class="card-architecture__text">
+                  Modules such as <i>apiAuth.js</i>, <i>apiCategory.js</i>, and
+                  <i>apiProject.js</i> encapsulate all database interactions
+                  with <i></i>Supabase, handling authentication and CRUD
+                  operations through a clean, reusable API layer.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
