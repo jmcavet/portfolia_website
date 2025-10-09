@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/style.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/scripts/demo_script_src.js"></script>
 
     <script src="../components/header.js" type="text/javascript" defer></script>
     <script src="../components/footer.js" type="text/javascript" defer></script>
@@ -37,12 +36,34 @@
                 <p>Bonjour!</p>
                 <p>
                   My name is <span>Jean-Marie</span>, I am a Software engineer
-                  from France. I live with my italian wife and our two boys in
-                  beautiful Munich, Germany.
+                  from France
+                  <img
+                    src="../img/about/france-flag.svg"
+                    alt="France flag"
+                    width="28"
+                    height="28"
+                    style="vertical-align: middle"
+                  />. I live in beautiful Munich
+                  <img
+                    src="../img/about/germany-flag.svg"
+                    alt="France flag"
+                    width="28"
+                    height="28"
+                    style="vertical-align: middle"
+                  />
+                  with my italian wife
+                  <img
+                    src="../img/about/italy-flag.svg"
+                    alt="France flag"
+                    width="28"
+                    height="28"
+                    style="vertical-align: middle"
+                  />
+                  and our two boys.
                 </p>
                 <p>
-                  Apart from coding, I love cooking, travelling, and practising
-                  foreign languages.
+                  When I am not coding and developing Web Apps, I enjoy cooking,
+                  traveling, and exploring new foreign languages.
                 </p>
               </div>
               <figure class="about-header__figure">
@@ -52,8 +73,9 @@
             <div class="grid about-header__grid1">
               <div class="about-header__travelling">
                 <p>
-                  Over the last 18 years, I travelled around 3 EU countries and
-                  worked for international aeronautical companies, such as
+                  Over the past <span id="career-period"></span> years, I have
+                  lived and worked across three European countries and
+                  contributed to international aerospace companies such as
                   <span class="span-link"
                     ><a href="https://www.airbus.com">Airbus</a></span
                   >
@@ -63,9 +85,9 @@
                   >.
                 </p>
                 <p>
-                  While I started as an aerodynamic engineer, I gradually
-                  developed a passionate interest in Software development, which
-                  brought me in 2017 to my current position as a
+                  I began my career as an aerodynamic engineer, but over time
+                  developed a strong passion for Software development, which led
+                  me in 2017 to my current role as a
                   <span class="span-link"
                     ><a href="#experience"
                       >Software engineer for Methods & Tools</a
@@ -74,10 +96,11 @@
                   at MTU.
                 </p>
                 <p>
-                  Since then, I help my company design and develop tools for
-                  scientific study, especially in the field of
+                  In this role, I design and develop tools and graphical user
+                  interfaces for engineering analysis, with a focus on
                   <span class="span-bold">data analysis</span> and
-                  <span class="span-bold">visualization</span>.
+                  <span class="span-bold">visualization</span>, helping my team
+                  turn complex analytics data into actionable insights.
                 </p>
               </div>
 
@@ -94,22 +117,22 @@
 
             <div class="grid about-header__grid2">
               <p>
-                Although I first worked with processes and algorithms, I felt
-                increasingly interested in
+                Although I initially worked with processes and algorithms, I
+                became increasingly drawn to
                 <span class="span-bold">Frontend</span> engineering and
-                <span class="span-bold">UI/UX</span> design.<br />It aroused my
-                curiosity and appetite for learning new languages and frameworks
-                and the potential to reach directly customers worldwide by
-                building and deploying <span class="span-bold">web apps</span>.
+                <span class="span-bold">UI/UX</span> design.<br />This field
+                sparked my curiosity and drive to learn new technologies — and
+                offered the exciting possibility of building and deploying
+                <span class="span-bold">web applications</span> that reach
+                multiple users.
               </p>
               <p>
-                My long-term learning process aims at achieving a qualitative
-                knowledge in both Front and Back ends. My career so far and
-                expertise in
-                <span class="span-bold">data and visual analytics</span>
-                bring me enough credibility to start a new career in Web
-                development, especially for industries turned towards AI,
-                digitalization, or data science.
+                My long-term goal is to develop strong, well-rounded expertise
+                in both front-end and back-end development. With my background
+                in <span class="span-bold">data and visual analytics</span>, I
+                bring a solid technical foundation and a natural bridge toward
+                modern web development — particularly in industries focused on
+                AI, digitalization, and data science.
               </p>
             </div>
           </div>
@@ -216,7 +239,10 @@
                     </h3>
                   </div>
                   <p class="bulletpt bulletpt--white">
-                    Languages: Python 3 (Pylint, Pytest, PyQt, OOP), React, Bash
+                    Languages: Python 3 (Pylint, Pytest, OOP), Bash
+                  </p>
+                  <p class="bulletpt bulletpt--white">
+                    Desktop/Web Applications: PyQt, React, Angular
                   </p>
                   <p class="bulletpt bulletpt--white">
                     Data analysis: Numpy, Panda
@@ -505,6 +531,52 @@
         cities = cv.cities;
         nb_cities = cities.length;
 
+        d3.json(geoJsonUrl, function (geojson) {
+          let cities_coordinates = [];
+          if (!cities) return;
+
+          cities.forEach((city) => {
+            cities_coordinates.push(city.coordinates);
+          });
+
+          // Draw the map
+          g.selectAll("path")
+            .data(geojson.features)
+            .enter()
+            .append("path")
+            .attr("d", pathGenerator)
+            .attr("fill", colorCountry) // Color uses to fill in the lines
+            .style("stroke", colorStroke); // Color of the lines themselves
+
+          g.selectAll("circle")
+            .data(cities_coordinates)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) {
+              return europeProjection(d)[0];
+            })
+            .attr("cy", function (d) {
+              return europeProjection(d)[1];
+            })
+            .attr("class", (d, i) => "circle" + (i + 1))
+            .attr("r", circle_radius + "px")
+            .attr("fill", "#0052CC")
+            .on("mouseover", mouseOverCity)
+            .on("mouseout", mouseOutCity);
+
+          g.selectAll("text")
+            .data(cities_coordinates)
+            .enter()
+            .append("text")
+            .text((d, i) => i + 1)
+            .attr("x", (d, i) => europeProjection(d)[0] + 0.5 * circle_radius)
+            .attr("y", (d, i) => europeProjection(d)[1] - 1 * circle_radius)
+            .attr("class", (d, i) => "circlenumber" + (i + 1))
+            .style("fill", "#0052CC") // Use '' and not ""!
+            .style("font-size", 13)
+            .style("font-weight", 500);
+        });
+
         let current_jobtitle = jobtitle[nb_jobs - 1];
         let current_place = place[nb_jobs - 1];
         let current_activities = activities[nb_jobs - 1];
@@ -568,52 +640,6 @@
         .append("div")
         .attr("class", "tooltip-map")
         .style("opacity", 0);
-
-      d3.json(geoJsonUrl, function (geojson) {
-        let cities_coordinates = [];
-        cities.forEach((city) => {
-          cities_coordinates.push(city.coordinates);
-        });
-
-        // Draw the map
-        g.selectAll("path")
-          .data(geojson.features)
-          .enter()
-          .append("path")
-          .attr("d", pathGenerator)
-          .attr("fill", colorCountry) // Color uses to fill in the lines
-          .style("stroke", colorStroke); // Color of the lines themselves
-
-        g.selectAll("circle")
-          .data(cities_coordinates)
-          .enter()
-          .append("circle")
-          .attr("cx", function (d) {
-            return europeProjection(d)[0];
-          })
-          .attr("cy", function (d) {
-            return europeProjection(d)[1];
-          })
-          .attr("class", (d, i) => "circle" + (i + 1))
-          .attr("r", circle_radius + "px")
-          .attr("fill", "#0052CC")
-          .on("mouseover", mouseOverCity)
-          .on("mouseout", mouseOutCity);
-
-        g.selectAll("text")
-          .data(cities_coordinates)
-          .enter()
-          .append("text")
-          .text((d, i) => i + 1)
-          .attr("x", (d, i) => europeProjection(d)[0] + 0.5 * circle_radius)
-          .attr("y", (d, i) => europeProjection(d)[1] - 1 * circle_radius)
-          .attr("class", (d, i) => "circlenumber" + (i + 1))
-          .style("fill", "#0052CC") // Use '' and not ""!
-          .style("font-size", 13)
-          .style("font-weight", 500);
-
-        //runAnimationCities(cities_coordinates);
-      });
 
       // color country
       function colorCountry(country) {
@@ -683,6 +709,8 @@
     function run_animation() {
       d3.json(geoJsonUrl, function (geojson) {
         let cities_coordinates = [];
+        if (!cities) return;
+
         cities.forEach((city) => {
           cities_coordinates.push(city.coordinates);
         });
@@ -763,7 +791,7 @@
           .style("opacity", 0)
           .transition()
           .duration(duration)
-          .style("opacity", 0.8)
+          .style("opacity", 0.9)
           .transition()
           .duration(duration)
           .style("opacity", 0)
@@ -805,7 +833,7 @@
 
     $(document).ready(() => {
       setup_svg_d3();
-      run_animation();
+      // run_animation();
     });
 
     /*
@@ -886,5 +914,8 @@
       };
       xobj.send(null);
     }
+
+    document.getElementById("career-period").textContent =
+      new Date().getFullYear() - 2003;
   </script>
 </html>

@@ -784,8 +784,8 @@ with import (before/after) --> looping problem*/
 .icon-social__github,
 .icon-social__linkedin,
 .icon-social__xing {
-  height: 3rem;
-  width: 3rem;
+  height: 2.6rem;
+  width: 2.6rem;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -911,6 +911,8 @@ with import (before/after) --> looping problem*/
   /*If we do not specify overflow: hidden, we'll see the image overflow its parent frame when we hover.
   Refer to '&:hover img {transform: scale(1.2);}'*/
   overflow: hidden;
+  border-radius: 0.8rem;
+  cursor: pointer;
 }
 .project::after {
   content: "";
@@ -969,6 +971,7 @@ with import (before/after) --> looping problem*/
 }
 .project__buttons a:first-child {
   transition: transform 0.3s;
+  border-radius: 0.8rem;
 }
 .project__buttons a:first-child:hover {
   transform: scale(1.5);
@@ -981,6 +984,7 @@ with import (before/after) --> looping problem*/
   padding: 0.6rem 1.3rem;
   cursor: pointer;
   transition: transform 0.3s;
+  border-radius: 0.8rem;
 }
 .project__buttons a:nth-last-child(2):hover,
 .project__buttons a:nth-last-child(1):hover {
@@ -1082,6 +1086,8 @@ Files inside this folder can contain specific element styles and layout.
 .section__layout {
   padding-top: calc(5 * 1.8rem);
   padding-bottom: calc(5 * 1.8rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .flex {
@@ -1161,9 +1167,11 @@ Files inside this folder can contain specific element styles and layout.
   margin-left: 2rem;
   color: hsl(210, 0%, 100%);
 }
-.header__logo span {
-  color: hsl(225, 82%, 50%);
+.header__logo--1 {
+  color: hsl(180, 80%, 50%);
+  margin-right: 0.5rem;
 }
+
 .header__nav {
   background-image: linear-gradient(
     to right,
@@ -1172,7 +1180,6 @@ Files inside this folder can contain specific element styles and layout.
   );
   color: hsl(210, 10%, 94%);
   height: 8rem;
-  padding-top: 2rem;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -1642,11 +1649,12 @@ This file is used to contain all pages imports.
 Files inside this folder can contain specific styles for pages. 
 */
 .tooltip-map {
-  background-color: hsl(210, 25%, 40%);
+  background-color: hsl(225, 82%, 50%);
   color: hsl(210, 0%, 100%);
-  border: hsl(225, 82%, 50%) 2px solid;
   padding: 0.5rem 1rem;
   position: absolute;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .map-city {
@@ -2156,6 +2164,10 @@ Files inside this folder can contain specific styles for pages.
 
 .header-portfolio {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(225, 82%, 50%);
   padding-top: calc(3 * 1.8rem);
   padding-bottom: calc(1.5 * 1.8rem);
@@ -2169,8 +2181,8 @@ Files inside this folder can contain specific styles for pages.
   font-size: 2.52rem;
   font-weight: 400;
   line-height: 1.2;
-  max-width: 60%;
-  margin: 2.5rem auto;
+  max-width: 80rem;
+  margin: 2.5rem 2rem;
   color: hsl(210, 10%, 94%);
 }
 .header-portfolio__cta {
@@ -2197,7 +2209,10 @@ Files inside this folder can contain specific styles for pages.
   margin-bottom: 5rem;
 }
 .portfolio-intro__text {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+.portfolio-intro__text--bottom {
+  margin-top: 3rem;
 }
 .portfolio-intro__text--1 {
   grid-row: 1 / span 1;

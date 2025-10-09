@@ -1,296 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=
         Prata:300,400,500,600,700,800|
         Roboto:300,400,500|
-        Ubunto:300,400,500">
-    <link rel="stylesheet" href="/css/style.css">
+        Ubunto:300,400,500"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="../../components/header.js" type="text/javascript" defer></script>
-    <script src="../../components/footer.js" type="text/javascript" defer></script>
+    <script
+      src="../../components/header.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      src="../../components/footer.js"
+      type="text/javascript"
+      defer
+    ></script>
 
     <script src="/scripts/scroll-down.js"></script>
     <script src="/scripts/hamburger.js"></script>
 
     <title>Jean-Marie Cavet | Portfolio - LinguAppo</title>
-</head>
+  </head>
 
-<body class="grid grid--body">
+  <body class="grid grid--body">
     <header class="header">
-        <header-component page="portfolio" portfolio_project="linguappo"></header-component>
-        <div class="header-portfolio">
-            <h1 class="heading-1 header-portfolio__title">Linguappo</h1>
-            <p class="header-portfolio__text">An application to learn a new language in a friendly way.</p>
-            <p class="header-portfolio__text">Enter your own vocabulary, train yourself with flipping cards, and review
-                your score and progress.</p>
+      <header-component
+        page="portfolio"
+        portfolio_project="linguappo"
+      ></header-component>
+      <div class="header-portfolio">
+        <h1 class="heading-1 header-portfolio__title">Linguappo</h1>
+        <p class="header-portfolio__text">
+          A simple, interactive app to make language learning easier.
+        </p>
+        <p class="header-portfolio__text">
+          Add your own vocabulary, practice with flashcards, and track your
+          progress over time.
+        </p>
 
-            <div class="header-portfolio__cta flex flex--center">
-                <a href="https://linguappo.herokuapp.com/" target="_blank"><button class="btn primary--inversed">View
-                        Website</button></a>
-                <a href="https://github.com/jmcavet/linguappo" target="_blank"><button
-                        class="btn primary--inversed">View Code</button></a>
-            </div>
+        <div class="header-portfolio__cta flex flex--center">
+          <a href="https://linguappo.herokuapp.com/" target="_blank"
+            ><button class="btn primary--inversed">View Website</button></a
+          >
+          <a href="https://github.com/jmcavet/linguappo" target="_blank"
+            ><button class="btn primary--inversed">View Code</button></a
+          >
         </div>
+      </div>
     </header>
 
     <main>
-        <section class="flex flex--center bg-color-light">
-            <div class="section__layout-container">
-                <div class="section__layout portfolio-intro">
-                    <h2 class="heading-2 portfolio-intro__title">Motives for developing a Language App</h2>
-                    <div class="portfolio-intro__grid">
-                        <p class="portfolio-intro__text portfolio-intro__text--1">Being a lover of foreign languages, I
-                            am always keen on
-                            learning new ones. Usually, I would
-                            read newspapers or books, chat with people, which is certainly the most effective way to
-                            enrich
-                            one's vocabulary. I would write down these new words somewhere in order to learn them at a
-                            later
-                            date. Yet I would easily loose track of all the papers and notes.</p>
-                        <figure class="portfolio-intro__figure portfolio-intro__figure--1">
-                            <img src="/img/portfolio/linguappo/challenge.svg" alt="Linguappo Challenge">
-                        </figure>
-                        <figure class="portfolio-intro__figure portfolio-intro__figure--2">
-                            <img src="/img/portfolio/linguappo/lightbulb.svg" alt="Light Bulb">
-                        </figure>
-                        <p class="portfolio-intro__text portfolio-intro__text--2">That's how I came up with Linguappo. I
-                            needed an app to store
-                            these words and expressions, so
-                            that I
-                            could easily review them at home or on my mobile phone in public transports. This would
-                            motivate me
-                            to train on a regular basis and manage my vocabulary in a more efficient way.</p>
-                        <p class="portfolio-intro__text portfolio-intro__text--3">A few years ago, I started to develop
-                            an android app (Java) for
-                            this language idea. It became
-                            the
-                            concept behind developing Linguappo, which ended up being a Web Application with a
-                            responsive
-                            design, developing both Front-end and Back-end, along with a database system and
-                            authentification
-                            functions. And most of all, it was my first Web Development challenge and product.
-                        </p>
-                        <figure class="portfolio-intro__figure portfolio-intro__figure--3">
-                            <img src="/img/portfolio/linguappo/application.svg" alt="Linguappo Application">
-                        </figure>
+      <section class="flex flex--center bg-color-light">
+        <div class="section__layout-container">
+          <div class="section__layout portfolio-intro">
+            <h2 class="heading-2 portfolio-intro__title">
+              Motives for developing a Language App
+            </h2>
+            <div class="portfolio-intro__grid">
+              <p class="portfolio-intro__text portfolio-intro__text--1">
+                As a language enthusiast, I often collected new words while
+                reading or speaking with others. I jotted them down on random
+                papers, but soon realized it was hard to stay organized. This
+                inspired me to create an app that makes vocabulary learning
+                simple, structured, and motivating.
+              </p>
+              <figure
+                class="portfolio-intro__figure portfolio-intro__figure--1"
+              >
+                <img
+                  src="/img/portfolio/linguappo/challenge.svg"
+                  alt="Linguappo Challenge"
+                />
+              </figure>
+              <figure
+                class="portfolio-intro__figure portfolio-intro__figure--2"
+              >
+                <img
+                  src="/img/portfolio/linguappo/lightbulb.svg"
+                  alt="Light Bulb"
+                />
+              </figure>
+              <p class="portfolio-intro__text portfolio-intro__text--2">
+                Linguappo was born as a personal project to keep my vocabulary
+                organized and accessible anywhere. It lets me quickly review new
+                words from my phone or computer, even while commuting. The goal
+                was to create a simple tool that encourages regular practice and
+                makes vocabulary management effortless.
+              </p>
+              <p class="portfolio-intro__text portfolio-intro__text--3">
+                I first explored this idea a few years ago with a small Android
+                app in Java. It eventually grew into Linguappo, a full web
+                application with responsive design, database integration, and
+                user authentication — my first complete front- and back-end web
+                project.
+              </p>
+              <figure
+                class="portfolio-intro__figure portfolio-intro__figure--3"
+              >
+                <img
+                  src="/img/portfolio/linguappo/application.svg"
+                  alt="Linguappo Application"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center">
+        <div class="section__layout-container">
+          <div class="section__layout userguide">
+            <h2 class="heading-2">How it works</h2>
+            <div class="grid userguide__grid">
+              <div class="userguide__item userguide__item--1">
+                <div
+                  class="userguide__title userguide__title--1 flex flex--spacebetween"
+                >
+                  <h3>Sign-up and Dashboard</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_dashboard.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--1">
+                  Users first sign up and create an account, with their
+                  information stored in a MongoDB database. Once logged in, they
+                  land on the main dashboard, where they can:
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Create new projects</span>
+                  for a specific language and theme
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Manage and visualize</span>
+                  project data: track total and incomplete vocabulary, and view
+                  chronological entries in graphical form
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Complete</span>
+                  missing translations directly within the dashboard
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--1">
+                <img
+                  src="/img/portfolio/linguappo/linguappo_mockup_desktop_dashboard.jpg"
+                  alt="Image 1"
+                />
+              </figure>
+              <div class="userguide__item userguide__item--2">
+                <div
+                  class="userguide__title userguide__title--2 flex -spacebetween"
+                >
+                  <h3>Vocabulary and Tags</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_vocabulary.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--2">
+                  For each project, users can save their own items:
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Add entries</span>
+                  — input a word, expression, verb, etc., along with its
+                  translation (immediately or later)
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Organize with tags</span>
+                  — create as many tags as needed, e.g., “Adjective”, “Verb”,
+                  “Expression”, “Slang”
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Manage tags</span>
+                  — edit or delete tags, with automatic updates to the database
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--2">
+                <img
+                  src="/img/portfolio/linguappo/linguappo_mockup_destkop1.jpg"
+                  alt="Image 2"
+                />
+              </figure>
+              <div class="userguide__item userguide__item--3">
+                <div
+                  class="userguide__title userguide__title--3 flex -spacebetween"
+                >
+                  <h3>Game</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_game.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--3">
+                  The core feature of the app allows users to:
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Filter items</span>
+                  by various criteria: tags, number of entries, sampling method,
+                  or knowledge evaluation
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Play</span>
+                  the <i>Flipping Card</i> game in either language direction,
+                  validate their knowledge (pass or fail), and receive a final
+                  score
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Manage items</span>
+                  by deleting them or updating their details, including
+                  vocabulary, translation, tags, and knowledge evaluation
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--3">
+                <img
+                  src="/img/portfolio/linguappo/linguappo_mockup_desktop_game.jpg"
+                  alt="Image 3"
+                />
+              </figure>
+              <div class="userguide__item userguide__item--4">
+                <div
+                  class="userguide__title userguide__title--4 flex -spacebetween"
+                >
+                  <h3>Dictionary</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_dictionary.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--4">
+                  Users can search for items within a project:
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Find</span>
+                  a word or expression and get its translation, or search by
+                  translation to find the original vocabulary
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--4">
+                <img
+                  src="/img/portfolio/linguappo/linguappo_mockup_destkop2.jpg"
+                  alt="Image 4"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-medium">
+        <div class="section__layout-container">
+          <div class="section__layout techstack-design">
+            <div class="grid techstack-design__grid">
+              <div class="techstack">
+                <h2 class="heading-2 flex flex--center">Technology Stack</h2>
+                <div class="grid techstack__grid">
+                  <div class="techstack__frontend">
+                    <h3 class="heading-3">Front-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__html5"></div>
+                      <div class="techstack-wrapper__name">HTML5</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="flex flex--center">
-            <div class="section__layout-container">
-                <div class="section__layout userguide">
-                    <h2 class="heading-2">How it works</h2>
-                    <div class="grid userguide__grid">
-                        <div class="userguide__item userguide__item--1">
-                            <div class="userguide__title userguide__title--1 flex flex--spacebetween">
-                                <h3>Sign-up and Dashboard</h3>
-                                <img src="/img/portfolio/linguappo/linguappo_dashboard.svg" alt="Icon Dashboard" />
-                            </div>
-                            <p class="userguide__intro userguide__intro--1"> Users must first signup and create an
-                                account, which information is saved in the MongoDb database. Then, they will land on the
-                                main dashboard, where they can:</p>
-                            <p class="bulletpt bulletpt--white">Create a new project for a specific language and
-                                theme.</p>
-                            <p class="bulletpt bulletpt--white">Manage and visualize data of a project: number of
-                                incomplete and total vocabulary, chronological entries in graphic form.</p>
-                            <p class="bulletpt bulletpt--white">Directly complete the missing translations.</p>
-                        </div>
-                        <figure class="userguide__figure userguide__figure--1">
-                            <img src="/img/portfolio/linguappo/linguappo_mockup_desktop_dashboard.jpg" alt="Image 1">
-                        </figure>
-                        <div class="userguide__item userguide__item--2">
-                            <div class="userguide__title userguide__title--2 flex -spacebetween">
-                                <h3>Vocabulary and Tags</h3>
-                                <img src="/img/portfolio/linguappo/linguappo_vocabulary.svg" alt="Icon Dashboard" />
-                            </div>
-                            <p class="userguide__intro userguide__intro--2">For a specific project, users can save their
-                                own items:</p>
-                            <p class="bulletpt bulletpt--primary">Enter some data (word, expression,
-                                verb, etc.) and its translation (directly or complete at a later date).</p>
-                            <p class="bulletpt bulletpt--primary">Create as many tags as needed in order to regroup
-                                the items, e.g. 'Adjective', 'Verb', 'Expression', 'Slang', etc.</p>
-                            <p class="bulletpt bulletpt--primary">Manage tags: edit or delete them. It will update
-                                automatically the database.</p>
-                        </div>
-                        <figure class="userguide__figure userguide__figure--2">
-                            <img src="/img/portfolio/linguappo/linguappo_mockup_destkop1.jpg" alt="Image 2">
-                        </figure>
-                        <div class="userguide__item userguide__item--3">
-                            <div class="userguide__title userguide__title--3 flex -spacebetween">
-                                <h3>Game</h3>
-                                <img src="/img/portfolio/linguappo/linguappo_game.svg" alt="Icon Dashboard" />
-                            </div>
-                            <p class="userguide__intro userguide__intro--3">The central part of the app. It enables
-                                users to:</p>
-                            <p class="bulletpt bulletpt--white">Filter data according to various information: tags,
-                                number
-                                of items, sampling method, their evaluation of knowledge.</p>
-                            <p class="bulletpt bulletpt--white">Play the 'Flipping Card' game in both language
-                                directions,
-                                validate their knowledge (pass or fail), and get the final score.
-                            </p>
-                            <p class="bulletpt bulletpt--white">Manage the item: delete it or update its
-                                information (vocabulary, translation, tags, knowledge evaluation).</p>
-                        </div>
-                        <figure class="userguide__figure userguide__figure--3">
-                            <img src="/img/portfolio/linguappo/linguappo_mockup_desktop_game.jpg" alt="Image 3">
-                        </figure>
-                        <div class="userguide__item userguide__item--4">
-                            <div class="userguide__title userguide__title--4 flex -spacebetween">
-                                <h3>Dictionary</h3>
-                                <img src="/img/portfolio/linguappo/linguappo_dictionary.svg" alt="Icon Dashboard" />
-                            </div>
-                            <p class="userguide__intro userguide__intro--4">Users can search for an item for a specific
-                                project. They can:</p>
-                            <p class="bulletpt bulletpt--primary">Look for either the vocabulary and get in return
-                                its
-                                translation, or vice-versa.</p>
-                        </div>
-                        <figure class="userguide__figure userguide__figure--4">
-                            <img src="/img/portfolio/linguappo/linguappo_mockup_destkop2.jpg" alt="Image 4">
-                        </figure>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__css3"></div>
+                      <div class="techstack-wrapper__name">CSS3</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="flex flex--center bg-color-medium">
-            <div class="section__layout-container">
-                <div class="section__layout techstack-design">
-                    <div class="grid techstack-design__grid">
-                        <div class="techstack">
-                            <h2 class="heading-2 flex flex--center">Technology Stack</h2>
-                            <div class=" grid techstack__grid">
-                                <div class="techstack__frontend">
-                                    <h3 class="heading-3">Front-End</h3>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__html5"></div>
-                                        <div class="techstack-wrapper__name">HTML5</div>
-                                    </div>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__css3"></div>
-                                        <div class="techstack-wrapper__name">CSS3</div>
-                                    </div>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__javascript"></div>
-                                        <div class="techstack-wrapper__name">Javascript</div>
-                                    </div>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__jquery"></div>
-                                        <div class="techstack-wrapper__name">JQuery</div>
-                                    </div>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__bootstrap"></div>
-                                        <div class="techstack-wrapper__name">Bootstrap</div>
-                                    </div>
-                                </div>
-                                <div class="techstack__backend">
-                                    <h3 class="heading-3">Back-End</h3>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__nodejs"></div>
-                                        <div class="techstack-wrapper__name">Nodes.js + Express</div>
-                                    </div>
-                                    <div class="techstack-wrapper flex flex--start">
-                                        <div class="icon-web__mongodb"></div>
-                                        <div class="techstack-wrapper__name">MongoDb</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="responsive-design">
-                            <h2 class="heading-2 flex flex--center">Responsive Design</h2>
-                            <figure>
-                                <img src="/img/portfolio/linguappo/responsive_design.gif" alt="Responsive Design Gif">
-                            </figure>
-                        </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__javascript"></div>
+                      <div class="techstack-wrapper__name">Javascript</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="flex flex--center bg-color-dark">
-            <div class="section__layout-container">
-                <div class="section__layout architecture">
-                    <h2 class="heading-2">Architecture</h2>
-                    <h3 class="heading-3">MVC(S) Pattern</h3>
-                    <p>For the first development version of my Application, I implemented an architecture based on
-                        the MVC (Model-View-Controller) pattern. I later refactored it and introduced Services in
-                        order to make functions reusable across my various controllers.</p>
-                    <div class="grid architecture__grid-cards">
-                        <div class="card-architecture">
-                            <h3 class="heading-3 card-architecture__title">Models</h3>
-                            <p class="card-architecture__text">My data access layer has 4 models (User, Project,
-                                Vocabulary, Tag). Each interacts with the MongoDb database by performing queries to
-                                get/save/update specific data.</p>
-                        </div>
-                        <div class="card-architecture">
-                            <h3 class="heading-3 card-architecture__title">Views</h3>
-                            <p class="card-architecture__text">Single pages and their respective modals are written
-                                as ejs templates. In each of them, partials (header, footer, navbar, etc.) are included.
-                            </p>
-                        </div>
-                        <div class="card-architecture">
-                            <h3 class="heading-3 card-architecture__title">Controllers</h3>
-                            <p class="card-architecture__text">They directly use Service classes. As such, I do not
-                                need to rewrite the same functions for different controllers. It complies well with the
-                                DRY principle.</p>
-                        </div>
-                        <div class="card-architecture">
-                            <h3 class="heading-3 card-architecture__title">Services</h3>
-                            <p class="card-architecture__text">These contain my business logic. They represent a
-                                layer between my controllers and models. There is one Service for one Model.</p>
-                        </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__jquery"></div>
+                      <div class="techstack-wrapper__name">JQuery</div>
                     </div>
-
-                    <h3 class="heading-3">On the Front-End</h3>
-                    <p>While refactoring the code, I implemented various controller closures in order to split
-                        my user
-                        interfaces from the logic:</p>
-
-                    <ul>
-                        <li>For instance, the game logic closure has a collection of functions for storing data,
-                            calculating game result, etc.</li>
-                        <li>On the other hand, the game UI closure keeps track of DOM elements and performs
-                            actions such as flip the card, display or hide icons, etc.</li>
-                    </ul>
-                    <br>
-                    <p>I made use of Ajax calls in order to modify only a specific element without forcing the
-                        whole
-                        html page to reload.</p>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__bootstrap"></div>
+                      <div class="techstack-wrapper__name">Bootstrap</div>
+                    </div>
+                  </div>
+                  <div class="techstack__backend">
+                    <h3 class="heading-3">Back-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__nodejs"></div>
+                      <div class="techstack-wrapper__name">
+                        Nodes.js + Express
+                      </div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__mongodb"></div>
+                      <div class="techstack-wrapper__name">MongoDb</div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="responsive-design">
+                <h2 class="heading-2 flex flex--center">Responsive Design</h2>
+                <figure>
+                  <img
+                    src="/img/portfolio/linguappo/responsive_design.gif"
+                    alt="Responsive Design Gif"
+                  />
+                </figure>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="flex flex--center bg-color-light">
-            <div class="section__layout-container">
-                <div class="section__layout">
-                    <h2 class="heading-2">Lessons Learnt</h2>
-                    <p>This application still reveals great potential for refactoring some parts of the code.</p>
-                    <p>The design was not fully planned beforehands, so it lacks some consistency in Typography and
-                        color
-                        scheme</p>
-                    <p>My css code lacks consistency and could be improved by using some CSS pre-compiler.</p>
-                    <p>Refactoring the whole architecture gave me an insight into clean code and the DRY concept. I
-                        shall
-                        apply these principles in my future apps.</p>
-                    <p>A future challenge would be to create a similar app like this one, this time using React as a
-                        front-end library and UI Materials as a UI framework.
-                    </p>
-                </div>
+      <section class="flex flex--center bg-color-dark">
+        <div class="section__layout-container">
+          <div class="section__layout architecture">
+            <h2 class="heading-2">Architecture</h2>
+            <h3 class="heading-3">MVC(S) Pattern</h3>
+            <p>
+              In the first version of my application, I implemented an MVC
+              (Model-View-Controller) architecture. Later, I refactored it to
+              introduce Services, making functions reusable across different
+              controllers.
+            </p>
+            <div class="grid architecture__grid-cards">
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">Models</h3>
+                <p class="card-architecture__text">
+                  The data access layer has 4 models: User, Project, Vocabulary,
+                  and Tag. Each interacts with MongoDB, performing queries to
+                  retrieve, save, or update data.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">Views</h3>
+                <p class="card-architecture__text">
+                  Pages and modals are built as EJS templates, with partials for
+                  reusable components like the header, footer, and navbar.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">Controllers</h3>
+                <p class="card-architecture__text">
+                  They use Service classes directly, eliminating the need to
+                  rewrite functions across different controllers and adhering to
+                  the DRY principle.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">Services</h3>
+                <p class="card-architecture__text">
+                  They contain the business logic and act as a layer between
+                  controllers and models. Each model has a corresponding
+                  service.
+                </p>
+              </div>
             </div>
-        </section>
 
+            <h3 class="heading-3">Frontend</h3>
+            <p>
+              During refactoring, I used controller closures to separate the
+              user interface from the logic:
+            </p>
+
+            <p class="bulletpt bulletpt--white">
+              The game logic closure handles functions like storing data and
+              calculating results
+            </p>
+
+            <p class="bulletpt bulletpt--white">
+              The game UI closure manages DOM elements, performing actions such
+              as flipping cards and showing or hiding icons
+            </p>
+
+            <br />
+            <p>
+              I also used AJAX calls to update specific elements without
+              reloading the entire page.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-light">
+        <div class="section__layout-container">
+          <div class="section__layout">
+            <h2 class="heading-2">Lessons Learned</h2>
+            <p>
+              The application still has areas that could benefit from further
+              refactoring.
+            </p>
+            <p>
+              Since the design wasn’t fully planned in advance, there are
+              inconsistencies in typography and color scheme, and the CSS could
+              be improved by using a preprocessor.
+            </p>
+            <p>
+              Refactoring the architecture gave me valuable insights into clean
+              code and the DRY principle, which I plan to apply in future
+              projects.
+            </p>
+            <p>
+              A future challenge would be to build a similar app using React for
+              the front-end and UI frameworks for a more structured interface.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer-component></footer-component>
-
-</body>
+  </body>
+</html>
