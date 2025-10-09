@@ -26,8 +26,8 @@
     <header class="header">
         <header-component page="portfolio" portfolio_project="personal"></header-component>
         <div class="header-portfolio">
-            <h1 class="heading-1 header-portfolio__title">Personal Site</h1>
-            <p class="header-portfolio__text">First version of my Personal Site, built without any Front-End framework.
+            <h1 class="heading-1 header-portfolio__title">Portfolio Website</h1>
+            <p class="header-portfolio__text">An early version of my personal site built from scratch using only HTML, CSS, and JavaScript — no frameworks, just clean and lightweight code.
             </p>
             <div class="header-portfolio__cta flex flex--center">
                 <a href="https://github.com/jmcavet/personal-site" target="_blank"><button
@@ -41,17 +41,15 @@
             <div class="section__layout-container">
                 <div class="section__layout">
                     <div class="portfolio-intro">
-                        <h2 class="heading-2 portfolio-intro__title">Why building a Personal Site?</h2>
-                        <p class="portfolio-intro__text">Demonstrate and showcase to potential recruiters</p>
-                        <p class="portfolio-intro__text bullet-triangle">The skills and knowledge I have acquired
-                            throughout my career</p>
-                        <p class="portfolio-intro__text bullet-triangle">My personal Web Dev projects and related web
-                            technologies as well as
-                            my
-                            working style</p>
-                        <p class="portfolio-intro__text">Opportunity to put into practise the knowledge of web dev
-                            technologies I have
-                            acquired over the past month. In particular Web Design, css layouts and animations</p>
+                        <h2 class="heading-2 portfolio-intro__title">Why build a Portfolio Website?</h2>
+                        <p class="portfolio-intro__text">Creating a personal portfolio website is both a way to showcase my work and a chance to refine my technical and design skills.</p>
+                        <p class="portfolio-intro__text">It allows me to present to potential recruiters:</p>
+                        <p class="portfolio-intro__text bullet-triangle">The skills and experience I’ve developed throughout my career</p>
+                        <p class="portfolio-intro__text bullet-triangle">My personal web development projects, including the technologies I use and my overall approach to design and problem-solving</p>
+                        <p class="portfolio-intro__text bullet-triangle">My working style, organization, and attention to detail through both the code and the user experience</p>
+                        <p class="portfolio-intro__text--bottom">Beyond showcasing my work, building this site was also an opportunity to apply and deepen my knowledge of modern web development — from semantic HTML and responsive CSS layouts to animations, and accessibility.
+
+I view this website as a living project: something I can continuously improve as I grow as a developer and designer.</p>
                     </div>
                 </div>
         </section>
@@ -64,13 +62,13 @@
                         <h3 class="heading-3">Design Tools</h3>
                         <div class="grid design-tools__grid">
                             <div class="design-tools__description">
-                                <p class="design-tools__text">I dove into UI/UX Web Design with Figma, which taught
-                                    me the basic principles on how to sketch my application prior to its development. I
-                                    mostly used it to get an overall design.</p>
-                                <p class="design-tools__text">Building my personal website was the opportunity to begin
-                                    learning Web Design and its fundamentals such as typography and color scheme.</p>
-                                <p class="design-tools__text">I ended up choosing a simple typography and color scheme
-                                    corresponding to my personal taste.</p>
+                                <p class="design-tools__text">I explored UI/UX design using <a
+                  class="link-blue"
+                  href="https://www.figma.com/design/HxnpV6F2CgRtL30bZTfoG3/Test1?t=JkrKbuJeQWzjMSSN-1"
+                  >Figma</a
+                >, which helped me grasp the fundamentals of sketching and planning an application before development. I mainly used it to create an overall layout and visual direction for my projects.</p>
+                                <p class="design-tools__text">Building my portfolio website was also an opportunity to dive deeper into web design principles, focusing on typography, color schemes, and visual balance.</p>
+                                <p class="design-tools__text">In the end, I chose a clean and minimal design, with a simple typography and a color palette that reflects my personal taste and design preferences.</p>
                             </div>
                             <figure class="design-tools__figure">
                                 <img src="/img/portfolio/personal_site/figma.gif" alt="Figma Gif">
@@ -237,45 +235,41 @@
                 <div class="section__layout architecture">
                     <h2 class="heading-2">Architecture</h2>
                     <div class="architecture__precompiler">
-                        <h3 class="heading-3">Pre-compiling with SASS/SCSS</h3>
-                        <p>I decided to practise my fresh knowledge of SASS with my personal
-                            website. After some research, I decided to apply the 7-1 architecture style and size it down
-                            to 5 main folders.</p>
+                        <h3 class="heading-3">Pre-compiling with <span class="bold">SASS/SCSS</span></h3>
+                        <p>I used my personal website as an opportunity to practise and consolidate my knowledge of SASS. After some research, I decided to follow the <span class="bold">7-1 architecture pattern</span>, which I adapted and simplified into five main folders to suit the scale of my project:</p>
                         <div class="architecture__7-1">
                             <div class="flex flex--start">
                                 <img src="/img/portfolio-arrow.svg"
                                     class="icon-portfolio-arrow icon-portfolio-arrow--small" alt="Portfolio arrow" />
-                                <div><strong>Abstracts:</strong> variables (color, font, margin,
-                                    padding, etc), and some helpers and mixins functions</div>
+                                <div><span class="bold">Abstracts:</span> variables (color, font, margin,
+                                    padding, etc), helper functions and mixins</div>
                             </div>
                             <div class="flex flex--start">
                                 <img src="/img/portfolio-arrow.svg"
                                     class="icon-portfolio-arrow icon-portfolio-arrow--small" alt="Portfolio arrow" />
-                                <div><strong>Base:</strong> typography, body/html..., animations,
+                                <div><span class="bold">Base:</span> global styles such as typography, body and HTML defaults, animations, and
                                     utilities</div>
                             </div>
                             <div class="flex flex--start">
                                 <img src="/img/portfolio-arrow.svg"
                                     class="icon-portfolio-arrow icon-portfolio-arrow--small" alt="Portfolio arrow" />
-                                <div><strong>Components:</strong> button, general card, project card</div>
+                                <div><span class="bold">Components:</span> reusable elements like buttons, general cards, and project cards</div>
                             </div>
                             <div class="flex flex--start">
                                 <img src="/img/portfolio-arrow.svg"
                                     class="icon-portfolio-arrow icon-portfolio-arrow--small" alt="Portfolio arrow" />
-                                <div><strong>Layouts:</strong> navbar, header, footer, grid, etc.</div>
+                                <div><span class="bold">Layouts:</span> structure-related styles for the navbar, header, footer, and grid system</div>
                             </div>
                             <div class="flex flex--start">
                                 <img src="/img/portfolio-arrow.svg"
                                     class="icon-portfolio-arrow icon-portfolio-arrow--small" alt="Portfolio arrow" />
-                                <div><strong>Pages:</strong> css specific to each of my five pages
-                                    (home, portfolio, about, blog, contact)</div>
+                                <div><span class="bold">Pages:</span> page-specific styles for eac of the five main sections (Home, Portfolio, About, Blog, and Contact)</div>
                             </div>
                         </div>
                     </div>
                     <div class="architecture__miscelleanous">
-                        <h3 class="heading-3">Miscelleanous</h3>
-                        <p>I have created my own HTMLElement classes for the header, footer and cards for my portfolio
-                            projects</p>
+                        <h3 class="heading-3">Custom HTML Elements</h3>
+                        <p>I also created my own custom HTML element classes for the header, footer, and portfolio cards to improve readability and modularity in the codebase.</p>
                     </div>
                 </div>
             </div>
@@ -285,15 +279,11 @@
             <div class="section__layout-container">
                 <div class="section__layout">
                     <div class="lessons-learnt">
-                        <h2 class="heading-2">Lessons Learnt</h2>
-                        <p class="lessons-learnt__text">I performed many refactoring throughout the developement of this
-                            site.</p>
-                        <p class="lessons-learnt__text">Refactoring the whole architecture gave me an insight into clean
-                            code and the DRY concept. I
-                            shall
-                            apply these principles in my future apps.</p>
-                        <p>Still some effort on general Grid Systems, especially on how to have a consistent grid system
-                            throughout the whole site.</p>
+                        <h2 class="heading-2">Lessons Learned</h2>
+                        <p class="lessons-learnt__text">Throughout the development of this site, I performed several rounds of refactoring to improve both the structure and maintainability of the code.</p>
+                        <p class="lessons-learnt__text">Reworking the overall architecture gave me valuable insight into clean code principles and the importance of the DRY concept — lessons I will continue to apply in future projects.</p>
+                        <p>One area I identified for further improvement is the consistency of the grid system across the entire site. Achieving a uniform layout structure remains one of my next challenges.</p>
+                        <p>Looking ahead, I plan to build a new version of my portfolio website using more modern technologies such as React, Next.js, and Tailwind CSS. This will allow me to create a more dynamic, scalable, and visually consistent website while deepening my knowledge of these industry-standard tools.</p>
                     </div>
                 </div>
             </div>

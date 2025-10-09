@@ -17,7 +17,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
         <div class="header__nav">
             <a href="/index.html" class="header__logo">
-                <span class="logo-main">JM</span><span class="logo-sub">c</span>
+                <span>&lt;</span><span class="header__logo--1">JMc</span><span>/&gt;</span>
             </a>
             
             <nav class="navbar">
@@ -58,7 +58,7 @@ class Header extends HTMLElement {
                               this.portfolio_project == "personal"
                                 ? 'class="dropdown__link active"'
                                 : 'class="dropdown__link"'
-                            }>Personal Website</a></li>
+                            }>Portfolio Website</a></li>
                             
                         </ul>
                     </li>
@@ -126,7 +126,7 @@ class Header extends HTMLElement {
                               this.portfolio_project == "personal"
                                 ? 'class="dropdown-mobile__link active"'
                                 : 'class="dropdown-mobile__link"'
-                            }>Personal Website</a></li>
+                            }>Portfolio Website</a></li>
                         </ul>
                     </li>
 
