@@ -509,7 +509,7 @@
     var europeProjection = d3
       .geoMercator()
       .center([4, 47])
-      .scale([width / 0.55]) //.scale([width / 1.5])
+      .scale([width / 0.55])
       .translate([width / 2, height / 2]);
 
     var g = svg.append("g");
@@ -517,7 +517,6 @@
     var circle_radius = 5; // 5px
 
     function setup_svg_d3() {
-      console.log("Setup SVG d3 graph");
       loadJSON((response) => {
         cv = JSON.parse(response);
         jobstart = cv.jobstart;
@@ -572,7 +571,7 @@
             .attr("x", (d, i) => europeProjection(d)[0] + 0.5 * circle_radius)
             .attr("y", (d, i) => europeProjection(d)[1] - 1 * circle_radius)
             .attr("class", (d, i) => "circlenumber" + (i + 1))
-            .style("fill", "#0052CC") // Use '' and not ""!
+            .style("fill", "#0052CC")
             .style("font-size", 13)
             .style("font-weight", 500);
         });
@@ -601,14 +600,14 @@
           $(".job-activities").append(`
                     <div class="job-activity flex">
                         <img src="/img/arrow-right.svg" class="job-activity__image" alt="Icon arrow right" />
-                        <div class="job-activity__text">${element}</div>
+                        <p class="job-activity__text">${element}</p>
                     </div>
                 `);
         });
 
         current_summary.forEach((element) => {
           $(".job-summary").append(`
-                    <div class="job-summary__text">${element}</div>
+                    <p class="job-summary__text">${element}</p>
                 `);
         });
 
@@ -749,7 +748,7 @@
       }
 
       for (let i = 0; i < nb_cities; i++) {
-        let duration = 1800;
+        let duration = 2500;
         let tooltip_offset = 10; // In pixel
         let svg_position = $("#map_europe").position();
 
@@ -888,7 +887,7 @@
         $(".job-activities").append(`
                     <div class="job-activity flex">
                         <img src="/img/arrow-right.svg" class="job-activity__image" alt="Icon arrow right" />
-                        <div class="job-activity__text">${element}</div>
+                        <p class="job-activity__text">${element}</p>
                     </div>
                 `);
       });
@@ -896,7 +895,7 @@
       $(".job-summary").empty();
       summary[element_index].forEach((element) => {
         $(".job-summary").append(`
-                    <div class="job-summary__text">${element}</div>
+                    <p class="job-summary__text">${element}</p>
                 `);
       });
     });
@@ -917,5 +916,16 @@
 
     document.getElementById("career-period").textContent =
       new Date().getFullYear() - 2003;
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        console.log("target: ", target);
+        if (target) {
+          console.log("Scrolling into view...");
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
   </script>
 </html>
