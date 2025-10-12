@@ -723,9 +723,7 @@ with import (before/after) --> looping problem*/
   grid-template-rows: 15vw auto 5rem;
   justify-items: center;
 }
-.career-card:hover {
-  transform: translateY(-0.5rem) scale(1.02);
-}
+
 .career-card__img {
   width: 100%;
   height: 100%;
@@ -735,11 +733,11 @@ with import (before/after) --> looping problem*/
   display: block;
 }
 .career-card__title {
-  background-color: hsl(225, 82%, 18%);
-  color: hsl(210, 10%, 94%);
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1.5;
+  background-color: hsl(225, 82%, 50%);
+  color: hsl(0, 0%, 100%);
+  font-size: 2.52rem;
+  font-weight: 400;
+  line-height: 1.2;
   width: 80%;
   padding: 1rem;
   text-align: center;
@@ -749,7 +747,7 @@ with import (before/after) --> looping problem*/
   align-self: end;
 }
 .career-card__items {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.5;
   padding-top: calc(3 * 1.8rem);
@@ -930,6 +928,7 @@ with import (before/after) --> looping problem*/
 .project:hover::after {
   transform: scale(1) translate(0, 0);
 }
+
 .project__grid {
   grid-template-rows: max-content auto max-content;
 }
@@ -1532,7 +1531,7 @@ Files inside this folder can contain specific element styles and layout.
   padding: 1rem 1.5rem;
   box-shadow: 0.2rem 0.2rem 0.6rem 0.2rem rgba(167.025, 178.5, 189.975, 0.2);
   width: 75%;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -1809,7 +1808,7 @@ Files inside this folder can contain specific styles for pages.
   }
 }
 .experience__company {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 300;
   line-height: 1.5;
   border: none;
@@ -1824,6 +1823,7 @@ Files inside this folder can contain specific styles for pages.
 }
 .experience__company:hover {
   color: hsl(225, 82%, 95%);
+  background-color: hsl(211, 31%, 27%);
   transition: transform 1s;
   transform: translateY(-0.3rem);
 }
@@ -2996,6 +2996,10 @@ PORTFOLIO PERSONAL SITE
 }
 .architecture__miscelleanous p {
   color: hsl(210, 10%, 94%);
+}
+
+section {
+  scroll-margin-top: 0px; /* adjust to header height */
 }
 
 /*# sourceMappingURL=style.css.map */

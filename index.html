@@ -92,7 +92,7 @@
                     alt="Work Expertise"
                     class="career-card__img"
                   />
-                  <div class="career-card__title">Work expertise in ...</div>
+                  <div class="career-card__title">Work expertise</div>
                   <ul class="career-card__items">
                     <li class="career-card__item bulletpt bulletpt--primary">
                       Desktop (GUI) & Web App Design and Development
@@ -118,19 +118,19 @@
                     alt="Learning"
                     class="career-card__img"
                   />
-                  <div class="career-card__title">Currently learning ...</div>
+                  <div class="career-card__title">Web Skills</div>
                   <ul class="career-card__items">
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      Angular 19, React
+                      Frontend: Angular, React, Typescript
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      Redux
+                      Backend: Node.js, Express, Mongodb, Firestore
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      Bootstrap, semanticUI, MaterialUI
+                      Tailwind css, MaterialUI, Sass
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      Node.js, Express, Mongodb
+                      Porfolio of 4 Web Apps
                     </li>
                   </ul>
                   <a href="about/#learning" class="career-card__link"
@@ -143,10 +143,10 @@
                     alt="Next Job"
                     class="career-card__img"
                   />
-                  <div class="career-card__title">Looking for ...</div>
+                  <div class="career-card__title">Looking for</div>
                   <ul class="career-card__items">
                     <li class="career-card__item bulletpt bulletpt--primary">
-                      A position as
+                      A role as
                       <span class="career-card__bold">Frontend developer</span>
                     </li>
                     <li class="career-card__item bulletpt bulletpt--primary">
@@ -175,17 +175,17 @@
             <div class="portfolio__header">
               <h3 class="heading-3">Selection of some of my latest projects</h3>
               <h2 class="heading-2">Portfolio</h2>
-              <div>
+              <p>
                 My first projects have been developed using plain html, css, and
                 javascript. I have continuously commited myself to build a more
                 <a href="about/#about-architecture">solid architecture</a>,
                 using semantic html and CSS-preprocessing.
-              </div>
+              </p>
               <br />
-              <div>
+              <p>
                 The most recent ones are built using frameworks, such as React
                 and Angular.
-              </div>
+              </p>
             </div>
             <div class="portfolio__body">
               <div class="projects grid projects__grid">
@@ -240,19 +240,6 @@
                   scroll-down="scroll-down"
                 >
                 </project-component>
-
-                <project-component
-                  figure-path="/img/projects/project_personal.png"
-                  img-alt="Project-Personal"
-                  github-page="https://github.com/jmcavet/portfolia_website"
-                  app-detail="/portfolio/personal/"
-                  app-page="https://jeanmariecavet.netlify.app/"
-                  header="Portfolio Website"
-                  description="First version of my personal website, developed with vanilla JavaScript"
-                  tech-stack="html5, css3, sass, jquery, d3js"
-                  scroll-down="scroll-down"
-                >
-                </project-component>
               </div>
 
               <div class="portfolio__viewmore">
@@ -269,15 +256,3 @@
     <footer-component></footer-component>
   </body>
 </html>
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-</script>
