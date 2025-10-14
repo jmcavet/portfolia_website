@@ -720,7 +720,8 @@ with import (before/after) --> looping problem*/
   position: relative;
 }
 .career-card__grid {
-  grid-template-rows: 15vw auto 5rem;
+  /* grid-template-rows: 15vw auto 5rem; */
+  grid-template-rows: minmax(22rem, 15vw) auto 5rem;
   justify-items: center;
 }
 
