@@ -37,12 +37,17 @@
       ></header-component>
       <div class="header-portfolio">
         <h1 class="heading-1 header-portfolio__title">Familiapp</h1>
-        <p class="header-portfolio__text">Manage your shopping cart.</p>
+        <p class="header-portfolio__text">
+          Your smart companion to plan meals, organize your recipes, and create
+          shopping lists effortlessly.
+        </p>
         <div class="header-portfolio__cta flex flex--center">
           <a href="https://fluento-jm.netlify.app/" target="_blank"
             ><button class="btn primary--inversed">View Website</button></a
           >
-          <a href="https://github.com/jmcavet/linguappo" target="_blank"
+          <a
+            href="https://github.com/jmcavet/todo_app_react_redux"
+            target="_blank"
             ><button class="btn primary--inversed">View Code</button></a
           >
         </div>
@@ -54,72 +59,36 @@
         <div class="section__layout-container">
           <div class="section__layout portfolio-intro">
             <h2 class="heading-2 portfolio-intro__title">
-              Motives for developing a brand new Language App
+              My first implementation of the React framework
             </h2>
             <p class="portfolio-intro__text">
-              While learning React and Redux back in 2020, I took a chance at
-              applying my knowledge by developing a new Progressive Web
-              Application (PWA) for learning foreign languages.
+              Familapp was my first project using the React framework I had just
+              learned on Udemy. I wanted to practice building a complete
+              frontend structure and focus on functionality over design.
             </p>
             <br />
             <p class="portfolio-intro__text">
-              I used Supabase for my backend, giving me more time to focus on
-              the frontend. While my previous language app (<a
-                href="https://jeanmariecavet.netlify.app/portfolio/linguappo/"
-                >Linguappo</a
-              >) was not particularly solid in terms of design, I chose to
-              consolidate my knowledge of UI & UX by designing every page using
-              Figma.
+              Built with React and Redux, Familapp connects to Firebase
+              Firestore for real-time data storage. Asynchronous actions and
+              reducers manage app logic cleanly, while Material UI ensures a
+              simple and responsive interface.
             </p>
             <br />
-            <p>
-              For more information regarding my design process in Figma, please
-              open the following links:
+            <p class="portfolio-intro__text">
+              I actively use Familiapp to manage our family’s weekly meals and
+              shopping lists. Its practical impact motivates me to expand its
+              concept — I’m now developing
+              <span
+                ><a
+                  href="../../portfolio/famappy/index.html"
+                  target="_blank"
+                  class="link-blue"
+                  >Famappy</a
+                ></span
+              >, an Angular app that links recipes, ingredients, and shopping
+              lists, while also helping organize family activities like school
+              planning.
             </p>
-            <div class="flex flex--spacebetween">
-              <div class="flex" style="gap: 0.5rem">
-                <figure>
-                  <img
-                    style="width: 3rem"
-                    src="/img/portfolio/fluento/sitemap.svg"
-                    alt="FLuento sitemap"
-                  />
-                </figure>
-                <a
-                  class="link-blue"
-                  href="https://www.figma.com/board/IyryBsjwpiQMxjbgashgY7/Fluento-Sitemap?node-id=0-1&t=bNJ9bmJ7raj1zdsA-1"
-                  >Basic Sitemap</a
-                >
-              </div>
-              <div class="flex" style="gap: 0.5rem">
-                <figure>
-                  <img
-                    style="width: 3rem"
-                    src="/img/portfolio/fluento/low-fidelity.svg"
-                    alt="FLuento sitemap"
-                  />
-                </figure>
-                <a
-                  class="link-blue"
-                  href="https://www.figma.com/design/fgJLOvjYgRFDRIw2Ua5Hq7/Fluento?node-id=1-2&t=VqlLnusWdfkubVeq-1"
-                  >Mobile Low Fidelity</a
-                >
-              </div>
-              <div class="flex" style="gap: 0.5rem">
-                <figure>
-                  <img
-                    style="width: 3rem"
-                    src="/img/portfolio/fluento/prototype.svg"
-                    alt="FLuento sitemap"
-                  />
-                </figure>
-                <a
-                  class="link-blue"
-                  href="https://www.figma.com/proto/fgJLOvjYgRFDRIw2Ua5Hq7/Fluento?node-id=492-2618&starting-point-node-id=1%3A4&t=j2CIVdwotJYv5NUG-1"
-                  >Prototyping</a
-                >
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -134,10 +103,6 @@
                   <div class="techstack__frontend">
                     <h3 class="heading-3">Front-End</h3>
                     <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__figma"></div>
-                      <div class="techstack-wrapper__name">Figma</div>
-                    </div>
-                    <div class="techstack-wrapper flex flex--start">
                       <div class="icon-web__react"></div>
                       <div class="techstack-wrapper__name">React</div>
                     </div>
@@ -146,15 +111,15 @@
                       <div class="techstack-wrapper__name">Redux</div>
                     </div>
                     <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__tailwind"></div>
-                      <div class="techstack-wrapper__name">Tailwind</div>
+                      <div class="icon-web__material-ui"></div>
+                      <div class="techstack-wrapper__name">Material UI</div>
                     </div>
                   </div>
                   <div class="techstack__backend">
                     <h3 class="heading-3">Back-End</h3>
                     <div class="techstack-wrapper flex flex--start">
                       <div class="icon-web__supabase"></div>
-                      <div class="techstack-wrapper__name">Supabase</div>
+                      <div class="techstack-wrapper__name">Firebase</div>
                     </div>
                   </div>
                 </div>
@@ -184,29 +149,31 @@
                 <div
                   class="userguide__title userguide__title--1 flex flex--spacebetween"
                 >
-                  <h3>Sign-up and Dashboard</h3>
+                  <h3>Sign-up and First categories</h3>
                   <img
-                    src="/img/portfolio/linguappo/linguappo_dashboard.svg"
-                    alt="Icon Dashboard"
+                    src="/img/portfolio/familiapp/login.svg"
+                    alt="Icon signup"
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--1">
                   If an account already exists, users can just log in with their
                   email. <br />
                   Otherwise, they must first signup, which creates an account in
-                  the <i>Supabase</i> database. Once valided, they can:
+                  the <i>Firebase</i> database. Once valided, they can:
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Create a new project by defining the learning language they
-                  want to learn as well as their mother tongue
+                  Start creating new categories, such as <i>Shopping</i>,
+                  <i>Home activities</i>
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Start adding some vocabulary for this specific project
+                  For each category, create a tag (sub-category). For instance,
+                  add <i>Vegetable</i>, <i>Fruit</i>, <i>Cheese</i>
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  View all their projects on the dashboard represented as cards
-                  or graphs (total number of words, categories, incomplete
-                  vocabulary, etc.)
+                  Start customizing your default Cart by adding your favorite
+                  ingredients for example. If you regulary plan to buy
+                  <i>Camembert</i>, <i>Feta</i>, or <i>Goronzola</i> cheese, add
+                  them to its corresponding tag
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--1">
@@ -220,34 +187,27 @@
                 <div
                   class="userguide__title userguide__title--2 flex -spacebetween"
                 >
-                  <h3>Vocabulary and Tags</h3>
+                  <h3>Shopping</h3>
                   <img
-                    src="/img/portfolio/linguappo/linguappo_vocabulary.svg"
-                    alt="Icon Dashboard"
+                    src="/img/portfolio/familiapp/shopping.svg"
+                    alt="Icon shopping"
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--2">
-                  For a specific project, users can save their own items:
+                  Get ready for shopping your ingredients:
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Enter some data (word, expression, verb, etc.) and its
-                  translation (directly or complete at a later date). If
-                  available, add some context and its translation for this
-                  specific item.
+                  Go to your Cart, and select your pre-defined customized
+                  ingredients you want to buy, sorted by categories. Finally,
+                  ship all those items to your shopping list
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Any incomplete translation can be completed later. <br />
-                  Users can enter <i>quickies</i> in case they are in a hurry
-                  (e.g. listening to a conversation)
+                  Alternatively, on the home page, add ingredients that are not
+                  already pre-defined (because they might not be often bought)
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Create as many tags as needed in order to regroup the items,
-                  e.g. <i>Adjective</i>, <i>Verb</i>, <i>Expression</i>,
-                  <i>Slang</i>, etc.
-                </p>
-                <p class="bulletpt bulletpt--primary">
-                  Manage tags: edit or delete them. It will update automatically
-                  the database.
+                  While shopping, get your list ready, sort it by categories,
+                  and delete the items you buy as you go
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--2">
@@ -260,34 +220,31 @@
                 <div
                   class="userguide__title userguide__title--3 flex -spacebetween"
                 >
-                  <h3>Game</h3>
+                  <h3>Recipes</h3>
                   <img
-                    src="/img/portfolio/linguappo/linguappo_game.svg"
-                    alt="Icon Dashboard"
+                    src="/img/portfolio/familiapp/recipe.svg"
+                    alt="Icon recipe"
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--3">
-                  The central part of the app. It enables users to:
+                  Store all your favorite recipes:
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Select 1 or a few corresponding projects for 1 specific
-                  language
+                  First, create a new recipe by providing information such as a
+                  title, the list of ingredients, cooking steps, and the source
+                  (cooking bloc, youtube, etc.)
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Select the language you want to play with (learning or own
-                  language)
+                  Optionally provide some tags to sort them out later (e.g.
+                  Fish-based, Meat-based, desert, pasta, etc.)
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Select the method presenting the words (random or sorted by
-                  date) and the number of words to play with
+                  Once you have stored your recipes, search and filter them by
+                  name and tags
                 </p>
                 <p class="bulletpt bulletpt--white">
-                  Filter data according to various information: word types,
-                  categories, allocated score
-                </p>
-                <p class="bulletpt bulletpt--white">
-                  Play the game by guessing the translation (blurred) and
-                  provide a grade (failed, neutral, passed)
+                  Finally, select one recipe and view its main properties
+                  provided in the first place
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--3">
@@ -300,32 +257,23 @@
                 <div
                   class="userguide__title userguide__title--4 flex -spacebetween"
                 >
-                  <h3>Dictionary</h3>
+                  <h3>Meal planning</h3>
                   <img
-                    src="/img/portfolio/linguappo/linguappo_dictionary.svg"
-                    alt="Icon Dashboard"
+                    src="/img/portfolio/familiapp/meal.svg"
+                    alt="Icon meal"
                   />
                 </div>
                 <p class="userguide__intro userguide__intro--4">
-                  For a specific project and language, users can search for 1 or
-                  multiple items. In particular, they are able to:
+                  Once you have enough recipes stored, you can start planning
+                  your weekly meals:
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Search a specific item by its name
+                  For each lunch and dinner, either add a new meal on the fly or
+                  select one from your recipes' database, using some filter
                 </p>
                 <p class="bulletpt bulletpt--primary">
-                  Sort the list of items by date
-                </p>
-                <p class="bulletpt bulletpt--primary">
-                  Filter data according to various information: word types,
-                  categories, allocated score, items complete or incomplete,
-                  favourites
-                </p>
-                <p class="bulletpt bulletpt--primary">
-                  Select a specific item and update its properties
-                </p>
-                <p class="bulletpt bulletpt--primary">
-                  Select 1 or multiple items and delete them
+                  Take advantage of an overview of all your meals for the whole
+                  week
                 </p>
               </div>
               <figure class="userguide__figure userguide__figure--4">

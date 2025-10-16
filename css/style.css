@@ -875,6 +875,10 @@ with import (before/after) --> looping problem*/
   background-image: url(/img/projects/supabase.svg);
 }
 
+.icon-web__material-ui {
+  background-image: url(/img/projects/material-ui.svg);
+}
+
 .icon-portfolio-arrow {
   width: 3rem !important;
   height: 3rem !important;
