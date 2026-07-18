@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -38,13 +38,14 @@
       <div class="header-portfolio">
         <h1 class="heading-1 header-portfolio__title">Famappy</h1>
         <p class="header-portfolio__text">
-          Manage your family activities, such as shopping, meals, school.
+          Manage your weekly family activities, such as planning meals,
+          shopping, and scheduling school events.
         </p>
         <div class="header-portfolio__cta flex flex--center">
-          <a href="https://linguappo.herokuapp.com/" target="_blank"
+          <a href="https://famappy-6181c.web.app" target="_blank"
             ><button class="btn primary--inversed">View Website</button></a
           >
-          <a href="https://github.com/jmcavet/linguappo" target="_blank"
+          <a href="https://github.com/jmcavet/famappy" target="_blank"
             ><button class="btn primary--inversed">View Code</button></a
           >
         </div>
@@ -52,10 +53,327 @@
     </header>
 
     <main>
-      <section class="flex flex--center">
+      <section class="flex flex--center bg-color-light">
         <div class="section__layout-container">
           <div class="section__layout">
-            <div>Some information</div>
+            <h2 class="heading-2 portfolio-intro__title">
+              Motivation for Developing a Familly Organization Application
+            </h2>
+            <p>
+              After gaining experience with <span class="bold">React</span> I
+              wanted to broaden my frontend expertise by learning
+              <span class="bold">Angular</span>, a framework widely used in
+              enterprise environments. Rather than building a tutorial project,
+              I decided to create a complete Progressive Web Application (PWA)
+              that addresses a real need for my own family.
+            </p>
+
+            <p>
+              The application helps organize everyday family life by allowing
+              users to manage their own recipes, plan meals for the week, and
+              automatically generate shopping lists based on the selected meals.
+              It is designed to simplify meal planning while keeping all
+              information synchronized across devices.
+            </p>
+
+            <p>The goal of this project was threefold:</p>
+
+            <p class="bulletpt bulletpt--primary">
+              <span class="bulletpt--span-dark"
+                >Create a practical application</span
+              >
+              that my family and others can use every day.
+            </p>
+            <p class="bulletpt bulletpt--primary">
+              <span class="bulletpt--span-dark"
+                >Develop strong Angular skills</span
+              >
+              while building a scalable application using modern technologies
+              such as Tailwind CSS and Firebase/Firestore.
+            </p>
+            <p class="bulletpt bulletpt--primary">
+              Deepen my understanding of
+              <span class="bulletpt--span-dark"
+                >application architecture, state management, reusable UI
+                components, and responsive UI/UX design</span
+              >
+              by developing a production-quality project from concept to
+              deployment.
+            </p>
+
+            <p>
+              The application is still actively evolving. Planned features
+              include school event management, allowing families to organize
+              activities, appointments, and important dates within the same
+              platform.
+            </p>
+
+            <div class="flex">
+              <span>
+                You can explore my design process through the following links →
+              </span>
+              <span>
+                <div class="flex" style="gap: 0.5rem">
+                  <figure>
+                    <img
+                      style="width: 3rem"
+                      src="/img/portfolio/fluento/low-fidelity.svg"
+                    />
+                  </figure>
+                  <a
+                    class="link-blue"
+                    href="/img/portfolio/famappy/famappy_design.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Mobile Low Fidelity</a
+                  >
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-medium">
+        <div class="section__layout-container">
+          <div class="section__layout techstack-design">
+            <div class="grid techstack-design__grid">
+              <div class="techstack">
+                <h2 class="heading-2 flex flex--center">Technology Stack</h2>
+                <div class="grid techstack__grid">
+                  <div class="techstack__frontend">
+                    <h3 class="heading-3">Front-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__figma"></div>
+                      <div class="techstack-wrapper__name">Figma</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__angular"></div>
+                      <div class="techstack-wrapper__name">Angular</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__typescript"></div>
+                      <div class="techstack-wrapper__name">Typescript</div>
+                    </div>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__tailwind"></div>
+                      <div class="techstack-wrapper__name">Tailwind</div>
+                    </div>
+                  </div>
+                  <div class="techstack__backend">
+                    <h3 class="heading-3">Back-End</h3>
+                    <div class="techstack-wrapper flex flex--start">
+                      <div class="icon-web__firebase"></div>
+                      <div class="techstack-wrapper__name">Firebase</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="responsive-design">
+                <h2 class="heading-2 flex flex--center">
+                  Lunacy Design TODO!!!!
+                </h2>
+
+                <figure>
+                  <img
+                    style="height: 25rem"
+                    src="/img/portfolio/fluento/figma.gif"
+                    alt="Figma Design"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center">
+        <div class="section__layout-container">
+          <div class="section__layout userguide">
+            <h2 class="heading-2">How it works</h2>
+            <div class="grid userguide__grid">
+              <div class="userguide__item userguide__item--1">
+                <div
+                  class="userguide__title userguide__title--1 flex flex--spacebetween"
+                >
+                  <h3>Sign-up and Dashboard</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_dashboard.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--1">
+                  Users with an existing account can log in directly using their
+                  email. <br />
+                  New users first sign up, which automatically creates their
+                  account in the <i>Supabase</i> database. <br />Once validated,
+                  they can:
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Create new projects</span>
+                  — Select the target language to learn and their native
+                  language
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Add vocabulary</span>
+                  — Enter words, translations, and contextual notes for each
+                  project
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light"
+                    >Explore the dashboard</span
+                  >
+                  View all projects as cards or graphs showing key stats such as
+                  total words, categories, and incomplete items
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--1">
+                <video
+                  src="/img/portfolio/fluento/vocabulary_animation.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
+              </figure>
+
+              <div class="userguide__item userguide__item--2">
+                <div
+                  class="userguide__title userguide__title--2 flex -spacebetween"
+                >
+                  <h3>Vocabulary and Tags</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_vocabulary.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--2">
+                  For each project, users can create and manage their own
+                  vocabulary items:
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Add new entries</span> —
+                  Enter a word, expression, or verb with its translation. If
+                  it’s not ready, complete it later. Optionally, include a
+                  context sentence and translation for better understanding
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark"
+                    >Complete translations later</span
+                  >
+                  — Update incomplete items anytime, or add
+                  <i>quick entries</i> on the go — for example, when hearing new
+                  words in conversation
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Organize with tags</span> —
+                  Create custom tags (e.g., <i>Adjective</i>, <i>Verb</i>,
+                  <i>Expression</i>, <i>Slang</i>) to group and filter
+                  vocabulary
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Manage tags easily</span> —
+                  Edit or delete tags; all changes sync automatically with the
+                  database
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--2">
+                <video
+                  src="/img/portfolio/fluento/dashboard_animation.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
+              </figure>
+              <div class="userguide__item userguide__item--3">
+                <div
+                  class="userguide__title userguide__title--3 flex -spacebetween"
+                >
+                  <h3>Game</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_game.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--3">
+                  The heart of the application, where users review and test
+                  their vocabulary:
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Select projects</span> —
+                  Choose one or more projects for a specific language
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Choose the mode</span> —
+                  Play using either your learning or native language
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Pick a method</span> — Show
+                  words randomly or by date, and set how many to review
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Filter your data</span> —
+                  Focus on selected word types, categories, or scores
+                </p>
+                <p class="bulletpt bulletpt--white">
+                  <span class="bulletpt--span-light">Play the game</span> —
+                  Guess blurred translation and rate your answer as
+                  <i>failed</i>, <i>neutral</i>, or <i>passed</i> to track your
+                  progress
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--3">
+                <video
+                  src="/img/portfolio/fluento/dictionary_animation.mp4"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                ></video>
+              </figure>
+              <div class="userguide__item userguide__item--4">
+                <div
+                  class="userguide__title userguide__title--4 flex -spacebetween"
+                >
+                  <h3>Dictionary</h3>
+                  <img
+                    src="/img/portfolio/linguappo/linguappo_dictionary.svg"
+                    alt="Icon Dashboard"
+                  />
+                </div>
+                <p class="userguide__intro userguide__intro--4">
+                  For each project and language, users can search, filter, and
+                  manage their saved items:
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Search items</span> — Find
+                  specific words or expressions by name
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Sort by date</span> —
+                  Organize the vocabulary list chronologically to track progress
+                  over time
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Filter results</span> —
+                  Narrow down items by word type, category, score, completion
+                  status, or favorites
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Edit items</span> — Select
+                  any entry to update its properties or correct information
+                </p>
+                <p class="bulletpt bulletpt--primary">
+                  <span class="bulletpt--span-dark">Delete items</span> — Choose
+                  one or several entries to remove them permanently from the
+                  project
+                </p>
+              </div>
+              <figure class="userguide__figure userguide__figure--4">
+                <img src="/img/portfolio/fluento/fluento_game.gif" alt="Game" />
+              </figure>
+            </div>
           </div>
         </div>
       </section>
