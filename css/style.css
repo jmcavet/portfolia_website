@@ -356,7 +356,9 @@ Files inside this folder can contain global styles used in the project.
 .scroll-down {
   opacity: 0;
   transform: translateY(5rem);
-  transition: transform 1s, opacity 1s;
+  transition:
+    transform 1s,
+    opacity 1s;
 }
 
 .anim-scroll-down {
@@ -712,7 +714,8 @@ with import (before/after) --> looping problem*/
 
 .career-card {
   background-color: hsl(210, 0%, 100%);
-  box-shadow: 0px 2px 2px rgba(22.95, 75.225, 232.05, 0.1),
+  box-shadow:
+    0px 2px 2px rgba(22.95, 75.225, 232.05, 0.1),
     0px 0px 2px 0px rgba(22.95, 75.225, 232.05, 0.1);
   border-radius: 0.8rem;
   overflow: hidden;
@@ -814,6 +817,7 @@ with import (before/after) --> looping problem*/
 .icon-web__react,
 .icon-web__angular,
 .icon-web__tailwind,
+.icon-web__typescript,
 .icon-web__supabase,
 .icon-web__firebase,
 .icon-web__redux,
@@ -858,6 +862,9 @@ with import (before/after) --> looping problem*/
 }
 .icon-web__tailwind {
   background-image: url(/img/projects/tailwind.svg);
+}
+.icon-web__typescript {
+  background-image: url(/img/projects/typescript.svg);
 }
 .icon-web__redux {
   background-image: url(/img/projects/redux.svg);
@@ -961,7 +968,8 @@ with import (before/after) --> looping problem*/
   text-align: center;
   z-index: 1;
   color: hsl(210, 0%, 100%);
-  transition: opacity 1500ms cubic-bezier(0.2, 1, 0.3, 1),
+  transition:
+    opacity 1500ms cubic-bezier(0.2, 1, 0.3, 1),
     transform 1500ms cubic-bezier(0.2, 1, 0.3, 1);
   transition-delay: 120ms;
 }
@@ -1507,7 +1515,9 @@ Files inside this folder can contain specific element styles and layout.
   border-bottom: 3px transparent solid;
   display: inline-block;
   padding-bottom: 0.7rem;
-  transition: border-color 1s, opacity 1s;
+  transition:
+    border-color 1s,
+    opacity 1s;
   opacity: 0.7;
 }
 .dropdown__link:hover,
@@ -1604,7 +1614,9 @@ Files inside this folder can contain specific element styles and layout.
   width: 0;
   background-color: yellow;
   transform: scaleY(0);
-  transition: transform 0.1s, width 0.3s;
+  transition:
+    transform 0.1s,
+    width 0.3s;
 }
 .navbar__link:link,
 .navbar__link:visited {
@@ -2498,7 +2510,8 @@ Files inside this folder can contain specific styles for pages.
 }
 video {
   border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
