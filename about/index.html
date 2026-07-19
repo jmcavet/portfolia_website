@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,23 +35,23 @@
               <div class="about-header__bonjour">
                 <p>Bonjour!</p>
                 <p>
-                  My name is <span>Jean-Marie</span>, I am a Software engineer
-                  from France
+                  My name is <span>Jean-Marie</span>, and I am a Software
+                  engineer from France
                   <img
                     src="../img/about/france-flag.svg"
                     alt="France flag"
                     width="28"
                     height="28"
                     style="vertical-align: middle"
-                  />. I live in beautiful Munich
+                  />
+                  currently living in Munich
                   <img
                     src="../img/about/germany-flag.svg"
                     alt="France flag"
                     width="28"
                     height="28"
                     style="vertical-align: middle"
-                  />
-                  with my italian wife
+                  />, with my italian wife
                   <img
                     src="../img/about/italy-flag.svg"
                     alt="France flag"
@@ -59,11 +59,12 @@
                     height="28"
                     style="vertical-align: middle"
                   />
-                  and our two boys.
+                  and our two sons.
                 </p>
                 <p>
-                  When I am not coding and developing Web Apps, I enjoy cooking,
-                  traveling, and exploring new foreign languages.
+                  Beyond software development, I enjoy cooking, exploring new
+                  places, and learning foreign languages — passions that reflect
+                  my curiosity and love for continuous learning.
                 </p>
               </div>
               <figure class="about-header__figure">
@@ -74,8 +75,8 @@
               <div class="about-header__travelling">
                 <p>
                   Over the past <span id="career-period"></span> years, I have
-                  lived and worked across three European countries and
-                  contributed to international aerospace companies such as
+                  lived and worked across three European countries, contributing
+                  to international aerospace companies such as
                   <span class="span-link"
                     ><a href="https://www.airbus.com">Airbus</a></span
                   >
@@ -85,22 +86,24 @@
                   >.
                 </p>
                 <p>
-                  I began my career as an aerodynamic engineer, but over time
-                  developed a strong passion for Software development, which led
-                  me in 2017 to my current role as a
+                  I started my career as an aerodynamic engineer and gradually
+                  developed a strong passion for software development. This
+                  journey led me in 2017 to my current role as a
                   <span class="span-link"
                     ><a href="#experience"
-                      >Software engineer for Methods & Tools</a
+                      >Software Engineer in Methods & Tools</a
                     ></span
                   >
                   at MTU.
                 </p>
                 <p>
-                  In this role, I design and develop tools and graphical user
-                  interfaces for engineering analysis, with a focus on
-                  <span class="span-bold">data analysis</span> and
-                  <span class="span-bold">visualization</span>, helping my team
-                  turn complex analytics data into actionable insights.
+                  In this role, I design and develop engineering applications
+                  and graphical interfaces to support analysis workflows. I
+                  focus on
+                  <span class="span-bold"
+                    >data processing and visualization</span
+                  >, helping teams transform complex engineering data into
+                  meaningful insights.
                 </p>
               </div>
 
@@ -117,22 +120,26 @@
 
             <div class="grid about-header__grid2">
               <p>
-                Although I initially worked with processes and algorithms, I
-                became increasingly drawn to
-                <span class="span-bold">Frontend</span> engineering and
-                <span class="span-bold">UI/UX</span> design.<br />This field
-                sparked my curiosity and drive to learn new technologies — and
-                offered the exciting possibility of building and deploying
-                <span class="span-bold">web applications</span> that reach
-                multiple users.
+                My early work focused on engineering processes, algorithms, and
+                data analysis, but I gradually became increasingly interested in
+                <span class="span-bold">frontend engineering</span> and
+                <span class="span-bold">UI/UX</span> design. This field sparked
+                my curiosity and motivated me to explore modern web
+                technologies, while offering the opportunity to create intuitive
+                applications used by a wider range of users.
               </p>
+
               <p>
-                My long-term goal is to develop strong, well-rounded expertise
-                in both front-end and back-end development. With my background
-                in <span class="span-bold">data and visual analytics</span>, I
-                bring a solid technical foundation and a natural bridge toward
-                modern web development — particularly in industries focused on
-                AI, digitalization, and data science.
+                My long-term goal is to continue developing well-rounded
+                expertise across frontend and backend development. By combining
+                my background in
+                <span class="span-bold"
+                  >enginering, data analysis and visualization</span
+                >
+                with modern web technologies, I aim to contribute to the
+                development of modern engineering tools that connect software,
+                data visualization, and domain expertise to improve
+                <span class="span-bold">industrial processes.</span>
               </p>
             </div>
           </div>
@@ -732,7 +739,7 @@
             .select("body")
             .append("div")
             .attr("class", "tooltip-map")
-            .style("opacity", 0)
+            .style("opacity", 0),
         );
 
         map_lines.push(
@@ -741,7 +748,7 @@
             .style("stroke", "#0067ff")
             .style("stroke-width", 3)
             .style("stroke-dasharray", "5, 5") // 5px long, 5px offset
-            .style("opacity", 0)
+            .style("opacity", 0),
         );
 
         circles_position.push($(".circle" + (i + 1)).position());

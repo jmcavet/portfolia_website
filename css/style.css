@@ -416,7 +416,7 @@ p {
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.5;
-  margin-bottom: calc(1 * 1.8rem);
+  margin-bottom: 1.8rem;
   /*
   Have some subtle neutral for paragraphs. They should be more subtle than headings.
   */
@@ -1372,6 +1372,7 @@ Files inside this folder can contain specific element styles and layout.
 .presentation__summary p,
 .presentation__summary span {
   font-size: 2rem;
+  line-height: 4rem;
   color: hsl(210, 10%, 80%);
 }
 .presentation__summary span {
@@ -2340,6 +2341,12 @@ Files inside this folder can contain specific styles for pages.
 .portfolio__header {
   margin-bottom: 4rem;
 }
+
+.portfolio__header a {
+  color: hsl(225, 82%, 50%);
+  font-weight: 400;
+}
+
 .portfolio__viewmore {
   margin-top: calc(3 * 1.8rem);
   margin-bottom: calc(3 * 1.8rem);
