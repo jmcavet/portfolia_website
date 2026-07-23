@@ -21,7 +21,12 @@ npm run dev
 The website is hosted on Netlify: [Jean-Marie Cavet Website](https://app.netlify.com/projects/jeanmariecavet/)
 
 1. Commit your changes, and push to github
-2. The Netlify project is linked to the github repo. Therefore, Netlify will automatically create a build and deploy the website
+2. Merge the branch into master:
+   1. git checkout master
+   2. git pull origin master
+   3. git merge feature/my-feature
+   4. git push origin master
+3. The Netlify project is linked to the github repo. Therefore, Netlify will automatically create a build and deploy the website
 
 ## Tech Stack
 
