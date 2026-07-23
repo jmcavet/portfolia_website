@@ -43,6 +43,7 @@ class Project extends HTMLElement {
       "mongodb",
       "react",
       "angular",
+      "typescript",
       "tailwind",
       "firebase",
       "supabase",
