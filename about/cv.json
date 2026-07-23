@@ -18,7 +18,7 @@
     "Research and Development Engineer",
     "Engineer in Aerodynamics",
     "Secondary Air System Engineer",
-    "Software Engineer - Methods & Tools"
+    "Method and Software Engineer"
   ],
   "jobstart": ["2003.9", "2005.5", "2007.9", "2008.25", "2017.0"],
   "jobMonthYear": [
@@ -30,25 +30,26 @@
   ],
   "activities": [
     [
-      "Aerodynamic analysis of high-lift devices of the Airbus A320 and A380 aircrafts for several flight configurations.",
-      "English-French translation of technical nuclear documentation (for British Nuclear Fuel Group)"
+      "Performed aerodynamic load analyses for the Aribus A320 and A380 programs, supporting aircraft development through numerical simulation and validation activities",
+      "Translated technical nuclear documentation (for British Nuclear Fuel Group) in English-French"
     ],
     [
-      "Investigated the longitudinal and lateral aerodynamic characteristics of an Airbus V-tail plane for various flight conditions and aircraft configurations",
-      "Defined a mathematical model of aerodynamic coefficients, based on Wind tunnel test data."
+      "Investigated the aerodynamic and flight dynamics characteristics of innovative aircraft configurations, including V-tail concepts",
+      "Conducted numerical analyses and performance assessments to evaluate aircraft behavior under various operating conditions"
     ],
     [
-      "Analysed the A350-XWB high-lift devices aerodynamic loads based on low speed wind tunnel data for longitudinal motion. In particular, I compared wind tunnel test data with CFD calculations."
+      "Contributed to the aerodynamic development of the Airbus A350-XWB through simulation-based analysis of high-lift systems"
     ],
     [
-      "Performed CFD analysis of Aero Engine Low Pressure Turbines and cavities",
-      "Developed processes for the internal multidisciplinary simulation lifecycle management",
-      "Developed a pre- and postprocessing software for Computational Fluid Dynamics (CFD) analysis"
+      "Led CFD analysis of secondary air systems, supporting engine development through numerical simulation and data-driven engineering decisions",
+      "Designed and implemented engineering tools to automate CFD pre- and post-processing activities, reducing manual effort and improving consistency",
+      "Developed GUI-based applications for the analysis and visualization of complex flow and thermal phenomena, still used by engineering teams today"
     ],
     [
-      "Developing a thermal and aerodynamic Software for analysing engine test data and comparing them with numerical simulations",
-      "Building processes for scientific simulations, through Computed Aided Engineering (CAE)",
-      "Focal point for a post-processing CFD Tool and our simulation lifecycle management system within the Secondary Air System Department"
+      "Lead the development of engineering applications and user interfaces, promoting modern software architecture, usability, and sustainable development practises",
+      "Design and implement software solutions for the analysis, processing, and visualization of simulation and test data across multiple engineering domains",
+      "Develop desktop and web-based applications using Python, PyQt, React, and Flask to explore modern alternatives to traditional engineering tools",
+      "Establish engineering workflows and contribute to software quality, lifecycle management, and cross-functional collaboration between engineering and IT teams"
     ]
   ],
   "summary": [
