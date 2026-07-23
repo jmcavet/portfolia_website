@@ -2185,7 +2185,7 @@ Files inside this folder can contain specific styles for pages.
 }
 
 .header-portfolio {
-  text-align: center;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2539,6 +2539,7 @@ video {
   }
 }
 
+.section__layout h2,
 .techstack h2,
 .responsive-design h2 {
   color: hsl(225, 82%, 18%);
