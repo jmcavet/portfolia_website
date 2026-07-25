@@ -197,7 +197,6 @@
                   <div class="techstack__backend">
                     <h3 class="heading-3">Styling</h3>
                     <div class="techstack-wrapper flex flex--start">
-                      <div class="icon-web__tailwind"></div>
                       <div class="techstack-wrapper__name">Tailwind CSS3</div>
                     </div>
                     <div class="techstack-wrapper flex flex--start">
@@ -213,18 +212,177 @@
         </div>
       </section>
 
-      <section>
-        <h2 class="heading-2 flex flex--center">Lunacy Design</h2>
-        <figure>
-          <video
-            style="height: 40rem"
-            src="/img/portfolio/famappy/lunacy_design.mp4"
-            autoplay
-            loop
-            muted
-            playsinline
-          ></video>
-        </figure>
+      <section class="flex flex--center bg-color-light">
+        <div class="section__layout-container">
+          <div class="section__layout">
+            <h2 class="heading-2 flex flex--center">Design Systems</h2>
+            <h3 class="heading-3">Color palette</h3>
+            <p>
+              The application uses a carefully structured colour system with
+              full light and dark mode
+            </p>
+            <div class="palette">
+              <div class="grid palette__grid">
+                <div class="palette__label palette__label--primary">
+                  Primary
+                </div>
+                <div class="palette__feature palette__feature--1">
+                  <div class="palette__code palette__code--primary">
+                    hsl(225, 85%, 45%)
+                  </div>
+                  <div
+                    class="palette__color palette__color--famappy-primary"
+                  ></div>
+                </div>
+                <div class="palette__use palette__use--famappy-primary">
+                  <div class="bulletpt bulletpt--primary">CTA buttons</div>
+                  <div class="bulletpt bulletpt--primary">Active states</div>
+                  <div class="bulletpt bulletpt--primary">Links & icons</div>
+                  <div class="bulletpt bulletpt--primary">Selected chip</div>
+                </div>
+
+                <div class="palette__label palette__label--secondary">
+                  Secondary
+                </div>
+                <div class="palette__feature palette__feature--2">
+                  <div class="palette__code palette__code--secondary">
+                    #f97316
+                  </div>
+                  <div
+                    class="palette__color palette__color--famappy-secondary"
+                  ></div>
+                </div>
+                <div class="palette__use palette__use--famappy-secondary">
+                  <div class="bulletpt bulletpt--primary">
+                    Stepper navigation
+                  </div>
+                  <div class="bulletpt bulletpt--primary">
+                    Secondary action button
+                  </div>
+                </div>
+
+                <div class="palette__label palette__label--gray-dark">
+                  Neutral
+                </div>
+                <div class="palette__feature palette__feature--3">
+                  <div class="palette__code palette__code--gray-dark">
+                    #172B4D
+                  </div>
+                  <div
+                    class="palette__color palette__color--famappy-neutral"
+                  ></div>
+                </div>
+                <div class="palette__use palette__use--famappy-neutral">
+                  <div class="bulletpt bulletpt--primary">Body Text</div>
+                  <div class="bulletpt bulletpt--primary">Page background</div>
+                  <div class="bulletpt bulletpt--primary">Surfaces</div>
+                  <div class="bulletpt bulletpt--primary">Borders</div>
+                </div>
+
+                <div class="palette__label palette__label--gray-light">
+                  Success
+                </div>
+                <div class="palette__feature palette__feature--4">
+                  <div class="palette__code palette__code--gray-light">
+                    hsl(142 72% 38%)
+                  </div>
+                  <div
+                    class="palette__color palette__color--famappy-success"
+                  ></div>
+                </div>
+                <div class="palette__use palette__use--famappy-success">
+                  <div class="bulletpt bulletpt--primary">
+                    Subtle backgrounds
+                  </div>
+                  <div class="bulletpt bulletpt--primary">
+                    Text on dark backgrounds
+                  </div>
+                  <div class="bulletpt bulletpt--primary">
+                    Success feedback state
+                  </div>
+                </div>
+
+                <div class="palette__label palette__label--white">Danger</div>
+                <div class="palette__feature palette__feature--5">
+                  <div class="palette__code palette__code--white">
+                    hsl(0 100% 38%)
+                  </div>
+                  <div
+                    class="palette__color palette__color--famappy-danger"
+                  ></div>
+                </div>
+                <div class="palette__use palette__use--famappy-danger">
+                  <div class="bulletpt bulletpt--primary">Delete buttons</div>
+                  <div class="bulletpt bulletpt--primary">
+                    Form validation error
+                  </div>
+                  <div class="bulletpt bulletpt--primary">
+                    Error feedback state
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="heading-3" style="margin-top: 5rem">Typography</h3>
+
+            <p>
+              The application uses a two-family typography system pairing Inter
+              (body and UI) with Roboto (titles and form labels).
+            </p>
+
+            <p>
+              The scale runs seven levels — display (3xl bold) for hero moments,
+              headline (2xl–3xl semibold) for page headings, title (xl–2xl bold)
+              for card and section headers, subtitle (base–lg medium) for named
+              values and sub-headings, body in three sizes for content, meta
+              (sm) for timestamps and supporting detail, and label (xs uppercase
+              tracked) for form labels and property names.
+            </p>
+            <p>
+              Responsive sizing is baked into the upper levels — headline and
+              title step up at the md breakpoint — keeping the hierarchy
+              proportional across mobile and desktop.
+            </p>
+
+            <h3 class="heading-3" style="margin-top: 5rem">
+              Custom Design System (SCSS)
+            </h3>
+
+            <p>
+              uilt a custom design system on top of Tailwind CSS, organised as a
+              set of SCSS partials under @layer components. Rather than using a
+              third-party component library, every token and primitive was
+              hand-crafted with a single responsibility: spacing tokens
+              (inset-*, space-*) that scale responsively across breakpoints,
+              surface elevation levels, a semantic colour system with full light
+              and dark mode variants, and a typography scale spanning seven
+              levels.
+            </p>
+
+            <p>
+              Layout primitives (Stack, Inline, Grid, Container, Section) are
+              Angular components that own either spacing or surface — never both
+              — making page composition entirely declarative.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-medium">
+        <div class="section__layout-container">
+          <div class="section__layout">
+            <h2 class="heading-2 flex flex--center">Lunacy Design</h2>
+            <figure>
+              <video
+                src="/img/portfolio/famappy/lunacy_design.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="flex flex--center">
@@ -426,6 +584,81 @@
                   playsinline
                 ></video>
               </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex--center bg-color-dark">
+        <div class="section__layout-container">
+          <div class="section__layout architecture">
+            <h2 class="heading-2">Architecture</h2>
+            <h3 class="heading-3">Summary</h3>
+            <p>
+              This application combines <i>React</i>, <i>Redux</i>, and
+              <i>React Router DOM</i> with <i>Supabase</i> as backend.
+            </p>
+            <p>
+              It uses context-based state management for each major feature and
+              a dedicated service layer for API communication. Routing is
+              managed in the <i>App.jsx</i> file with protected and public
+              routes, while <i>React Query</i> handles caching and data
+              synchronization.
+            </p>
+            <p style="margin-bottom: 6rem">
+              This architecture ensures a clear separation between logic, data,
+              and presentation.
+            </p>
+
+            <h3 class="heading-3">The main pillars</h3>
+            <div class="grid architecture__grid-cards">
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  Router & Entry Point
+                </h3>
+                <p class="card-architecture__text">
+                  The app is initialized in <i>main.jsx</i>, wrapped in
+                  <i>BrowserRouter</i>. Routes are defined in <i>App.jsx</i>,
+                  where a <i>ProtectedRoute</i> guards authenticated pages while
+                  keeping public routes like <i>Login</i>, <i>Sign-Up</i>, and
+                  <i>Landing Page</i> accessible.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  Global Providers
+                </h3>
+                <p class="card-architecture__text">
+                  The application is wrapped in several global providers:
+                  <i>MainProvider</i> for shared context,
+                  <i>QueryClientProvider</i> for caching and server state (via
+                  <i>React Query</i>), <i>GlobalStyles</i> for consistent UI,
+                  and <i>Toaster</i> for user notifications.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  State Management
+                </h3>
+                <p class="card-architecture__text">
+                  The app combines Redux for managing global state with
+                  <i>React Context</i> + <i>Reducer</i> for feature-specific
+                  logic. This hybrid setup ensures consistent data handling
+                  across the app while keeping each module isolated, scalable,
+                  and easy to maintain.
+                </p>
+              </div>
+              <div class="card-architecture">
+                <h3 class="heading-3 card-architecture__title">
+                  Service Layer
+                </h3>
+                <p class="card-architecture__text">
+                  Modules such as <i>apiAuth.js</i>, <i>apiCategory.js</i>, and
+                  <i>apiProject.js</i> encapsulate all database interactions
+                  with <i></i>Supabase, handling authentication and CRUD
+                  operations through a clean, reusable API layer.
+                </p>
+              </div>
             </div>
           </div>
         </div>

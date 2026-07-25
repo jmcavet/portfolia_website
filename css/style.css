@@ -2957,6 +2957,23 @@ PORTFOLIO PERSONAL SITE
   color: hsl(210, 35%, 20%);
   border: 1px solid hsl(210, 10%, 94%);
 }
+
+.palette__color--famappy-primary {
+  background-color: hsl(225, 85%, 45%);
+}
+.palette__color--famappy-secondary {
+  background-color: #f97316;
+}
+.palette__color--famappy-neutral {
+  background-color: hsl(215 14% 50%);
+}
+.palette__color--famappy-success {
+  background-color: hsl(142 72% 38%);
+}
+.palette__color--famappy-danger {
+  background-color: hsl(0 100% 38%);
+}
+
 .palette__use {
   grid-row: 3 / span 1;
   padding-top: 2rem;
@@ -2968,19 +2985,24 @@ PORTFOLIO PERSONAL SITE
     grid-column: 2 / span 1;
     padding-top: 0;
   }
-  .palette__use--primary {
+  .palette__use--primary,
+  .palette__use--famappy-primary {
     grid-row: 2 / span 1;
   }
-  .palette__use--secondary {
+  .palette__use--secondary,
+  .palette__use--famappy-secondary {
     grid-row: 4 / span 1;
   }
-  .palette__use--gray-dark {
+  .palette__use--gray-dark,
+  .palette__use--famappy-neutral {
     grid-row: 6 / span 1;
   }
-  .palette__use--gray-light {
+  .palette__use--gray-light,
+  .palette__use--famappy-success {
     grid-row: 8 / span 1;
   }
-  .palette__use--white {
+  .palette__use--white,
+  .palette__use--famappy-danger {
     grid-row: 10 / span 1;
   }
 }
