@@ -246,7 +246,7 @@
                 </div>
                 <div class="palette__feature palette__feature--2">
                   <div class="palette__code palette__code--secondary">
-                    #f97316
+                    hsl(25, 95%, 53%)
                   </div>
                   <div
                     class="palette__color palette__color--famappy-secondary"
@@ -266,7 +266,7 @@
                 </div>
                 <div class="palette__feature palette__feature--3">
                   <div class="palette__code palette__code--gray-dark">
-                    #172B4D
+                    hsl(216, 54%, 20%)
                   </div>
                   <div
                     class="palette__color palette__color--famappy-neutral"
@@ -349,9 +349,9 @@
             </h3>
 
             <p>
-              uilt a custom design system on top of Tailwind CSS, organised as a
-              set of SCSS partials under @layer components. Rather than using a
-              third-party component library, every token and primitive was
+              Built a custom design system on top of Tailwind CSS, organised as
+              a set of SCSS partials under @layer components. Rather than using
+              a third-party component library, every token and primitive was
               hand-crafted with a single responsibility: spacing tokens
               (inset-*, space-*) that scale responsively across breakpoints,
               surface elevation levels, a semantic colour system with full light
@@ -593,73 +593,105 @@
         <div class="section__layout-container">
           <div class="section__layout architecture">
             <h2 class="heading-2">Architecture</h2>
-            <h3 class="heading-3">Summary</h3>
+
             <p>
-              This application combines <i>React</i>, <i>Redux</i>, and
-              <i>React Router DOM</i> with <i>Supabase</i> as backend.
-            </p>
-            <p>
-              It uses context-based state management for each major feature and
-              a dedicated service layer for API communication. Routing is
-              managed in the <i>App.jsx</i> file with protected and public
-              routes, while <i>React Query</i> handles caching and data
-              synchronization.
-            </p>
-            <p style="margin-bottom: 6rem">
-              This architecture ensures a clear separation between logic, data,
-              and presentation.
+              One of the central architectural decisions in Famappy was keeping
+              UI components completely unaware of where data comes from or how
+              state is managed.
             </p>
 
-            <h3 class="heading-3">The main pillars</h3>
-            <div class="grid architecture__grid-cards">
-              <div class="card-architecture">
-                <h3 class="heading-3 card-architecture__title">
-                  Router & Entry Point
-                </h3>
-                <p class="card-architecture__text">
-                  The app is initialized in <i>main.jsx</i>, wrapped in
-                  <i>BrowserRouter</i>. Routes are defined in <i>App.jsx</i>,
-                  where a <i>ProtectedRoute</i> guards authenticated pages while
-                  keeping public routes like <i>Login</i>, <i>Sign-Up</i>, and
-                  <i>Landing Page</i> accessible.
-                </p>
-              </div>
-              <div class="card-architecture">
-                <h3 class="heading-3 card-architecture__title">
-                  Global Providers
-                </h3>
-                <p class="card-architecture__text">
-                  The application is wrapped in several global providers:
-                  <i>MainProvider</i> for shared context,
-                  <i>QueryClientProvider</i> for caching and server state (via
-                  <i>React Query</i>), <i>GlobalStyles</i> for consistent UI,
-                  and <i>Toaster</i> for user notifications.
-                </p>
-              </div>
-              <div class="card-architecture">
-                <h3 class="heading-3 card-architecture__title">
-                  State Management
-                </h3>
-                <p class="card-architecture__text">
-                  The app combines Redux for managing global state with
-                  <i>React Context</i> + <i>Reducer</i> for feature-specific
-                  logic. This hybrid setup ensures consistent data handling
-                  across the app while keeping each module isolated, scalable,
-                  and easy to maintain.
-                </p>
-              </div>
-              <div class="card-architecture">
-                <h3 class="heading-3 card-architecture__title">
-                  Service Layer
-                </h3>
-                <p class="card-architecture__text">
-                  Modules such as <i>apiAuth.js</i>, <i>apiCategory.js</i>, and
-                  <i>apiProject.js</i> encapsulate all database interactions
-                  with <i></i>Supabase, handling authentication and CRUD
-                  operations through a clean, reusable API layer.
-                </p>
-              </div>
+            <p>
+              Angular components have a single responsibility: rendering and
+              responding to user interaction — every data concern is delegated
+              downward through a deliberate three-layer architecture.
+            </p>
+            <div
+              style="
+                background: #405880;
+                border-radius: 2rem;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+                margin: 6rem 0;
+              "
+            >
+              <img
+                src="../../img/portfolio/famappy/famappy_architecture_flow.svg"
+                alt="Famappy architecture — four-layer data flow diagram"
+                class="w-full"
+              />
             </div>
+
+            <h3 class="heading-3" style="margin-top: 5rem">Feature facades</h3>
+            <p>
+              They sit directly behind each page component. They own local UI
+              state via Angular signals, compose raw domain data into view
+              models the template can consume directly, and expose a clean
+              public API of actions. A component never calls a database service
+              directly — it calls its facade, which decides what to do with the
+              request.
+            </p>
+
+            <h3 class="heading-3" style="margin-top: 5rem">Domain facades</h3>
+            <p>
+              They own a single Firestore collection each — recipes,
+              ingredients, meals, shopping lists, etc. They load data once via a
+              real-time <i>onSnapshot</i> listener, expose it as a signal, and
+              provide domain-level actions (add, update, delete). Multiple
+              feature facades can read from the same domain facade without
+              duplicating the Firestore subscription or the business logic that
+              lives there.
+            </p>
+
+            <h3 class="heading-3" style="margin-top: 5rem">State services</h3>
+            <p>
+              They handle shared transient state that spans multiple pages
+              within a feature — the shopping flow, for instance, passes
+              selected meals, ingredient measures, and category selections
+              across three separate pages. Rather than threading inputs and
+              outputs across the entire route, a dedicated
+              <i>ShoppingStateService</i>
+              holds a single typed <code>signal&lt;State&gt;</code> that any
+              facade in that feature can read from or write to.
+            </p>
+
+            <h3 class="heading-3" style="margin-top: 5rem">
+              Generic FirestoreService
+            </h3>
+            <p>
+              It abstracts all Firestore operations — loading, saving, updating,
+              deleting — into reusable methods that automatically scope queries
+              to the authenticated user and attach timestamps. No feature code
+              ever imports a Firestore SDK method directly.
+            </p>
+
+            <p>
+              The result is that swapping the backend, adding offline support,
+              or testing any layer in isolation requires touching only one layer
+              — the others remain unchanged.
+            </p>
+
+            <h3 class="heading-3" style="margin-top: 5rem">
+              Firebase integration
+            </h3>
+
+            <p>
+              <span class="bold">Firestore</span> — real-time collection
+              listeners via <i>onSnapshot</i>, scoped to the authenticated user
+              by userId field on every document
+            </p>
+            <p>
+              <span class="bold">Firestore rules</span> — user-ownership
+              enforced at the database level via
+              <i>isOwnerNew() / isOwnerExisting()</i> helper functions
+            </p>
+            <p>
+              <span class="bold">Firebase Auth</span> — authentication state
+              exposed as a signal via
+              <i>AuthService</i>
+            </p>
+            <p>
+              <span class="bold">Firebase Storage</span> — recipe image upload
+              with thumbnail generation
+            </p>
           </div>
         </div>
       </section>
